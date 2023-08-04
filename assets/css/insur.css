@@ -7574,7 +7574,8 @@
   }
   
   .feature-three__single:hover .feature-three__icon {
-    background-color: var(--insur-primary);
+    /* background-color: var(--insur-primary); */
+    background-color: #015fc9;
   }
   
   .feature-three__icon span {
@@ -7587,7 +7588,7 @@
   }
   
   .feature-three__single:hover .feature-three__icon span {
-    color: var(--insur-white);
+    color: var(--insur-primary);
   }
   
   .feature-three__content {
@@ -7788,7 +7789,7 @@
   .about-three__founder-img img {
     border-radius: 50%;
     border: 2px solid var(--insur-primary);
-    width: auto;
+    width: 5rem;
   }
   
   .about-three__founder-content {
