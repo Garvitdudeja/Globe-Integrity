@@ -117,12 +117,14 @@
                                 <div class="main-menu-three__logo">
                                     <a href="index.html"><img src="assets/images/resources/logo-1.png" alt="" style="width: 100px;"></a>
                                 </div>
-                                <div class="main-menu-three__main-menu-box" style="">
+                                <div class="main-menu-three__main-menu-box" >
                                     <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars" style="padding-top: 20px;"></i></a>
                                     <ul class="main-menu__list" style="padding-top: 20px;">
-                                        
                                         <li class="">
-                                            <a href="/about.html">About</a>
+                                            <a href="/index.html" style="font-size: larger;" >Home</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/about.html" style="font-size: larger;">About</a>
                                             <!-- <ul>
                                                 <li><a href="about.html">About</a></li>
                                                 <li class="is-new-menu"><a href="sign-in.html">Sign in</a></li>
@@ -146,7 +148,7 @@
                                             </ul> -->
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#">Insurance </a>
+                                            <a href="insurance.html" style="font-size: larger;">Insurance </a>
                                             <ul>
                                                 <!-- <li><a href="insurance-01.html">Insurance 01</a></li>
                                                 <li><a href="insurance-02.html">Insurance 02</a></li>
@@ -183,7 +185,7 @@
                                             </ul>
                                         </li> -->
                                         <li>
-                                            <a href="contact.html">Contact </a>
+                                            <a href="contact.html" class="active" style="color: #015fc9;font-size: larger;">Contact </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -255,7 +257,7 @@
                                 <div class="contact-page__call-email-content">
                                     <h4>
                                         <a href="tel:561-646-0095" class="contact-page__call-number">561-646-0095</a>
-                                        <a href="mailto:needhelp@company.com"
+                                        <a href="mailto:swolkov@globeintegrity.com"
                                             class="contact-page__email"></a>
                                     </h4>
                                 </div>
@@ -334,7 +336,6 @@
   }
   #crmWebToEntityForm.zcwf_lblLeft {
       width:100%;
-      padding: 25px;
       margin: 0 auto;
       box-sizing: border-box;
   }
@@ -477,31 +478,34 @@
       .zcwf_lblLeft .zcwf_col_help {width: 40%;}
   }
   </style>
-    <div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'>WebContact Form</div>
 
   <div class="row">
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'><label for='NAME'>Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld' style="width: 100%;"><input type='text' id='NAME' name='NAME' maxlength='120' style="width: 100%;"></input><div class='zcwf_col_help'></div></div></div>
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' id='NAME' name='NAME' maxlength='120' style="width: 100%;" placeholder="Name"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'><label for='Email'>Email</label></div><div class='zcwf_col_fld' style="width: 100%;"><input type='text' ftype='email' id='Email' name='Email' maxlength='100' style="width: 100%;"></input><div class='zcwf_col_help'></div></div></div>
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' ftype='email' id='Email' name='Email' maxlength='100' style="width: 100%;" placeholder="Email"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-        <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'><label for='COBJ1CF2'>Phone</label></div><div class='zcwf_col_fld' style="width: 100%;"><input type='text' id='COBJ1CF2' name='COBJ1CF2' maxlength='30' style="width: 100%;"></input><div class='zcwf_col_help'></div></div></div>
+        <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' id='COBJ1CF2' name='COBJ1CF2' maxlength='30' style="width: 100%;" class="Phone Number" placeholder="Phone Number"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-             <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'><label for='COBJ1CF3'>Subject</label></div><div class='zcwf_col_fld' style="width: 100%;"><input type='text' id='COBJ1CF3' name='COBJ1CF3' maxlength='255' style="width: 100%;"></input><div class='zcwf_col_help'></div></div></div>
+             <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input type='text' id='COBJ1CF3' name='COBJ1CF3' maxlength='255' style="width: 100%;" placeholder="Subject"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
   </div>
-  <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'><label for='COBJ1CF1'>Message</label></div><div class='zcwf_col_fld'><textarea id='COBJ1CF1' name='COBJ1CF1'></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
+  <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld comment-form__input-box text-message-box' style="width: 100%"><textarea id='COBJ1CF1' name='COBJ1CF1' style="width: 100%" placeholder="Message"></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div>
+        <div class='zcwf_col_fld'>
+                <input type='submit' id='formsubmit' class='formsubmit zcwf_button btn btn-primary' value='Submit' title='Submit' style="padding: 8px 18px;color: white;font-size: large;" >
+        </div> 
+    </div>
       <script>
       function validateEmail5572526000004234240()
       {
@@ -785,19 +789,19 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@insur.com</a>
+                    <a href="mailto:swolkov@globeintegrity.com">swolkov@globeintegrity.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:561-646-0095">561-646-0095</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="https://www.linkedin.com/company/globeintegrity/" class="fab fa-linkedin"></a>
+                    <!-- <a href="#" class="fab fa-facebook-square"></a>
                     <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-instagram"></a> -->
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
 

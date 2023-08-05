@@ -1843,7 +1843,7 @@
   .main-menu-three__logo {
     display: block;
     float: left;
-    padding: 41px 0;
+    padding: 25px 0;
     padding-right: 170px;
   }
   
@@ -3252,7 +3252,7 @@
     transform: scale(1);
   }
   
-  .services-one__single:hover .services-one__icon span {
+  .services-one__single:hover .services-one__icon span .customIcon:hover{
     color: var(--insur-white);
     transform: scale(0.9);
   }
