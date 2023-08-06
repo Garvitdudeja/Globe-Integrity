@@ -49,6 +49,26 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/insur.css" />
     <link rel="stylesheet" href="assets/css/insur-responsive.css" />
+    <style>
+        #formsubmit {
+  padding: 8px 18px;
+  color: white;
+  font-size: large;
+  background-color: #007bff; /* Change this to your desired background color */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#formsubmit:hover {
+  background-color: white; /* Change this to the hover background color you want */
+  transform: scale(1.05); /* Adjust the scaling factor to your liking */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  color: gray;
+}
+
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -92,8 +112,8 @@
                         <div class="main-header__top-right">
                             <div class="main-header__top-menu-box">
                                 <ul class="list-unstyled main-header__top-menu">
-                                    <li><a href="make-a-claim-death.html">Make a claim</a></li>
-                                    <li><a href="faq.html"> FAQs</a></li>
+                                    <!-- <li><a href="make-a-claim-death.html">Make a claim</a></li>
+                                    <li><a href="faq.html"> FAQs</a></li> -->
                                     <li><a href="about.html">About</a></li>
                                 </ul>
                             </div>
@@ -118,8 +138,8 @@
                                     <a href="index.html"><img src="assets/images/resources/logo-1.png" alt="" style="width: 100px;"></a>
                                 </div>
                                 <div class="main-menu-three__main-menu-box" >
-                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars" style="padding-top: 20px;"></i></a>
-                                    <ul class="main-menu__list" style="padding-top: 20px;">
+                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars" style="padding-top: 10px;"></i></a>
+                                    <ul class="main-menu__list" style="padding-top: 10px;">
                                         <li class="">
                                             <a href="/index.html" style="font-size: larger;" >Home</a>
                                         </li>
@@ -149,19 +169,17 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="insurance.html" style="font-size: larger;">Insurance </a>
-                                            <ul>
+                                           <ul>
                                                 <!-- <li><a href="insurance-01.html">Insurance 01</a></li>
                                                 <li><a href="insurance-02.html">Insurance 02</a></li>
                                                 <li><a href="insurance-03.html">Insurance 03</a></li> -->
-                                                <li><a href="car-insurance.html">Car insurance</a></li>
-                                                <li><a href="life-insurance.html">Life insurance</a></li>
-                                                <li><a href="home-insurance.html">Home insurance</a>
-                                                </li>
-                                                <li><a href="health-insurance.html">Health insurance</a></li>
-                                                <li><a href="business-insurance.html">Business insurance</a></li>
-                                                <li><a href="fire-insurance.html">Fire insurance</a></li>
-                                                <li><a href="marriage-insurance.html">Marriage insurance</a></li>
-                                                <li><a href="travel-insurance.html">Travel insurance</a></li>
+                                                <li><a href="Mortgage_Insurance.html">Mortgage Insurance</a></li>
+                                                <li><a href="term_life_insurance.html">Term Life Insurance</a></li>
+                                                <li><a href="whole_life_insurance.html">Whole Life Insurance</a></li>
+                                                <li><a href="group_life_insurance.html">Group Life Insurance</a></li>
+                                                <li><a href="policy_review.html">Policy Review</a></li>
+                                                <li><a href="future_income_planning.html">Future Income Planning</a></li>
+                                                <li><a href="disability_insurance.html">Disabolity Insurance</a></li>
                                             </ul>
                                         </li>
                                         <!-- <li class="dropdown">
@@ -185,12 +203,12 @@
                                             </ul>
                                         </li> -->
                                         <li>
-                                            <a href="contact.html" class="active" style="color: #015fc9;font-size: larger;">Contact </a>
+                                            <a href="contact.html" class="active" style="color: #015fc9;font-size: larger;text-decoration: underline;text-decoration-thickness: 2px;">Contact </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="main-menu-three__right" style="padding-top: 20px;">
+                            <div class="main-menu-three__right" style="padding-top: 10px;">
                                 <div class="main-menu-three__search-get-quote-btn">
                                     <!-- <div class="main-menu-three__search-box">
                                         <a href="#"
@@ -256,9 +274,9 @@
                                 </div>
                                 <div class="contact-page__call-email-content">
                                     <h4>
-                                        <a href="tel:561-646-0095" class="contact-page__call-number">561-646-0095</a>
+                                        <a href="tel:561-646-0095" class="contact-page__call-number" >561-646-0095</a>
                                         <a href="mailto:swolkov@globeintegrity.com"
-                                            class="contact-page__email"></a>
+                                            class="contact-page__email">swolkov@globeintegrity.com</a>
                                     </h4>
                                 </div>
                             </div>
@@ -482,28 +500,28 @@
   <div class="row">
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' id='NAME' name='NAME' maxlength='120' style="width: 100%;" placeholder="Name"></input><div class='zcwf_col_help'></div></div></div>
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' id='NAME' name='NAME' maxlength='120' style="width: 100%;border: none !important;border-radius: 8px;" placeholder="Name"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' ftype='email' id='Email' name='Email' maxlength='100' style="width: 100%;" placeholder="Email"></input><div class='zcwf_col_help'></div></div></div>
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' ftype='email' id='Email' name='Email' maxlength='100' style="width: 100%;border: none !important;border-radius: 8px;" placeholder="Email"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-        <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' id='COBJ1CF2' name='COBJ1CF2' maxlength='30' style="width: 100%;" class="Phone Number" placeholder="Phone Number"></input><div class='zcwf_col_help'></div></div></div>
+        <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input required type='text' id='COBJ1CF2' name='COBJ1CF2' maxlength='30' style="width: 100%;border: none !important;border-radius: 8px;" class="Phone Number" placeholder="Phone Number"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
     <div class="col-xl-6">
         <div class="comment-form__input-box">
-             <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input type='text' id='COBJ1CF3' name='COBJ1CF3' maxlength='255' style="width: 100%;" placeholder="Subject"></input><div class='zcwf_col_help'></div></div></div>
+             <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld' style="width: 100%;"><input type='text' id='COBJ1CF3' name='COBJ1CF3' maxlength='255' style="width: 100%;border: none !important;border-radius: 8px;" placeholder="Subject"></input><div class='zcwf_col_help'></div></div></div>
         </div>
     </div>
   </div>
-  <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld comment-form__input-box text-message-box' style="width: 100%"><textarea id='COBJ1CF1' name='COBJ1CF1' style="width: 100%" placeholder="Message"></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div>
+  <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;width: 100%;'></div><div class='zcwf_col_fld comment-form__input-box text-message-box' style="width: 100%"><textarea id='COBJ1CF1' name='COBJ1CF1' style="width: 100%;border: none !important;border-radius: 8px;" placeholder="Message" ></textarea><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div>
         <div class='zcwf_col_fld'>
-                <input type='submit' id='formsubmit' class='formsubmit zcwf_button btn btn-primary' value='Submit' title='Submit' style="padding: 8px 18px;color: white;font-size: large;" >
+            <input type='submit' id='formsubmit' class='formsubmit zcwf_button btn btn-primary ' value='Submit' title='Submit'>
         </div> 
     </div>
       <script>
