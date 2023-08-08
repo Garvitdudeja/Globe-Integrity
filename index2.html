@@ -43,11 +43,141 @@
     <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
-
+    <link rel="stylesheet" href="assets/css/w3.css">
     <!-- template styles -->
     <link rel="stylesheet" id="langLtr" href="assets/css/insur.css" />
     <link rel="stylesheet" href="assets/css/insur-responsive.css" />
+    <style>
+        /* ------------------- */
+/* TEMPLATE        -- */
+/* ----------------- */
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+
+/* body { 
+	height: 100%;
+	background-color: #333; 
+	color: whitesmoke; 
+	font-size: 16px; 
+	font-family: 'Lato';
+} 
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 18px; }
+p { margin: 0 0 15px; line-height: 24px; color: gainsboro; }
+a { color: dodgerblue; text-decoration: none; border-bottom: 1px dotted; }
+a:hover { color: tomato; } */
+
+.containerTabs {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: -100px;
+  z-index: 99;
+  /* color: white; */
+}
+
+/* ------------------- */
+/* PEN STYLES      -- */
+/* ----------------- */
+
+/* MAKE IT CUTE ----- */
+.tabs {
+	position: relative;
+	display: flex;
+	min-height: 300px;
+	border-radius: 8px 8px 0 0;
+	overflow: hidden;
+}
+
+.tabby-tab {
+	flex: 1;
+}
+
+.tabby-tab label {
+	display: block;
+	box-sizing: border-box;
+	/* tab content must clear this */
+		height: 40px;
+	
+	padding: 10px;
+	text-align: center;
+	background: #7dbaff;
+	cursor: pointer;
+	transition: background 0.5s ease;
+	
+}
+
+.tabby-tab label:hover {
+	background: #4892e7;
+}
+
+.tabby-content {
+	position: absolute;
+	
+	left: 0; bottom: 0; right: 0;
+	/* clear the tab labels */
+		top: 40px; 
+	
+	padding: 20px;
+	border-radius: 0 0 8px 8px;
+	background: #015fc9;
+	
+	transition: 
+		opacity 0.8s ease,
+		transform 0.8s ease		;
+	
+	/* show/hide */
+		opacity: 0;
+		transform: scale(0.1);
+		transform-origin: top left;
+	
+}
+
+.tabby-content img {
+	float: left;
+	margin-right: 20px;
+	border-radius: 8px;
+}
+
+
+/* MAKE IT WORK ----- */
+
+.tabby-tab [type=radio] { display: none; }
+[type=radio]:checked ~ label {
+	background: #015fc9;
+	z-index: 2;
+}
+
+[type=radio]:checked ~ label ~ .tabby-content {
+	z-index: 1;
+	
+	/* show/hide */
+		opacity: 1;
+		transform: scale(1);
+}
+
+/* BREAKPOINTS ----- */
+@media screen and (max-width: 767px) {
+	.tabs { min-height: 300px;}
+}
+
+@media screen and (max-width: 480px) {
+    .containerTabs {
+        width:100%;
+    }
+	.tabs { min-height: 580px; }
+	.tabby-tab label { 
+		height: 60px;
+	}
+	.tabby-content { top: 60px; }
+	.tabby-content img {
+		float: none;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -311,61 +441,106 @@
         <!--Main Slider End-->
 
         <!--Feature Three Start-->
-        <section class="feature-three">
-            <div class="feature-three-shape float-bob-x">
-                <img src="assets/images/shapes/feature-three-shape.png" alt="">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <!--Feature Three Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="100ms" onclick="window.location='policy_review.html'">
-                        <div class="feature-three__single">
-                            <div class="feature-three__icon">
-                                <img src="/assets/images/Custom/Policy review.jpg" alt="" style="border-radius: 50%;width: 100%;">
-                            </div>
-                            <div class="feature-three__content">
-                                <!-- <p class="feature-three__sub-title">Policy Review</p> -->
-                                <h3 class="feature-three__title">Policy Review  and Analysis</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Feature Three Single End-->
-                    <!--Feature Three Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="200ms" onclick="window.location='Mortgage_Insurance.html'">
-                        <div class="feature-three__single">
-                            <div class="feature-three__icon">
-                                <img src="/assets/images/Custom/House.jpg" alt="" style="border-radius: 50%;width: 100%;">
 
-                            </div>
-                            <div class="feature-three__content">
-                                <h3 class="feature-three__title">Mortgage Protection
-                                </h3>
-                            </div>
-                        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="containerTabs" style="width:80%;margin: auto; border-radius: 10px;background-color: #015fc9;color:white;">
+        <div style="display: flex; justify-content: space-evenly; width:100%;">
+            <button class="w3-bar-item w3-button" onclick="openCity('London')" style="width:100%;border-radius: 10px;" >London</button>
+            <button class="w3-bar-item w3-button" onclick="openCity('Paris')" style="width:100%;border-radius: 10px;" >Paris</button>
+            <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')" style="width:100%;border-radius: 10px;" >Tokyo</button>
+          </div>
+        <div id="London" class="city">
+            <h2>London</h2>
+            <p>London is the capital of England.</p>
+          </div>
+          
+          <div id="Paris" class="city" style="display:none">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.Paris is the capital of France.</p>
+          </div>
+          
+          <div id="Tokyo" class="city" style="display:none">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="containerTabs" >
+            <div class="tabs" style="color: white;">
+                <div class="tabby-tab">
+                    <input type="radio" id="tab-1" name="tabby-tabs" checked>
+                    <label for="tab-1">Insurance</label>
+                    <div class="tabby-content">
+                        <p>Our financial advisors help protect your family and keep your goals on track with insurance designed to give you financial flexibility, protect your income, and more.
+                        <ul>
+                            <li>Life insurance</li>
+                            <li>Disability insurance</li>
+                            <li>Long-term care</li>
+
+                        </ul>
                     </div>
-                    <!--Feature Three Single End-->
-                    <!--Feature Three Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="300ms" onclick="window.location='future_income_planning.html'">
-                        <div class="feature-three__single">
-                            <div class="feature-three__icon">
-                                <img src="/assets/images/Custom/income.jpg" alt="" style="border-radius: 50%;width: 100%;">
-            
-                            </div>
-                            <div class="feature-three__content">
-                                <!-- <p class="feature-three__sub-title">Lorem ipsum</p> -->
-                                <h3 class="feature-three__title">Future Income Planning
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Feature Three Single End-->
                 </div>
-            </div>
-        </section>
+        
+                <div class="tabby-tab">
+                    <input type="radio" id="tab-2" name="tabby-tabs">
+                    <label for="tab-2">Financial Planning </label>
+                    <div class="tabby-content">
+                        <p>Instead of starting with your finances, our advisors start with you—designing your plan around your priorities to help you reach your goals while protecting everything you've worked so hard for.
+
+                            <ul>
+                                <li>A personalized plan that brings all aspects of your financial life together</li>
+                                <li>A wide range of financial options and strategies tailored to your life and goals</li>
+                                <li>Your go-to financial professional who helps keep your big picture, and dreams, in focus</li>
+                            </ul></p>
+                    </div>
+                </div>
+        
+                <div class="tabby-tab">
+                    <input type="radio" id="tab-3" name="tabby-tabs">
+                    <label for="tab-3">Investments</label>
+                    <div class="tabby-content">
+                            <p>Our financial advisors show you how to make smart money moves, no matter what the markets do—giving you the confidence to go for your dreams.
+
+                             <ul>
+                                <li>   Investment and retirement strategies</li>
+                                <li>Wealth management</li>
+                                <li>Exclusive market commentary</li>
+                             </ul></p>
+                    </div>
+                </div>
+                
+            </div> -->
+
+
+
+
+
+
+
+
+
         <!--Feature Three End-->
 
         <!--About Three Start-->
-        <section class="about-three">
+        <section class="about-three" style="padding-top: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6">
@@ -418,7 +593,6 @@
                             <div class="about-three__bottom">
                                 <div class="about-three__founder">
                                     <div class="about-three__founder-img">
-                                        <img src="assets/images/Custom/founder.jpg" alt="">
                                     </div>
                                     <div class="about-three__founder-content">
                                         <h3 class="about-three__founder-name">Spencer Wolkov</h3>
@@ -1508,9 +1682,16 @@
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 
-
-
-
+    <script>
+        function openCity(cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none"; 
+          }
+          document.getElementById(cityName).style.display = "block";  
+        }
+        </script>
     <!-- template js -->
     <script src="assets/js/insur.js"></script>
 
