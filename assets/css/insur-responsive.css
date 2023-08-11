@@ -1014,7 +1014,9 @@
     }
 
     .testimonial-three__single {
-        padding: 108px 30px 51px;
+        padding: 40px 30px 51px;
+        /* padding: 108px 48px 51px; */
+
     }
 
     .download__title {
