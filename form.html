@@ -77,7 +77,7 @@ input.invalid {
    - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
    - The Mandatory check script can modified as to suit your business needs. 
    - It is important that you test the modified form before going live.-->
-<div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 600px;'>
+<div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' >
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
          <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
          <form action='https://crm.zoho.com/crm/WebForm' name=WebForm5572526000004361047 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000004361047()' accept-charset='UTF-8' id="regForm">
@@ -87,7 +87,7 @@ input.invalid {
        <input type='text'  style='display:none;' name='actionType' value='Q3VzdG9tTW9kdWxlMQ=='></input>
        <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;globe-integrity.vercel.app' > </input>
                <!-- Do not remove this code. -->
-      <style>
+      <!-- <style>
       html,body{
               margin: 0px;
       }
@@ -235,35 +235,48 @@ input.invalid {
               }
               .zcwf_lblLeft .zcwf_col_help {width: 40%;}
       }
-      </style>
+      </style> -->
       <div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'>Insurance Calculator</div>
 
 
 
 
 
-        <h1>Register:</h1>
         
+        <div class="tab">Contact Info:
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF51'>Age</label></div><div class='zcwf_col_fld'><input type='text' id='COBJ1CF51' name='COBJ1CF51' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
+      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF52'>U.S. ZIP code</label></div><div class='zcwf_col_fld'><input type='text' id='COBJ1CF52' name='COBJ1CF52' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
+
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF4'>Annual Household Income</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='COBJ1CF4' name='COBJ1CF4'  >
+                <option value='-None-'>-None-</option>
+                <option value='less&#x20;than&#x20;&#x24;40,000'>less than &#x24;40,000</option>
+                <option value='&#x24;40,001&#x20;-&#x20;&#x24;75,000'>&#x24;40,001 - &#x24;75,000</option>
+                <option value='&#x24;75,001&#x20;-&#x20;&#x24;100,000'>&#x24;75,001 - &#x24;100,000</option>
+                <option value='&#x24;100,001&#x20;-&#x20;&#x24;150,000'>&#x24;100,001 - &#x24;150,000</option>
+                <option value='&#x24;150,001&#x20;-&#x20;&#x24;200,000'>&#x24;150,001 - &#x24;200,000</option>
+                <option value='&#x24;200,001&#x20;-&#x20;&#x24;300,000'>&#x24;200,001 - &#x24;300,000</option>
+                <option value='more&#x20;than&#x20;&#x24;300,000'>more than &#x24;300,000</option>
+        </select><div class='zcwf_col_help'></div></div></div>
+          </div>
+
         <!-- One "tab" for each step in the form: -->
         <div class="tab">Name:
           <p>      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='NAME'>Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='NAME' name='NAME' maxlength='120'></input><div class='zcwf_col_help'></div></div></div>          </p>
-          <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+
         </div>
         
-        <div class="tab">Contact Info:
-          <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-          <p><input placeholder="Phone..." oninput="this.className = ''"></p>
-        </div>
+
         
-        <div class="tab">Birthday:
+        <!-- <div class="tab">Birthday:
           <p><input placeholder="dd" oninput="this.className = ''"></p>
           <p><input placeholder="mm" oninput="this.className = ''"></p>
           <p><input placeholder="yyyy" oninput="this.className = ''"></p>
-        </div>
+        </div> -->
         
         <div class="tab">Login Info:
-          <p><input placeholder="Username..." oninput="this.className = ''"></p>
-          <p><input placeholder="Password..." oninput="this.className = ''"></p>
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF2'>Phone</label></div><div class='zcwf_col_fld'><input type='text' id='COBJ1CF2' name='COBJ1CF2' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
+
         </div>
         
         <div style="overflow:auto;">
@@ -294,9 +307,6 @@ input.invalid {
 
 
 
-      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
-      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF51'>Age</label></div><div class='zcwf_col_fld'><input type='text' id='COBJ1CF51' name='COBJ1CF51' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
-      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF52'>U.S. ZIP code</label></div><div class='zcwf_col_fld'><input type='text' id='COBJ1CF52' name='COBJ1CF52' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
       <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF5'>Goal</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='COBJ1CF5' name='COBJ1CF5'  >
                               <option value='-None-'>-None-</option>
                               <option value='Buy&#x20;a&#x20;Home'>Buy a Home</option>
@@ -310,18 +320,8 @@ input.invalid {
                               <option value='Grow&#x20;My&#x20;Investments'>Grow My Investments</option>
                               <option value='I&#x27;m&#x20;not&#x20;Sure'>I&#x27;m not Sure</option>
                       </select><div class='zcwf_col_help'></div></div></div>
-      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF2'>Phone</label></div><div class='zcwf_col_fld'><input type='text' id='COBJ1CF2' name='COBJ1CF2' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
       <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF3'>Subject</label></div><div class='zcwf_col_fld'><input type='text' id='COBJ1CF3' name='COBJ1CF3' maxlength='255'></input><div class='zcwf_col_help'></div></div></div>
-      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ1CF4'>Annual Household Income</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='COBJ1CF4' name='COBJ1CF4'  >
-                              <option value='-None-'>-None-</option>
-                              <option value='less&#x20;than&#x20;&#x24;40,000'>less than &#x24;40,000</option>
-                              <option value='&#x24;40,001&#x20;-&#x20;&#x24;75,000'>&#x24;40,001 - &#x24;75,000</option>
-                              <option value='&#x24;75,001&#x20;-&#x20;&#x24;100,000'>&#x24;75,001 - &#x24;100,000</option>
-                              <option value='&#x24;100,001&#x20;-&#x20;&#x24;150,000'>&#x24;100,001 - &#x24;150,000</option>
-                              <option value='&#x24;150,001&#x20;-&#x20;&#x24;200,000'>&#x24;150,001 - &#x24;200,000</option>
-                              <option value='&#x24;200,001&#x20;-&#x20;&#x24;300,000'>&#x24;200,001 - &#x24;300,000</option>
-                              <option value='more&#x20;than&#x20;&#x24;300,000'>more than &#x24;300,000</option>
-                      </select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
+        <div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
               <script>
               function validateEmail5572526000004361047()
               {
@@ -478,6 +478,12 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+document.getElementById('regForm').addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent form submission
+      }
+    });
 </script>
 
 </html>
