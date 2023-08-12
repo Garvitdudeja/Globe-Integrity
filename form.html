@@ -448,7 +448,7 @@ function validateForm() {
   y = x[currentTab].getElementsByTagName("input");
   var MySelect = x[currentTab].getElementsByTagName("select");
 
-  if ( MySelect.length>1 && MySelect[0].value === "-None-") { // Use === for comparison
+  if ( MySelect.length>=1 && MySelect[0].value === "-None-") { // Use === for comparison
     MySelect[0].classList.add("invalid"); // Add missing semicolon
     valid = false;
   }
