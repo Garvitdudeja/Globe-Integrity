@@ -6,6 +6,10 @@
     <title>Contact || Globe Integrity</title>
     <!-- favicons Icons -->
     <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="assets/images/favicons/apple-touch-icon.png"
@@ -101,380 +105,111 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/insur.css" />
     <link rel="stylesheet" href="assets/css/insur-responsive.css" />
+
+
     <style>
-      #formsubmit {
-        padding: 8px 18px;
-        color: white;
-        font-size: large;
-        background-color: #007bff; /* Change this to your desired background color */
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease, transform 0.2s ease,
-          box-shadow 0.3s ease;
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
       }
 
-      #formsubmit:hover {
-        background-color: white; /* Change this to the hover background color you want */
-        transform: scale(1.05); /* Adjust the scaling factor to your liking */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        color: gray;
-      }
-    </style>
-
-    <!-- New Form Insurance Calculator -->
-    <style>
-      /* html,body{
-        margin: 0px;
-    }
-    #crmWebToEntityForm.zcwf_lblLeft {
-        width:100%;
-        padding: 25px;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-    #crmWebToEntityForm.zcwf_lblLeft * {
-        box-sizing: border-box;
-    }
-    #crmWebToEntityForm{text-align: left;}
-    #crmWebToEntityForm * {
-        direction: ltr;
-    }
-    .zcwf_lblLeft .zcwf_title {
-        word-wrap: break-word;
-        padding: 0px 6px 10px;
-        font-weight: bold;
-    }
-    .zcwf_lblLeft .zcwf_col_fld input[type=text], .zcwf_lblLeft .zcwf_col_fld textarea {
-        width: 60%;
-        border: 1px solid #c0c6cc !important;
-        resize: vertical;
-        border-radius: 2px;
-        float: left;
-    }
-    .zcwf_lblLeft .zcwf_col_lab {
-        width: 30%;
-        word-break: break-word;
-        padding: 0px 6px 0px;
-        margin-right: 10px;
-        margin-top: 5px;
-        float: left;
-        min-height: 1px;
-    }
-    .zcwf_lblLeft .zcwf_col_fld {
-        float: left;
-        width: 68%;
-        padding: 0px 6px 0px;
-        position: relative;
-        margin-top: 5px;
-    }
-    .zcwf_lblLeft .zcwf_privacy{padding: 6px;}
-    .zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
-    .dIB{display: inline-block;}
-    .zcwf_lblLeft .zcwf_col_fld_slt {
-        width: 60%;
-        border: 1px solid #ccc;
-        background: #fff;
-        border-radius: 4px;
-        font-size: 12px;
-        float: left;
-        resize: vertical;
-        padding: 2px 5px;
-    }
-    .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
-    .zcwf_lblLeft .zcwf_col_help {
-        float: left;
-        margin-left: 7px;
-        font-size: 12px;
-        max-width: 35%;
-        word-break: break-word;
-    }
-    .zcwf_lblLeft .zcwf_help_icon {
-        cursor: pointer;
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        background: #fff;
-        border: 1px solid #c0c6cc;
-        color: #c1c1c1;
-        text-align: center;
-        font-size: 11px;
-        line-height: 16px;
-        font-weight: bold;
-        border-radius: 50%;
-    }
-    .zcwf_lblLeft .zcwf_row {margin: 15px 0px;}
-    .zcwf_lblLeft .formsubmit {
-        margin-right: 5px;
-        cursor: pointer;
-        color: var(--baseColor);
-        font-size: 12px;
-    }
-    .zcwf_lblLeft .zcwf_privacy_txt {
-        width: 90%;
-        color: rgb(0, 0, 0);
-        font-size: 12px;
-        font-family: Arial;
-        display: inline-block;
-        vertical-align: top;
-        color: var(--baseColor);
-        padding-top: 2px;
-        margin-left: 6px;
-    }
-    .zcwf_lblLeft .zcwf_button {
-        font-size: 12px;
-        color: var(--baseColor);
-        border: 1px solid #c0c6cc;
-        padding: 3px 9px;
-        border-radius: 4px;
-        cursor: pointer;
-        max-width: 120px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .zcwf_lblLeft .zcwf_tooltip_over{
-        position: relative;
-    }
-    .zcwf_lblLeft .zcwf_tooltip_ctn{
-        position: absolute;
-        background: #dedede;
-        padding: 3px 6px;
-        top: 3px;
-        border-radius: 4px;word-break: break-word;
-        min-width: 100px;
-        max-width: 150px;
-        color: var(--baseColor);
-        z-index: 100;
-    }
-    .zcwf_lblLeft .zcwf_ckbox{
-        float: left;
-    }
-    .zcwf_lblLeft .zcwf_file{
-        width: 55%;
-        box-sizing: border-box;
-        float: left;
-    }
-    .clearB:after{
-        content:'';
-        display: block;
-        clear: both;
-    }
-    @media all and (max-width: 600px) {
-        .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
-            width: auto;
-            float: none !important;
-        }
-        .zcwf_lblLeft .zcwf_col_help {width: 40%;}
-    } */
-
-      /* multi Step Form Styles */
-      #msform {
-        text-align: center;
-        position: relative;
-        margin-top: 30px;
-      }
-
-      #msform fieldset {
-        background: white;
-        border: 0 none;
-        border-radius: 0px;
-        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-        padding: 20px 30px;
-        box-sizing: border-box;
-        width: 80%;
-        margin: 0 10%;
-
-        /*stacking fieldsets above each other*/
-        position: relative;
-      }
-
-      /*Hide all except first fieldset*/
-      #msform fieldset:not(:first-of-type) {
-        display: none;
-      }
-
-      /*inputs*/
-      #msform input,
-      #msform textarea {
-        padding: 15px;
-        border: 1px solid #ccc;
-        border-radius: 0px;
-        margin-bottom: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        font-family: montserrat;
-        color: #2c3e50;
-        font-size: 13px;
-      }
-
-      #msform input:focus,
-      #msform textarea:focus {
-        -moz-box-shadow: none !important;
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        border: 1px solid #ee0979;
-        outline-width: 0;
-        transition: All 0.5s ease-in;
-        -webkit-transition: All 0.5s ease-in;
-        -moz-transition: All 0.5s ease-in;
-        -o-transition: All 0.5s ease-in;
-      }
-
-      /*buttons*/
-      #msform .action-button {
-        width: 100px;
-        background: #ee0979;
-        font-weight: bold;
-        color: white;
-        border: 0 none;
-        border-radius: 25px;
-        cursor: pointer;
-        padding: 10px 5px;
-        margin: 10px 5px;
-      }
-
-      #msform .action-button:hover,
-      #msform .action-button:focus {
-        box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
-      }
-
-      #msform .action-button-previous {
-        width: 100px;
-        background: #c5c5f1;
-        font-weight: bold;
-        color: white;
-        border: 0 none;
-        border-radius: 25px;
-        cursor: pointer;
-        padding: 10px 5px;
-        margin: 10px 5px;
-      }
-
-      #msform .action-button-previous:hover,
-      #msform .action-button-previous:focus {
-        box-shadow: 0 0 0 2px white, 0 0 0 3px #c5c5f1;
-      }
-
-      /*headings*/
-      .fs-title {
-        font-size: 18px;
-        text-transform: uppercase;
-        color: #2c3e50;
-        margin-bottom: 10px;
-        letter-spacing: 2px;
-        font-weight: bold;
-      }
-
-      .fs-subtitle {
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
         font-weight: normal;
-        font-size: 13px;
-        color: #666;
-        margin-bottom: 20px;
+        font-style: normal;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: "liga";
+        -webkit-font-smoothing: antialiased;
       }
-
-      /*progressbar*/
-      #progressbar {
-        margin-bottom: 30px;
-        overflow: hidden;
-        /*CSS counters to number the steps*/
-        counter-reset: step;
-      }
-
-      #progressbar li {
-        list-style-type: none;
-        color: white;
-        text-transform: uppercase;
-        font-size: 9px;
-        width: 33.33%;
-        float: left;
-        position: relative;
-        letter-spacing: 1px;
-      }
-
-      #progressbar li:before {
-        content: counter(step);
-        counter-increment: step;
-        width: 24px;
-        height: 24px;
-        line-height: 26px;
-        display: block;
-        font-size: 12px;
-        color: #333;
-        background: white;
-        border-radius: 25px;
-        margin: 0 auto 10px auto;
-      }
-
-      /*progressbar connectors*/
-      #progressbar li:after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: white;
-        position: absolute;
-        left: -50%;
-        top: 9px;
-        z-index: -1; /*put it behind the numbers*/
-      }
-
-      #progressbar li:first-child:after {
-        /*connector not needed before the first step*/
-        content: none;
-      }
-
-      /*marking active/completed steps green*/
-      /*The number of the step and the connector before it = green*/
-      #progressbar li.active:before,
-      #progressbar li.active:after {
-        background: #ee0979;
-        color: white;
-      }
-
-      /* Not relevant to this form */
-      .dme_link {
-        margin-top: 30px;
-        text-align: center;
-      }
-      .dme_link a {
-        background: #fff;
-        font-weight: bold;
-        color: #ee0979;
-        border: 0 none;
-        border-radius: 25px;
-        cursor: pointer;
-        padding: 5px 25px;
-        font-size: 12px;
-      }
-
-      .dme_link a:hover,
-      .dme_link a:focus {
-        background: #c5c5f1;
-        text-decoration: none;
-      }
-
-
-      .labl {
-    display : block;
-    width: 400px;
-}
-.labl > input{ /* HIDE RADIO */
-    visibility: hidden; /* Makes input not-clickable */
-    position: absolute; /* Remove input from document flow */
-}
-.labl > input + div{ /* DIV STYLES */
-    cursor:pointer;
-    border:2px solid transparent;
-}
-.labl > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
-    background-color: #ffd6bb;
-    border: 1px solid #ff6600;
-}
     </style>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .labl {
+        display: block;
+      }
+      .labl > input {
+        /* HIDE RADIO */
+        visibility: hidden; /* Makes input not-clickable */
+        position: absolute; /* Remove input from document flow */
+      }
+      .labl > input + div {
+        /* DIV STYLES */
+        cursor: pointer;
+        border: 2px solid white;
+      }
+      .labl > input:checked + div {
+        /* (RADIO CHECKED) DIV STYLES */
+        background-color: white;
+        border: 1px solid white;
+        color: #015fc9;
+      }
+
+      /* Style the form */
+      #regForm {
+        background-color: #015fc9;
+        /* margin: 100px auto;
+        padding: 40px; */
+        width: 100%;
+        /* min-width: 300px; */
+      }
+
+      /* Style the input fields */
+      input {
+        padding: 10px;
+        /* width: 100%; */
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+      }
+
+      /* Mark input boxes that gets an error on validation: */
+      input.invalid {
+        background-color: #ffdddd;
+      }
+
+      /* Hide all steps by default: */
+      .tab {
+        display: none;
+         text-align: center;
+         color: white;
+         font-size: 1rem;
+         line-height: 2rem;
+      }
+
+      /* Make circles that indicate the steps of the form: */
+      .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+      }
+
+      /* Mark the active step: */
+      .step.active {
+        opacity: 1;
+      }
+
+      /* Mark the steps that are finished and valid: */
+      .step.finish {
+        background-color: #04aa6d;
+      }
+    </style>
+
+
+
   </head>
 
   <body class="custom-cursor">
@@ -755,858 +490,745 @@
    - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
    - The Mandatory check script can modified as to suit your business needs. 
    - It is important that you test the modified form before going live.-->
-      <div
-        id="crmWebToEntityForm"
-        class="zcwf_lblLeft crmWebToEntityForm row pt-5"
-      >
-        <div class="col-md-offset-3">
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-          <form
-            action="https://crm.zoho.com/crm/WebForm"
-            name="WebForm5572526000004361047"
-            method="POST"
-            id="msform"
-            onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000004361047()'
-            accept-charset="UTF-8"
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div
+   id="crmWebToEntityForm"
+   class="zcwf_lblLeft crmWebToEntityForm"
+   style="background-color: #0e497b"
+ >
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <form
+     action="https://crm.zoho.com/crm/WebForm"
+     name="WebForm5572526000004361047"
+     method="POST"
+     onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000004361047()'
+     accept-charset="UTF-8"
+     id="regForm"
+   >
+     <input
+       type="text"
+       style="display: none"
+       name="xnQsjsdp"
+       value="28ee8f012c038486e7f97d8e377b2f6cf29c85ba010a9d35f8b01a68a78c4ee4"
+     />
+     <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+     <input
+       type="text"
+       style="display: none"
+       name="xmIwtLD"
+       value="302ea04f46e70a0985cd5476bc5124b138431da681062a30e72ae1d70ae85400"
+     />
+     <input
+       type="text"
+       style="display: none"
+       name="actionType"
+       value="Q3VzdG9tTW9kdWxlMQ=="
+     />
+     <input
+       type="text"
+       style="display: none"
+       name="returnURL"
+       value="https&#x3a;&#x2f;&#x2f;globe-integrity.vercel.app"
+     />/
+     <!-- Do not remove this code. -->
+     <!-- <style>
+   html,body{
+           margin: 0px;
+   }
+   #crmWebToEntityForm.zcwf_lblLeft {
+           width:100%;
+           padding: 25px;
+           margin: 0 auto;
+           box-sizing: border-box;
+   }
+   #crmWebToEntityForm.zcwf_lblLeft * {
+           box-sizing: border-box;
+   }
+   #crmWebToEntityForm{text-align: left;}
+   #crmWebToEntityForm * {
+           direction: ltr;
+   }
+   .zcwf_lblLeft .zcwf_title {
+           word-wrap: break-word;
+           padding: 0px 6px 10px;
+           font-weight: bold;
+   }
+   .zcwf_lblLeft .zcwf_col_fld input[type=text], .zcwf_lblLeft .zcwf_col_fld textarea {
+           width: 60%;
+           border: 1px solid #c0c6cc !important;
+           resize: vertical;
+           border-radius: 2px;
+           float: left;
+   }
+   .zcwf_lblLeft .zcwf_col_lab {
+           width: 30%;
+           word-break: break-word;
+           padding: 0px 6px 0px;
+           margin-right: 10px;
+           margin-top: 5px;
+           float: left;
+           min-height: 1px;
+   }
+   .zcwf_lblLeft .zcwf_col_fld {
+           float: left;
+           width: 68%;
+           padding: 0px 6px 0px;
+           position: relative;
+           margin-top: 5px;
+   }
+   .zcwf_lblLeft .zcwf_privacy{padding: 6px;}
+   .zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
+   .dIB{display: inline-block;}
+   .zcwf_lblLeft .zcwf_col_fld_slt {
+           width: 60%;
+           border: 1px solid #ccc;
+           background: #fff;
+           border-radius: 4px;
+           font-size: 12px;
+           float: left;
+           resize: vertical;
+           padding: 2px 5px;
+   }
+   .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after {
+           content: '';
+           display: table;
+           clear: both;
+   }
+   .zcwf_lblLeft .zcwf_col_help {
+           float: left;
+           margin-left: 7px;
+           font-size: 12px;
+           max-width: 35%;
+           word-break: break-word;
+   }
+   .zcwf_lblLeft .zcwf_help_icon {
+           cursor: pointer;
+           width: 16px;
+           height: 16px;
+           display: inline-block;
+           background: #fff;
+           border: 1px solid #c0c6cc;
+           color: #c1c1c1;
+           text-align: center;
+           font-size: 11px;
+           line-height: 16px;
+           font-weight: bold;
+           border-radius: 50%;
+   }
+   .zcwf_lblLeft .zcwf_row {margin: 15px 0px;}
+   .zcwf_lblLeft .formsubmit {
+           margin-right: 5px;
+           cursor: pointer;
+           color: var(--baseColor);
+           font-size: 12px;
+   }
+   .zcwf_lblLeft .zcwf_privacy_txt {
+           width: 90%;
+           color: rgb(0, 0, 0);
+           font-size: 12px;
+           font-family: Arial;
+           display: inline-block;
+           vertical-align: top;
+           color: var(--baseColor);
+           padding-top: 2px;
+           margin-left: 6px;
+   }
+   .zcwf_lblLeft .zcwf_button {
+           font-size: 12px;
+           color: var(--baseColor);
+           border: 1px solid #c0c6cc;
+           padding: 3px 9px;
+           border-radius: 4px;
+           cursor: pointer;
+           max-width: 120px;
+           overflow: hidden;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+   }
+   .zcwf_lblLeft .zcwf_tooltip_over{
+           position: relative;
+   }
+   .zcwf_lblLeft .zcwf_tooltip_ctn{
+           position: absolute;
+           background: #dedede;
+           padding: 3px 6px;
+           top: 3px;
+           border-radius: 4px;word-break: break-word;
+           min-width: 100px;
+           max-width: 150px;
+           color: var(--baseColor);
+           z-index: 100;
+   }
+   .zcwf_lblLeft .zcwf_ckbox{
+           float: left;
+   }
+   .zcwf_lblLeft .zcwf_file{
+           width: 55%;
+           box-sizing: border-box;
+           float: left;
+   }
+   .clearB:after{
+           content:'';
+           display: block;
+           clear: both;
+   }
+   @media all and (max-width: 600px) {
+           .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
+                   width: auto;
+                   float: none !important;
+           }
+           .zcwf_lblLeft .zcwf_col_help {width: 40%;}
+   }
+   </style> -->
+     <!-- <div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'>Insurance Calculator</div> -->
+
+     <div
+       class="tab"
+       style="
+         text-align: center;
+         color: white;
+         font-size: 1rem;
+         line-height: 2rem;
+       "
+     >
+       What's your biggest financial goal ?
+       <div
+         style="
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+
+           padding-top: 40px;
+         "
+       >
+         <div class="container">
+           <div class="row">
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl">
+                   <input
+                     type="radio"
+                     name="radioname"
+                     value="one_value"
+                     checked="checked"
+                   />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                       real_estate_agent
+                     </span>
+                     Buy a Home
+                   </div>
+                 </label>
+               </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl" style="flex: 1">
+                   <input type="radio" name="radioname" value="one_value" />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                     <span class="material-symbols-outlined">
+                         school
+                         </span>
+                     </span>
+                     Save for College
+                   </div>
+                 </label>
+               </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl" style="flex: 1">
+                   <input type="radio" name="radioname" value="one_value" />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                     beach_access
+                     </span>
+                     Save for Retiremnet
+                   </div>
+                 </label>
+               </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl" style="">
+                   <input type="radio" name="radioname" value="one_value" />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                       savings
+                     </span>
+                     Protect My Income
+                   </div>
+                 </label>
+               </div>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl" style="flex: 1">
+                   <input type="radio" name="radioname" value="one_value" />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                       bedroom_baby
+                     </span>
+                     Plan for Growing Family
+                   </div>
+                 </label>
+               </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl" style="flex: 1">
+                   <input type="radio" name="radioname" value="one_value" />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                     diversity_1
+                     </span>
+                     Protect My Family
+                   </div>
+                 </label>
+               </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl" style="flex: 1">
+                   <input type="radio" name="radioname" value="one_value" />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                       trending_up
+                     </span>
+                     Grow My Business
+                   </div>
+                 </label>
+               </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+               <div class="box">
+                 <label class="labl" style="flex: 1">
+                   <input type="radio" name="radioname" value="one_value" />
+                   <div
+                     style="
+                       display: flex;
+                       flex-direction: column;
+                       padding: 10px;
+                     "
+                   >
+                     <span
+                       class="material-symbols-outlined"
+                       style="width: 100%"
+                     >
+                       wallet
+                     </span>
+                     Grow My Investments
+                   </div>
+                 </label>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="tab" >
+       Contact Info:
+       <div class="flex flex-row">
+        <div class="zcwf_row">
+          <div
+            class="zcwf_col_lab"
+            style="font-size: 12px; font-family: Arial"
           >
+            <label for="COBJ1CF51" >Age</label>
+          </div>
+          <div class="zcwf_col_fld">
             <input
-              type="text"
-              style="display: none"
-              name="xnQsjsdp"
-              value="28ee8f012c038486e7f97d8e377b2f6cf29c85ba010a9d35f8b01a68a78c4ee4"
+              type="number"
+              id="COBJ1CF51"
+              name="COBJ1CF51"
+              min="18"
+              max="99"
             />
-            <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-            <input
-              type="text"
-              style="display: none"
-              name="xmIwtLD"
-              value="302ea04f46e70a0985cd5476bc5124b138431da681062a30e72ae1d70ae85400"
-            />
-            <input
-              type="text"
-              style="display: none"
-              name="actionType"
-              value="Q3VzdG9tTW9kdWxlMQ=="
-            />
-            <input
-              type="text"
-              style="display: none"
-              name="returnURL"
-              value="https&#x3a;&#x2f;&#x2f;globe-integrity.vercel.app"
-            />
-            <!-- Do not remove this code. -->
-
-            <fieldset>
-              <h2 class="fs-title">What's your biggest financial goal?</h2>
-              <h3 class="fs-subtitle">(Choose one)</h3>
-              <label class="labl">
-                <input type="radio" name="radioname" value="one_value" checked="checked"/>
-                <div>Small</div>
-            </label>
-            <label class="labl">
-                <input type="radio" name="radioname" value="another" />
-                <div>Small</div>
-            </label>
-              <input
-                type="button"
-                name="next"
-                class="next action-button"
-                value="Next"
-                
-              />
-            </fieldset>
-
-            <!-- fieldsets -->
-            <fieldset>
-              <h2 class="fs-title">Personal Details</h2>
-              <h3 class="fs-subtitle">Tell us something more about you</h3>
-              <div class="zcwf_row">
-                <div
-                  class="zcwf_col_lab"
-                  style="font-size: 12px; font-family: Arial"
-                >
-                  <label for="COBJ1CF51">Age</label>
-                </div>
-                <div class="zcwf_col_fld">
-                  <input
-                    class="required"
-                    type="text"
-                    id="COBJ1CF51"
-                    name="COBJ1CF51"
-                    maxlength="9"
-                  />
-                  <div class="zcwf_col_help"></div>
-                </div>
-              </div>
-
-              <div class="zcwf_row">
-                <div
-                  class="zcwf_col_lab"
-                  style="font-size: 12px; font-family: Arial"
-                >
-                  <label for="COBJ1CF52">U.S. ZIP code</label>
-                </div>
-                <div class="zcwf_col_fld">
-                  <input
-                    type="text"
-                    id="COBJ1CF52"
-                    name="COBJ1CF52"
-                    maxlength="9"
-                  />
-                  <div class="zcwf_col_help"></div>
-                </div>
-              </div>
-
-              <div class="zcwf_row">
-                <div
-                  class="zcwf_col_lab"
-                  style="font-size: 12px; font-family: Arial"
-                >
-                  <label for="COBJ1CF4">Annual Household Income</label>
-                </div>
-                <div class="zcwf_col_fld">
-                  <select
-                    class="zcwf_col_fld_slt"
-                    id="COBJ1CF4"
-                    name="COBJ1CF4"
-                  >
-                    <option value="-None-">-None-</option>
-                    <option value="less&#x20;than&#x20;&#x24;40,000">
-                      less than &#x24;40,000
-                    </option>
-                    <option value="&#x24;40,001&#x20;-&#x20;&#x24;75,000">
-                      &#x24;40,001 - &#x24;75,000
-                    </option>
-                    <option value="&#x24;75,001&#x20;-&#x20;&#x24;100,000">
-                      &#x24;75,001 - &#x24;100,000
-                    </option>
-                    <option value="&#x24;100,001&#x20;-&#x20;&#x24;150,000">
-                      &#x24;100,001 - &#x24;150,000
-                    </option>
-                    <option value="&#x24;150,001&#x20;-&#x20;&#x24;200,000">
-                      &#x24;150,001 - &#x24;200,000
-                    </option>
-                    <option value="&#x24;200,001&#x20;-&#x20;&#x24;300,000">
-                      &#x24;200,001 - &#x24;300,000
-                    </option>
-                    <option value="more&#x20;than&#x20;&#x24;300,000">
-                      more than &#x24;300,000
-                    </option>
-                  </select>
-                  <div class="zcwf_col_help"></div>
-                </div>
-              </div>
-              <input type="button" name="next" class="next action-button" value="Next" disabled />
-
-            </fieldset>
-            <fieldset>
-              <h2 class="fs-title">Social Profiles</h2>
-              <h3 class="fs-subtitle">Your presence on the social network</h3>
-              <div class="zcwf_row">
-                <div
-                  class="zcwf_col_lab"
-                  style="font-size: 12px; font-family: Arial"
-                >
-                  <label for="NAME"
-                    >Name<span style="color: red">*</span></label
-                  >
-                </div>
-                <div class="zcwf_col_fld">
-                  <input type="text" id="NAME" name="NAME" maxlength="120" />
-                  <div class="zcwf_col_help"></div>
-                </div>
-              </div>
-              <input
-                type="button"
-                name="next"
-                class="next action-button"
-                value="Next"
-                onclick="checkValue()"
-              />
-            </fieldset>
-            <fieldset>
-              <h2 class="fs-title">Create your account</h2>
-              <h3 class="fs-subtitle">Fill in your credentials</h3>
-              <div class="zcwf_row">
-                <div
-                  class="zcwf_col_lab"
-                  style="font-size: 12px; font-family: Arial"
-                >
-                  <label for="Email">Email</label>
-                </div>
-                <div class="zcwf_col_fld">
-                  <input
-                    type="text"
-                    ftype="email"
-                    id="Email"
-                    name="Email"
-                    maxlength="100"
-                  />
-                  <div class="zcwf_col_help"></div>
-                </div>
-              </div>
-              <div class="zcwf_row">
-                <div
-                  class="zcwf_col_lab"
-                  style="font-size: 12px; font-family: Arial"
-                >
-                  <label for="COBJ1CF2">Phone</label>
-                </div>
-                <div class="zcwf_col_fld">
-                  <input
-                    type="text"
-                    id="COBJ1CF2"
-                    name="COBJ1CF2"
-                    maxlength="30"
-                  />
-                  <div class="zcwf_col_help"></div>
-                </div>
-              </div>
-              <input
-                type="button"
-                name="previous"
-                class="previous action-button-previous"
-                value="Previous"
-              />
-              <div class="zcwf_row">
-                <div
-                  class="zcwf_col_lab"
-                  style="font-size: 12px; font-family: Arial"
-                >
-                  <label for="COBJ1CF3">Subject</label>
-                </div>
-                <div class="zcwf_col_fld">
-                  <input
-                    type="text"
-                    id="COBJ1CF3"
-                    name="COBJ1CF3"
-                    maxlength="255"
-                  />
-                  <div class="zcwf_col_help"></div>
-                </div>
-              </div>
-              <div class="zcwf_row">
-                <div class="zcwf_col_lab"></div>
-                <div class="zcwf_col_fld">
-                  <input
-                    type="submit"
-                    id="formsubmit"
-                    class="formsubmit zcwf_button"
-                    value="Submit"
-                    title="Submit"
-                  /><input
-                    type="reset"
-                    class="zcwf_button"
-                    name="reset"
-                    value="Reset"
-                    title="Reset"
-                  />
-                </div>
-              </div>
-            </fieldset>
-
-            <!-- Do not remove this --- Analytics Tracking code starts -->
-            <script
-              id="wf_anal"
-              src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=302ea04f46e70a0985cd5476bc5124b138431da681062a30e72ae1d70ae85400gid28ee8f012c038486e7f97d8e377b2f6cf29c85ba010a9d35f8b01a68a78c4ee4gid0553f79ba9ccf83e1be97f6851b4205dc78530f131c55496a36cdc928fa214e9gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a"
-            ></script>
-            <!-- Do not remove this --- Analytics Tracking code ends. -->
-          </form>
+            <div class="zcwf_col_help"></div>
+          </div>
         </div>
-      </div>
+        <div class="zcwf_row">
+          <div
+            class="zcwf_col_lab"
+            style="font-size: 12px; font-family: Arial"
+          >
+            <label for="COBJ1CF52">U.S. ZIP code</label>
+          </div>
+          <div class="zcwf_col_fld">
+            <input
+              type="text"
+              id="COBJ1CF52"
+              name="COBJ1CF52"
+              maxlength="9"
+            />
+            <div class="zcwf_col_help"></div>
+          </div>
+        </div>
+ 
+        <div class="zcwf_row">
+          <div
+            class="zcwf_col_lab"
+            style="font-size: 12px; font-family: Arial"
+          >
+            <label for="COBJ1CF4">Annual Household Income</label>
+          </div>
+          <div class="zcwf_col_fld">
+            <select class="zcwf_col_fld_slt" id="COBJ1CF4" name="COBJ1CF4">
+              <option value="-None-">-None-</option>
+              <option value="less&#x20;than&#x20;&#x24;40,000">
+                less than &#x24;40,000
+              </option>
+              <option value="&#x24;40,001&#x20;-&#x20;&#x24;75,000">
+                &#x24;40,001 - &#x24;75,000
+              </option>
+              <option value="&#x24;75,001&#x20;-&#x20;&#x24;100,000">
+                &#x24;75,001 - &#x24;100,000
+              </option>
+              <option value="&#x24;100,001&#x20;-&#x20;&#x24;150,000">
+                &#x24;100,001 - &#x24;150,000
+              </option>
+              <option value="&#x24;150,001&#x20;-&#x20;&#x24;200,000">
+                &#x24;150,001 - &#x24;200,000
+              </option>
+              <option value="&#x24;200,001&#x20;-&#x20;&#x24;300,000">
+                &#x24;200,001 - &#x24;300,000
+              </option>
+              <option value="more&#x20;than&#x20;&#x24;300,000">
+                more than &#x24;300,000
+              </option>
+            </select>
+            <div class="zcwf_col_help"></div>
+          </div>
+        </div>
+       </div>
+     </div>
+
+     <!-- One "tab" for each step in the form: -->
+     <div class="tab">
+       Name:
+       <div class="zcwf_row">
+         <div
+           class="zcwf_col_lab"
+           style="font-size: 12px; font-family: Arial"
+         >
+           <label for="NAME">Name<span style="color: red">*</span></label>
+         </div>
+         <div class="zcwf_col_fld">
+           <input type="text" id="NAME" name="NAME" maxlength="120" />
+           <div class="zcwf_col_help"></div>
+         </div>
+       </div>
+     </div>
+
+     <div class="tab">
+       Login Info:
+       <div class="zcwf_row">
+         <div
+           class="zcwf_col_lab"
+           style="font-size: 12px; font-family: Arial"
+         >
+           <label for="Email">Email</label>
+         </div>
+         <div class="zcwf_col_fld">
+           <input
+             type="text"
+             ftype="email"
+             id="Email"
+             name="Email"
+             maxlength="100"
+           />
+           <div class="zcwf_col_help"></div>
+         </div>
+       </div>
+       <div class="zcwf_row">
+         <div
+           class="zcwf_col_lab"
+           style="font-size: 12px; font-family: Arial"
+         >
+           <label for="COBJ1CF2">Phone</label>
+         </div>
+         <div class="zcwf_col_fld">
+           <input type="text" id="COBJ1CF2" name="COBJ1CF2" maxlength="30" />
+           <div class="zcwf_col_help"></div>
+         </div>
+       </div>
+     </div>
+
+     <div style="overflow: auto">
+       <div style="width:100%;text-align: center;">
+         <button type="button" id="prevBtn" class="thm-btn" style="background-color: white;color: #015fc9;" onclick="nextPrev(-1)">
+           Previous
+         </button>
+         <button type="button" id="nextBtn" class="thm-btn" style="background-color: white;color: #015fc9;"  onclick="nextPrev(1)">
+           Next
+         </button>
+       </div>
+     </div>
+
+     <!-- Circles which indicates the steps of the form: -->
+     <div style="text-align: center; margin-top: 40px">
+       <span class="step"></span>
+       <span class="step"></span>
+       <span class="step"></span>
+       <span class="step"></span>
+     </div>
+
+     <div class="zcwf_row">
+       <div class="zcwf_col_lab" style="font-size: 12px; font-family: Arial">
+         <label for="COBJ1CF5">Goal</label>
+       </div>
+       <div class="zcwf_col_fld">
+         <select class="zcwf_col_fld_slt" id="COBJ1CF5" name="COBJ1CF5">
+           <option value="-None-">-None-</option>
+           <option value="Buy&#x20;a&#x20;Home">Buy a Home</option>
+           <option value="Policy&#x20;Review">Policy Review</option>
+           <option value="Save&#x20;for&#x20;College">
+             Save for College
+           </option>
+           <option value="Save&#x20;for&#x20;Retirement">
+             Save for Retirement
+           </option>
+           <option value="Protect&#x20;my&#x20;Income">
+             Protect my Income
+           </option>
+           <option value="Plan&#x20;for&#x20;Growing&#x20;Family">
+             Plan for Growing Family
+           </option>
+           <option value="Protect&#x20;My&#x20;Family">
+             Protect My Family
+           </option>
+           <option value="Grow&#x20;My&#x20;Business">
+             Grow My Business
+           </option>
+           <option value="Grow&#x20;My&#x20;Investments">
+             Grow My Investments
+           </option>
+           <option value="I&#x27;m&#x20;not&#x20;Sure">
+             I&#x27;m not Sure
+           </option>
+         </select>
+         <div class="zcwf_col_help"></div>
+       </div>
+     </div>
+     <div class="zcwf_row">
+       <div class="zcwf_col_lab" style="font-size: 12px; font-family: Arial">
+         <label for="COBJ1CF3">Subject</label>
+       </div>
+       <div class="zcwf_col_fld">
+         <input type="text" id="COBJ1CF3" name="COBJ1CF3" maxlength="255" />
+         <div class="zcwf_col_help"></div>
+       </div>
+     </div>
+     <div class="zcwf_row">
+       <div class="zcwf_col_lab"></div>
+       <div class="zcwf_col_fld">
+         <input
+           type="submit"
+           id="formsubmit"
+           class="formsubmit zcwf_button"
+           value="Submit"
+           title="Submit"
+         /><input
+           type="reset"
+           class="zcwf_button"
+           name="reset"
+           value="Reset"
+           title="Reset"
+         />
+       </div>
+     </div>
+     <script>
+       function validateEmail5572526000004361047() {
+         var form = document.forms["WebForm5572526000004361047"];
+         var emailFld = form.querySelectorAll("[ftype=email]");
+         var i;
+         for (i = 0; i < emailFld.length; i++) {
+           var emailVal = emailFld[i].value;
+           if (emailVal.replace(/^\s+|\s+$/g, "").length != 0) {
+             var atpos = emailVal.indexOf("@");
+             var dotpos = emailVal.lastIndexOf(".");
+             if (
+               atpos < 1 ||
+               dotpos < atpos + 2 ||
+               dotpos + 2 >= emailVal.length
+             ) {
+               alert("Please enter a valid email address. ");
+               emailFld[i].focus();
+               return false;
+             }
+           }
+         }
+         return true;
+       }
+
+       function checkMandatory5572526000004361047() {
+         var mndFileds = new Array("NAME");
+         var fldLangVal = new Array("Name");
+         for (i = 0; i < mndFileds.length; i++) {
+           var fieldObj =
+             document.forms["WebForm5572526000004361047"][mndFileds[i]];
+           if (fieldObj) {
+             if (fieldObj.value.replace(/^\s+|\s+$/g, "").length == 0) {
+               if (fieldObj.type == "file") {
+                 alert("Please select a file to upload.");
+                 fieldObj.focus();
+                 return false;
+               }
+               alert(fldLangVal[i] + " cannot be empty.");
+               fieldObj.focus();
+               return false;
+             } else if (fieldObj.nodeName == "SELECT") {
+               if (
+                 fieldObj.options[fieldObj.selectedIndex].value == "-None-"
+               ) {
+                 alert(fldLangVal[i] + " cannot be none.");
+                 fieldObj.focus();
+                 return false;
+               }
+             } else if (fieldObj.type == "checkbox") {
+               if (fieldObj.checked == false) {
+                 alert("Please accept  " + fldLangVal[i]);
+                 fieldObj.focus();
+                 return false;
+               }
+             }
+             try {
+               if (fieldObj.name == "Last Name") {
+                 name = fieldObj.value;
+               }
+             } catch (e) {}
+           }
+         }
+         if (!validateEmail5572526000004361047()) {
+           return false;
+         }
+         document
+           .querySelector(".crmWebToEntityForm .formsubmit")
+           .setAttribute("disabled", true);
+       }
+
+       function tooltipShow5572526000004361047(el) {
+         var tooltip = el.nextElementSibling;
+         var tooltipDisplay = tooltip.style.display;
+         if (tooltipDisplay == "none") {
+           var allTooltip =
+             document.getElementsByClassName("zcwf_tooltip_over");
+           for (i = 0; i < allTooltip.length; i++) {
+             allTooltip[i].style.display = "none";
+           }
+           tooltip.style.display = "block";
+         } else {
+           tooltip.style.display = "none";
+         }
+       }
+     </script>
+     <!-- Do not remove this --- Analytics Tracking code starts -->
+     <script
+       id="wf_anal"
+       src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=302ea04f46e70a0985cd5476bc5124b138431da681062a30e72ae1d70ae85400gid28ee8f012c038486e7f97d8e377b2f6cf29c85ba010a9d35f8b01a68a78c4ee4gid0553f79ba9ccf83e1be97f6851b4205dc78530f131c55496a36cdc928fa214e9gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a"
+     ></script>
+     <!-- Do not remove this --- Analytics Tracking code ends. -->
+   </form>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- /.MultiStep Form -->
 
       <!--Contact Page Start-->
-      <section class="contact-page">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-4 col-lg-5">
-              <div class="contact-page__left">
-                <div class="section-title text-left">
-                  <div class="section-sub-title-box">
-                    <p class="section-sub-title">Contact us</p>
-                    <div class="section-title-shape-1">
-                      <img
-                        src="assets/images/shapes/section-title-shape-1.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="section-title-shape-2">
-                      <img
-                        src="assets/images/shapes/section-title-shape-2.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <h2 class="section-title__title">
-                    Feel free to get in touch with experts
-                  </h2>
-                </div>
-                <div class="contact-page__call-email">
-                  <div class="contact-page__call-icon">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <div class="contact-page__call-email-content">
-                    <h4>
-                      <a
-                        href="tel:561-646-0095"
-                        class="contact-page__call-number"
-                        >561-646-0095</a
-                      >
-                      <a
-                        href="mailto:swolkov@globeintegrity.com"
-                        class="contact-page__email"
-                        >swolkov@globeintegrity.com</a
-                      >
-                    </h4>
-                  </div>
-                </div>
-                <p class="contact-page__location-text">
-                  2560 s ocean blvd palm beach, <br />
-                  Florida , USA
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-8 col-lg-7">
-              <div class="contact-page__right">
-                <div class="contact-page__form">
-                  <!-- <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
-                                    novalidate="novalidate">
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Your name" name="name">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="comment-form__input-box">
-                                                <input type="email" placeholder="Email address" name="email">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Phone number" name="phone">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Subject" name="subject">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="comment-form__input-box text-message-box">
-                                                <textarea name="message" placeholder="Write a message"></textarea>
-                                            </div>
-                                            <div class="comment-form__btn-box">
-                                                <button type="submit" class="thm-btn comment-form__btn">Send a
-                                                    Message</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form> -->
-
-                  <!-- Zoho Forms -->
-
-                  <!-- Note :
-   - You can modify the font style and form style to suit your website. 
-   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
-   - The Mandatory check script can modified as to suit your business needs. 
-   - It is important that you test the modified form before going live.-->
-
-                  <!-- Contact Us -->
-                  <div
-                    id="crmWebToEntityForm"
-                    class="zcwf_lblLeft crmWebToEntityForm"
-                    style="
-                      background-color: white;
-                      color: black;
-                      max-width: 600px;
-                    "
-                  >
-                    <meta
-                      name="viewport"
-                      content="width=device-width, initial-scale=1.0"
-                    />
-                    <meta
-                      http-equiv="content-type"
-                      content="text/html;charset=UTF-8"
-                    />
-                    <form
-                      action="https://crm.zoho.com/crm/WebForm"
-                      name="WebForm5572526000004234240"
-                      method="POST"
-                      onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000004234240()'
-                      accept-charset="UTF-8"
-                    >
-                      <input
-                        type="text"
-                        style="display: none"
-                        name="xnQsjsdp"
-                        value="28ee8f012c038486e7f97d8e377b2f6cf29c85ba010a9d35f8b01a68a78c4ee4"
-                      />
-                      <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-                      <input
-                        type="text"
-                        style="display: none"
-                        name="xmIwtLD"
-                        value="302ea04f46e70a0985cd5476bc5124b1875607e676e82fb495182da535929f41"
-                      />
-                      <input
-                        type="text"
-                        style="display: none"
-                        name="actionType"
-                        value="Q3VzdG9tTW9kdWxlMQ=="
-                      />
-                      <input
-                        type="text"
-                        style="display: none"
-                        name="returnURL"
-                        value="https&#x3a;&#x2f;&#x2f;www.globeintegrity.com&#x2f;"
-                      />
-                      <!-- Do not remove this code. -->
-                      <style>
-                        html,
-                        body {
-                          margin: 0px;
-                        }
-                        #crmWebToEntityForm.zcwf_lblLeft {
-                          width: 100%;
-                          margin: 0 auto;
-                          box-sizing: border-box;
-                        }
-                        #crmWebToEntityForm.zcwf_lblLeft * {
-                          box-sizing: border-box;
-                        }
-                        #crmWebToEntityForm {
-                          text-align: left;
-                        }
-                        #crmWebToEntityForm * {
-                          direction: ltr;
-                        }
-                        .zcwf_lblLeft .zcwf_title {
-                          word-wrap: break-word;
-                          padding: 0px 6px 10px;
-                          font-weight: bold;
-                        }
-                        .zcwf_lblLeft .zcwf_col_fld input[type="text"],
-                        .zcwf_lblLeft .zcwf_col_fld textarea {
-                          width: 60%;
-                          border: 1px solid #c0c6cc !important;
-                          resize: vertical;
-                          border-radius: 2px;
-                          float: left;
-                        }
-                        .zcwf_lblLeft .zcwf_col_lab {
-                          width: 100%;
-                          word-break: break-word;
-                          padding: 0px 6px 0px;
-                          margin-right: 10px;
-                          margin-top: 5px;
-                          float: left;
-                          min-height: 1px;
-                        }
-                        .zcwf_lblLeft .zcwf_col_fld {
-                          float: left;
-                          width: 68%;
-                          padding: 0px 6px 0px;
-                          position: relative;
-                          margin-top: 5px;
-                        }
-                        .zcwf_lblLeft .zcwf_privacy {
-                          padding: 6px;
-                        }
-                        .zcwf_lblLeft .wfrm_fld_dpNn {
-                          display: none;
-                        }
-                        .dIB {
-                          display: inline-block;
-                        }
-                        .zcwf_lblLeft .zcwf_col_fld_slt {
-                          width: 60%;
-                          border: 1px solid #ccc;
-                          background: #fff;
-                          border-radius: 4px;
-                          font-size: 12px;
-                          float: left;
-                          resize: vertical;
-                          padding: 2px 5px;
-                        }
-                        .zcwf_lblLeft .zcwf_row:after,
-                        .zcwf_lblLeft .zcwf_col_fld:after {
-                          content: "";
-                          display: table;
-                          clear: both;
-                        }
-                        .zcwf_lblLeft .zcwf_col_help {
-                          float: left;
-                          margin-left: 7px;
-                          font-size: 12px;
-                          max-width: 35%;
-                          word-break: break-word;
-                        }
-                        .zcwf_lblLeft .zcwf_help_icon {
-                          cursor: pointer;
-                          width: 16px;
-                          height: 16px;
-                          display: inline-block;
-                          background: #fff;
-                          border: 1px solid #c0c6cc;
-                          color: #c1c1c1;
-                          text-align: center;
-                          font-size: 11px;
-                          line-height: 16px;
-                          font-weight: bold;
-                          border-radius: 50%;
-                        }
-                        .zcwf_lblLeft .zcwf_row {
-                          margin: 15px 0px;
-                        }
-                        .zcwf_lblLeft .formsubmit {
-                          margin-right: 5px;
-                          cursor: pointer;
-                          color: var(--baseColor);
-                          font-size: 12px;
-                        }
-                        .zcwf_lblLeft .zcwf_privacy_txt {
-                          width: 90%;
-                          color: rgb(0, 0, 0);
-                          font-size: 12px;
-                          font-family: Arial;
-                          display: inline-block;
-                          vertical-align: top;
-                          color: var(--baseColor);
-                          padding-top: 2px;
-                          margin-left: 6px;
-                        }
-                        .zcwf_lblLeft .zcwf_button {
-                          font-size: 12px;
-                          color: var(--baseColor);
-                          border: 1px solid #c0c6cc;
-                          padding: 3px 9px;
-                          border-radius: 4px;
-                          cursor: pointer;
-                          max-width: 120px;
-                          overflow: hidden;
-                          text-overflow: ellipsis;
-                          white-space: nowrap;
-                        }
-                        .zcwf_lblLeft .zcwf_tooltip_over {
-                          position: relative;
-                        }
-                        .zcwf_lblLeft .zcwf_tooltip_ctn {
-                          position: absolute;
-                          background: #dedede;
-                          padding: 3px 6px;
-                          top: 3px;
-                          border-radius: 4px;
-                          word-break: break-word;
-                          min-width: 100px;
-                          max-width: 150px;
-                          color: var(--baseColor);
-                          z-index: 100;
-                        }
-                        .zcwf_lblLeft .zcwf_ckbox {
-                          float: left;
-                        }
-                        .zcwf_lblLeft .zcwf_file {
-                          width: 55%;
-                          box-sizing: border-box;
-                          float: left;
-                        }
-                        .clearB:after {
-                          content: "";
-                          display: block;
-                          clear: both;
-                        }
-                        @media all and (max-width: 600px) {
-                          .zcwf_lblLeft .zcwf_col_lab,
-                          .zcwf_lblLeft .zcwf_col_fld {
-                            width: auto;
-                            float: none !important;
-                          }
-                          .zcwf_lblLeft .zcwf_col_help {
-                            width: 40%;
-                          }
-                        }
-                      </style>
-
-                      <div class="row">
-                        <div class="col-xl-6">
-                          <div class="comment-form__input-box">
-                            <div class="zcwf_row">
-                              <div
-                                class="zcwf_col_lab"
-                                style="
-                                  font-size: 12px;
-                                  font-family: Arial;
-                                  width: 100%;
-                                "
-                              ></div>
-                              <div class="zcwf_col_fld" style="width: 100%">
-                                <input
-                                  required
-                                  type="text"
-                                  id="NAME"
-                                  name="NAME"
-                                  maxlength="120"
-                                  style="
-                                    width: 100%;
-                                    border: none !important;
-                                    border-radius: 8px;
-                                  "
-                                  placeholder="Name"
-                                />
-                                <div class="zcwf_col_help"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-6">
-                          <div class="comment-form__input-box">
-                            <div class="zcwf_row">
-                              <div
-                                class="zcwf_col_lab"
-                                style="
-                                  font-size: 12px;
-                                  font-family: Arial;
-                                  width: 100%;
-                                "
-                              ></div>
-                              <div class="zcwf_col_fld" style="width: 100%">
-                                <input
-                                  required
-                                  type="text"
-                                  ftype="email"
-                                  id="Email"
-                                  name="Email"
-                                  maxlength="100"
-                                  style="
-                                    width: 100%;
-                                    border: none !important;
-                                    border-radius: 8px;
-                                  "
-                                  placeholder="Email"
-                                />
-                                <div class="zcwf_col_help"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-6">
-                          <div class="comment-form__input-box">
-                            <div class="zcwf_row">
-                              <div
-                                class="zcwf_col_lab"
-                                style="
-                                  font-size: 12px;
-                                  font-family: Arial;
-                                  width: 100%;
-                                "
-                              ></div>
-                              <div class="zcwf_col_fld" style="width: 100%">
-                                <input
-                                  required
-                                  type="text"
-                                  id="COBJ1CF2"
-                                  name="COBJ1CF2"
-                                  maxlength="30"
-                                  style="
-                                    width: 100%;
-                                    border: none !important;
-                                    border-radius: 8px;
-                                  "
-                                  class="Phone Number"
-                                  placeholder="Phone Number"
-                                />
-                                <div class="zcwf_col_help"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-6">
-                          <div class="comment-form__input-box">
-                            <div class="zcwf_row">
-                              <div
-                                class="zcwf_col_lab"
-                                style="
-                                  font-size: 12px;
-                                  font-family: Arial;
-                                  width: 100%;
-                                "
-                              ></div>
-                              <div class="zcwf_col_fld" style="width: 100%">
-                                <input
-                                  type="text"
-                                  id="COBJ1CF3"
-                                  name="COBJ1CF3"
-                                  maxlength="255"
-                                  style="
-                                    width: 100%;
-                                    border: none !important;
-                                    border-radius: 8px;
-                                  "
-                                  placeholder="Subject"
-                                />
-                                <div class="zcwf_col_help"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="zcwf_row">
-                        <div
-                          class="zcwf_col_lab"
-                          style="
-                            font-size: 12px;
-                            font-family: Arial;
-                            width: 100%;
-                          "
-                        ></div>
-                        <div
-                          class="zcwf_col_fld comment-form__input-box text-message-box"
-                          style="width: 100%"
-                        >
-                          <textarea
-                            id="COBJ1CF1"
-                            name="COBJ1CF1"
-                            style="
-                              width: 100%;
-                              border: none !important;
-                              border-radius: 8px;
-                            "
-                            placeholder="Message"
-                          ></textarea>
-                          <div class="zcwf_col_help"></div>
-                        </div>
-                      </div>
-                      <div class="zcwf_row">
-                        <div class="zcwf_col_lab"></div>
-                        <div class="zcwf_col_fld">
-                          <input
-                            type="submit"
-                            id="formsubmit"
-                            class="formsubmit zcwf_button btn btn-primary"
-                            value="Submit"
-                            title="Submit"
-                          />
-                        </div>
-                      </div>
-                      <script>
-                        function validateEmail5572526000004234240() {
-                          var form =
-                            document.forms["WebForm5572526000004234240"];
-                          var emailFld = form.querySelectorAll("[ftype=email]");
-                          var i;
-                          for (i = 0; i < emailFld.length; i++) {
-                            var emailVal = emailFld[i].value;
-                            if (
-                              emailVal.replace(/^\s+|\s+$/g, "").length != 0
-                            ) {
-                              var atpos = emailVal.indexOf("@");
-                              var dotpos = emailVal.lastIndexOf(".");
-                              if (
-                                atpos < 1 ||
-                                dotpos < atpos + 2 ||
-                                dotpos + 2 >= emailVal.length
-                              ) {
-                                alert("Please enter a valid email address. ");
-                                emailFld[i].focus();
-                                return false;
-                              }
-                            }
-                          }
-                          return true;
-                        }
-
-                        function checkMandatory5572526000004234240() {
-                          var mndFileds = new Array("NAME");
-                          var fldLangVal = new Array("Name");
-                          for (i = 0; i < mndFileds.length; i++) {
-                            var fieldObj =
-                              document.forms["WebForm5572526000004234240"][
-                                mndFileds[i]
-                              ];
-                            if (fieldObj) {
-                              if (
-                                fieldObj.value.replace(/^\s+|\s+$/g, "")
-                                  .length == 0
-                              ) {
-                                if (fieldObj.type == "file") {
-                                  alert("Please select a file to upload.");
-                                  fieldObj.focus();
-                                  return false;
-                                }
-                                alert(fldLangVal[i] + " cannot be empty.");
-                                fieldObj.focus();
-                                return false;
-                              } else if (fieldObj.nodeName == "SELECT") {
-                                if (
-                                  fieldObj.options[fieldObj.selectedIndex]
-                                    .value == "-None-"
-                                ) {
-                                  alert(fldLangVal[i] + " cannot be none.");
-                                  fieldObj.focus();
-                                  return false;
-                                }
-                              } else if (fieldObj.type == "checkbox") {
-                                if (fieldObj.checked == false) {
-                                  alert("Please accept  " + fldLangVal[i]);
-                                  fieldObj.focus();
-                                  return false;
-                                }
-                              }
-                              try {
-                                if (fieldObj.name == "Last Name") {
-                                  name = fieldObj.value;
-                                }
-                              } catch (e) {}
-                            }
-                          }
-                          if (!validateEmail5572526000004234240()) {
-                            return false;
-                          }
-                          document
-                            .querySelector(".crmWebToEntityForm .formsubmit")
-                            .setAttribute("disabled", true);
-                        }
-
-                        function tooltipShow5572526000004234240(el) {
-                          var tooltip = el.nextElementSibling;
-                          var tooltipDisplay = tooltip.style.display;
-                          if (tooltipDisplay == "none") {
-                            var allTooltip =
-                              document.getElementsByClassName(
-                                "zcwf_tooltip_over"
-                              );
-                            for (i = 0; i < allTooltip.length; i++) {
-                              allTooltip[i].style.display = "none";
-                            }
-                            tooltip.style.display = "block";
-                          } else {
-                            tooltip.style.display = "none";
-                          }
-                        }
-                      </script>
-                      <!-- Do not remove this --- Analytics Tracking code starts -->
-                      <script
-                        id="wf_anal"
-                        src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=302ea04f46e70a0985cd5476bc5124b1875607e676e82fb495182da535929f41gid28ee8f012c038486e7f97d8e377b2f6cf29c85ba010a9d35f8b01a68a78c4ee4gid0553f79ba9ccf83e1be97f6851b4205dc78530f131c55496a36cdc928fa214e9gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a"
-                      ></script>
-                      <!-- Do not remove this --- Analytics Tracking code ends. -->
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
       <!--Contact Page End-->
 
       <!--CTA One Start-->
@@ -1940,213 +1562,104 @@
     <script src="assets/vendors/timepicker/timePicker.js"></script>
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
-
     <script>
-      //jQuery time
-      var current_fs, next_fs, previous_fs; //fieldsets
-      var left, opacity, scale; //fieldset properties which we will animate
-      var animating; //flag to prevent quick multi-click glitches
-
-      $(".next").click(function(event){
-    event.preventDefault(); // Prevent form submission for demonstration purposes
-    
-    if(animating) return false;
-    animating = true;
-    
-    current_fs = $(this).parent();
-    next_fs = $(this).parent().next();
-    
-    // Check all fields within the current fieldset
-    var fields = current_fs.find("input, select, textarea");
-    var isValid = true;
-    
-    fields.each(function(){
-        var fieldValue = $(this).val().trim();
-        if(fieldValue === ""){
-            isValid = false;
-            $(this).addClass("warning");
-            if (!$(this).next('.field-warning').length) {
-                $(this).after('<span class="field-warning">This field is required</span>');
-            }
+      var currentTab = 0; // Current tab is set to be the first tab (0)
+      showTab(currentTab); // Display the current tab
+  
+      function showTab(n) {
+        // This function will display the specified tab of the form ...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        // ... and fix the Previous/Next buttons:
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
         } else {
-            $(this).removeClass("warning");
-            $(this).next('.field-warning').remove();
+          document.getElementById("prevBtn").style.display = "inline";
         }
-    });
-    
-    if (!isValid) {
-        animating = false;
-        $(".next").prop("disabled", true).css("background-color", "#ccc").addClass("disabled"); // Change button color and add disabled style
-        return false;
-    }
-    
-    $(".next").prop("disabled", false).css("background-color", "#4CAF50").removeClass("disabled"); // Change button color and remove disabled style
-    
-    //activate next step on progressbar using the index of next_fs
-    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-    
-    //show the next fieldset
-    next_fs.show(); 
-    //hide the current fieldset with style
-    current_fs.animate({
-        opacity: 0
-    }, {
-        step: function(now, mx) {
-            // ... (rest of the animation code)
-        }, 
-        duration: 800, 
-        complete: function(){
-            current_fs.hide();
-            animating = false;
-        }, 
-        //this comes from the custom easing plugin
-        easing: 'easeInOutBack'
-    });
-});
-
-
-      $(".previous").click(function () {
-        if (animating) return false;
-        animating = true;
-
-        current_fs = $(this).parent();
-        previous_fs = $(this).parent().prev();
-
-        //de-activate current step on progressbar
-        $("#progressbar li")
-          .eq($("fieldset").index(current_fs))
-          .removeClass("active");
-
-        //show the previous fieldset
-        previous_fs.show();
-        //hide the current fieldset with style
-        current_fs.animate(
-          { opacity: 0 },
-          {
-            step: function (now, mx) {
-              //as the opacity of current_fs reduces to 0 - stored in "now"
-              //1. scale previous_fs from 80% to 100%
-              scale = 0.8 + (1 - now) * 0.2;
-              //2. take current_fs to the right(50%) - from 0%
-              left = (1 - now) * 50 + "%";
-              //3. increase opacity of previous_fs to 1 as it moves in
-              opacity = 1 - now;
-              current_fs.css({ left: left });
-              previous_fs.css({
-                transform: "scale(" + scale + ")",
-                opacity: opacity,
-              });
-            },
-            duration: 800,
-            complete: function () {
-              current_fs.hide();
-              animating = false;
-            },
-            //this comes from the custom easing plugin
-            easing: "easeInOutBack",
-          }
-        );
-      });
-
-      $(".submit").click(function () {
-        return false;
-      });
-    </script>
-
-    <script>
-      // Zoho Form Script
-      function validateEmail5572526000004361047() {
-        var form = document.forms["WebForm5572526000004361047"];
-        var emailFld = form.querySelectorAll("[ftype=email]");
-        var i;
-        for (i = 0; i < emailFld.length; i++) {
-          var emailVal = emailFld[i].value;
-          if (emailVal.replace(/^\s+|\s+$/g, "").length != 0) {
-            var atpos = emailVal.indexOf("@");
-            var dotpos = emailVal.lastIndexOf(".");
-            if (
-              atpos < 1 ||
-              dotpos < atpos + 2 ||
-              dotpos + 2 >= emailVal.length
-            ) {
-              alert("Please enter a valid email address. ");
-              emailFld[i].focus();
-              return false;
-            }
-          }
+        if (n == x.length - 1) {
+          document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Next";
         }
-        return true;
+        // ... and run a function that displays the correct step indicator:
+        fixStepIndicator(n);
       }
-
-      function checkMandatory5572526000004361047() {
-        var mndFileds = new Array("NAME");
-        var fldLangVal = new Array("Name");
-        for (i = 0; i < mndFileds.length; i++) {
-          var fieldObj =
-            document.forms["WebForm5572526000004361047"][mndFileds[i]];
-          if (fieldObj) {
-            if (fieldObj.value.replace(/^\s+|\s+$/g, "").length == 0) {
-              if (fieldObj.type == "file") {
-                alert("Please select a file to upload.");
-                fieldObj.focus();
-                return false;
-              }
-              alert(fldLangVal[i] + " cannot be empty.");
-              fieldObj.focus();
-              return false;
-            } else if (fieldObj.nodeName == "SELECT") {
-              if (fieldObj.options[fieldObj.selectedIndex].value == "-None-") {
-                alert(fldLangVal[i] + " cannot be none.");
-                fieldObj.focus();
-                return false;
-              }
-            } else if (fieldObj.type == "checkbox") {
-              if (fieldObj.checked == false) {
-                alert("Please accept  " + fldLangVal[i]);
-                fieldObj.focus();
-                return false;
-              }
-            }
-            try {
-              if (fieldObj.name == "Last Name") {
-                name = fieldObj.value;
-              }
-            } catch (e) {}
-          }
-        }
-        if (!validateEmail5572526000004361047()) {
+  
+      function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form... :
+        if (currentTab >= x.length) {
+          //...the form gets submitted:
+          document.getElementById("regForm").submit();
           return false;
         }
-        document
-          .querySelector(".crmWebToEntityForm .formsubmit")
-          .setAttribute("disabled", true);
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
       }
-
-      function tooltipShow5572526000004361047(el) {
-        var tooltip = el.nextElementSibling;
-        var tooltipDisplay = tooltip.style.display;
-        if (tooltipDisplay == "none") {
-          var allTooltip = document.getElementsByClassName("zcwf_tooltip_over");
-          for (i = 0; i < allTooltip.length; i++) {
-            allTooltip[i].style.display = "none";
-          }
-          tooltip.style.display = "block";
-        } else {
-          tooltip.style.display = "none";
+  
+      function validateForm() {
+        // This function deals with validation of the form fields
+        var x,
+          y,
+          i,
+          valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        var MySelect = x[currentTab].getElementsByTagName("select");
+  
+        if (MySelect.length >= 1 && MySelect[0].value === "-None-") {
+          // Use === for comparison
+          MySelect[0].classList.add("invalid"); // Add missing semicolon
+          valid = false;
         }
+  
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+          // If a field is empty...
+          if (y[i].value === "") {
+            // Use === for comparison
+            // add an "invalid" class to the field:
+            y[i].classList.add("invalid"); // Add missing semicolon
+            // and set the current valid status to false:
+            valid = false;
+          }
+        }
+  
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+          document
+            .getElementsByClassName("step")
+            [currentTab].classList.add("finish"); // Add missing semicolon
+        }
+  
+        return valid; // return the valid status
       }
-    </script>
-
-    <script>
-      // MultistepForm
-      // function checkValue() {
-      // 	var name = document.getElementById("NAME");
-      //     console.log("fisdi")
-      //     if(name.value === "") {
-      //       var att = document.createAttribute("required");
-      //       name.setAttributeNode(att);
-      //     }
-      // }
+  
+      function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i,
+          x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class to the current step:
+        x[n].className += " active";
+      }
+  
+      document
+        .getElementById("regForm")
+        .addEventListener("keydown", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault(); // Prevent form submission
+          }
+        });
     </script>
 
     <!-- template js -->
