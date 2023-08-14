@@ -438,7 +438,7 @@
     animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    background-image: url(../images/loader.png);
+    background-image: url(../images/loader.webp);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 60px auto;
@@ -5530,7 +5530,7 @@
     bottom: -46px;
     left: 70px;
     content: "";
-    background-image: url(../images/shapes/about-two-awards-shape-1.png);
+    background-image: url(../images/shapes/about-two-awards-shape-1.webp);
     background-repeat: no-repeat;
     width: 73px;
     height: 46px;
