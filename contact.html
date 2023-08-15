@@ -901,6 +901,9 @@
                 max="99"
                 style="width: 100%;"
               />
+              <div id="ageWarning" class="warning-message" style="display: none;">
+                Age must be between 18 and 90.
+              </div>
               <div class="zcwf_col_help"></div>
             </div>
           </div></div>
@@ -911,16 +914,20 @@
               class="zcwf_col_lab"
               style="font-size: 12px; font-family: Arial"
             >
-              <label for="COBJ1CF52" style="width:100%">U.S. ZIP code</label>
+              <label for="COBJ1CF52" style="width:100%">U.S. ZIP Code</label>
             </div>
             <div class="zcwf_col_fld">
               <input
-                type="text"
+                type="number"
                 id="COBJ1CF52"
                 name="COBJ1CF52"
-                maxlength="9"
+                max="999999"
                 style="width: 100%;"
               />
+              <div id="zipCodeWarning" class="warning-message" style="display: none;">
+                Invalid ZIP code. Please enter a valid US ZIP code.
+              </div>
+              
               <div class="zcwf_col_help"></div>
             </div>
           </div></div>
@@ -1024,13 +1031,17 @@
             </div>
             <div class="zcwf_col_fld">
               <input
-                type="text"
+                type="email"
                 ftype="email"
                 id="Email"
                 name="Email"
                 maxlength="100"
                 style="width: 100%;"
               />
+              <div id="emailWarning" class="warning-message" style="display: none;">
+                Invalid email. Please enter a valid email address.
+              </div>
+              
               <div class="zcwf_col_help"></div>
             </div>
           </div></div>
@@ -1044,9 +1055,12 @@
               <label for="COBJ1CF2">Phone</label>
             </div>
             <div class="zcwf_col_fld">
-              <input type="text" id="COBJ1CF2" name="COBJ1CF2" maxlength="30"
+              <input type="number" id="COBJ1CF2" name="COBJ1CF2" maxlength="30"
               style="width: 100%;"
-              />
+              /><div id="mobileWarning" class="warning-message" style="display: none;">
+                Invalid mobile number. Please enter a valid US mobile number (10 digits).
+              </div>
+                
               <div class="zcwf_col_help"></div>
             </div>
           </div></div>
@@ -1312,7 +1326,7 @@
           <div class="site-footer__top">
             <div class="row">
               <div
-                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay="100ms"
               >
                 <div class="footer-widget__column footer-widget__about">
@@ -1341,7 +1355,7 @@
                 </div>
               </div>
               <div
-                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay="200ms"
               >
                 <div
@@ -1386,8 +1400,8 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              <!-- <div
+                class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay="300ms"
               >
                 <div
@@ -1453,18 +1467,18 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
               <div
-                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay="400ms"
               >
                 <div class="footer-widget__column footer-widget__newsletter">
-                  <h3 class="footer-widget__title">Newsletter</h3>
-                  <p class="footer-widget__newsletter-text">
+                  <h3 class="footer-widget__title">Call us Now On</h3>
+                  <!-- <p class="footer-widget__newsletter-text">
                     Subscribe our newsletter to get our <br />
                     latest update & news.
-                  </p>
-                  <form class="footer-widget__newsletter-form">
+                  </p> -->
+                  <!-- <form class="footer-widget__newsletter-form">
                     <div class="footer-widget__newsletter-input-box">
                       <input
                         type="email"
@@ -1478,7 +1492,7 @@
                         <i class="far fa-paper-plane"></i>
                       </button>
                     </div>
-                  </form>
+                  </form> -->
                   <div class="footer-widget__phone">
                     <div class="footer-widget__phone-icon">
                       <i class="fa-solid fa-phone" style="color: #015fc9"></i>
@@ -1638,7 +1652,64 @@
         x = document.getElementsByClassName("tab");
         y = x[currentTab].getElementsByTagName("input");
         var MySelect = x[currentTab].getElementsByTagName("select");
+
+        var ageInput = document.getElementById("COBJ1CF51"); // Age input
+  var ageValue = parseInt(ageInput.value);
   
+  var zipCodeInput = document.getElementById("COBJ1CF52"); // ZIP code input
+  var zipCodeValue = zipCodeInput.value;
+  
+  var zipCodePattern = /^\d{5}(?:-\d{4})?$/; // ZIP code regular expression pattern
+
+  if (currentTab === 1) {
+    // Validate age in the first step
+    if (ageValue < 18 || ageValue > 90) {
+      ageInput.classList.add("invalid");
+      document.getElementById("ageWarning").style.display = "block"; // Display the age warning message
+      valid = false;
+    } else {
+      ageInput.classList.remove("invalid");
+      document.getElementById("ageWarning").style.display = "none"; // Hide the age warning message
+    }
+    if (!zipCodePattern.test(zipCodeValue)) {
+      zipCodeInput.classList.add("invalid");
+      document.getElementById("zipCodeWarning").style.display = "block"; // Display the ZIP code warning message
+      valid = false;
+    } else {
+      zipCodeInput.classList.remove("invalid");
+      document.getElementById("zipCodeWarning").style.display = "none"; // Hide the ZIP code warning message
+    }
+  }
+  var emailInput = document.getElementById("Email"); // Email input
+  var emailValue = emailInput.value;
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var mobileInput = document.getElementById("COBJ1CF2"); // Mobile number input
+  var mobileValue = mobileInput.value;
+  var mobilePattern = /^\d{10}$/; // Basic US mobile number pattern (10 digits)
+
+  // validate Email
+  if  (currentTab==3){
+    if (!emailPattern.test(emailValue)) {
+    emailInput.classList.add("invalid");
+    document.getElementById("emailWarning").style.display = "block"; // Display the email warning message
+    valid = false;
+  } else {
+    emailInput.classList.remove("invalid");
+    document.getElementById("emailWarning").style.display = "none"; // Hide the email warning message
+  }
+  if (!mobilePattern.test(mobileValue)) {
+    mobileInput.classList.add("invalid");
+    document.getElementById("mobileWarning").style.display = "block"; // Display the mobile number warning message
+    valid = false;
+  } else {
+    mobileInput.classList.remove("invalid");
+    document.getElementById("mobileWarning").style.display = "none"; // Hide the mobile number warning message
+  }
+
+  }
+
+  //validate mobile number
+ 
         if (MySelect.length >= 1 && MySelect[0].value === "-None-") {
           // Use === for comparison
           MySelect[0].classList.add("invalid"); // Add missing semicolon
