@@ -256,7 +256,7 @@ input.invalid {
 <div style="text-align:center;margin-top:40px;display:none">
   <span class="step"></span>
   <span class="step"></span>
-  <span class="step"></span>
+  <!-- <span class="step"></span> -->
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
@@ -307,12 +307,11 @@ input.invalid {
 
 
 
-<div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'>Web Leads</div>
-<div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF51'>Age</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF51' name='LEADCF51' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
+<!-- <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF51'>Age</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF51' name='LEADCF51' maxlength='9'></input><div class='zcwf_col_help'></div></div></div> -->
 
-<div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div>
-<div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF3'>Contact Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF3' name='LEADCF3' maxlength='255'></input><div class='zcwf_col_help'></div></div></div>
-<div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Lead_Source'>Lead Source</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'  >
+<!-- <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div> -->
+<div class='zcwf_row' style="display: none;"><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial; display: none;'><label for='LEADCF30' >Contact Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' value="Spencer Wolkov" id='LEADCF3' name='LEADCF3' maxlength='255'></input><div class='zcwf_col_help'></div></div></div>
+<div class='zcwf_row' style="display: none;"><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial; display: none;'><label for='Lead_Source'>Lead Source</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'  >
 			<option value='-None-'>-None-</option>
 			<option value='Cold&#x20;Call'>Cold Call</option>
 			<option value='External&#x20;Referral'>External Referral</option>
@@ -320,7 +319,7 @@ input.invalid {
 			<option value='Policy&#x20;Review'>Policy Review</option>
 			<option value='Web&#x20;Lead' selected>Web Lead</option>
 		</select><div class='zcwf_col_help'></div></div></div>
-<div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Phone'>Phone</label></div><div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
+<!-- <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Phone'>Phone</label></div><div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF55'>Mortgage Value</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF55' name='LEADCF55' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
 <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF56'>Assests</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF56' name='LEADCF56' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
@@ -332,7 +331,9 @@ input.invalid {
 			<option value='Male'>Male</option>
 			<option value='Female'>Female</option>
 			<option value='Prefer&#x20;not&#x20;to&#x20;identify'>Prefer not to identify</option>
-		</select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
+		</select><div class='zcwf_col_help'></div></div></div> -->
+    <div class='zcwf_row' style="display: none;"><div class='zcwf_col_lab'></div>
+    <div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
 
 	<!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=302ea04f46e70a0985cd5476bc5124b11cb831beee7d6d8f89741f302bfe129cgid28ee8f012c038486e7f97d8e377b2f6cf29c85ba010a9d35f8b01a68a78c4ee4gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>
 </div>
@@ -352,7 +353,7 @@ input.invalid {
 				var dotpos=emailVal.lastIndexOf('.');
 				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)
 				{
-					alert('Please enter a valid email address. ');
+					// alert('Please enter a valid email address. ');
 					emailFld[i].focus();
 					return false;
 				}
@@ -370,22 +371,22 @@ input.invalid {
 			if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
 			 if(fieldObj.type =='file')
 				{ 
-				 alert('Please select a file to upload.'); 
+				//  alert('Please select a file to upload.'); 
 				 fieldObj.focus(); 
 				 return false;
 				} 
-			alert(fldLangVal[i] +' cannot be empty.'); 
+			// alert(fldLangVal[i] +' cannot be empty.'); 
    	   	  	  fieldObj.focus();
    	   	  	  return false;
 			}  else if(fieldObj.nodeName=='SELECT') {
   	   	   	 if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
-				alert(fldLangVal[i] +' cannot be none.'); 
+				// alert(fldLangVal[i] +' cannot be none.'); 
 				fieldObj.focus();
 				return false;
 			   }
 			} else if(fieldObj.type =='checkbox'){
  	 	 	 if(fieldObj.checked == false){
-				alert('Please accept  '+fldLangVal[i]);
+				// alert('Please accept  '+fldLangVal[i]);
 				fieldObj.focus();
 				return false;
 			   } 
