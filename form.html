@@ -298,8 +298,10 @@ input.invalid {
     <h2 class="help_text">Where Do you Live?</h2>
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ2CF56'>This helps us factor in the cost of living for your area.
     <br>Enter Zipcode
-  </label></div><div class='zcwf_col_fld'><input class="select_option" type='number' id='COBJ2CF56' name='COBJ2CF56' maxlength='9' ></input><div class='zcwf_col_help' ></div></div></div>
-  </div>
+  </label></div><div class='zcwf_col_fld'><input class="select_option" type='number' id='COBJ2CF56' name='COBJ2CF56' maxlength='5' ></input><div class='zcwf_col_help' ></div></div></div>
+  <div id="zipCodeWarning" class="warning-message" style="display: none;">
+    Invalid ZIP code. Please enter a valid US ZIP code.
+  </div></div>
 </div>
 
 <div class="tab">
@@ -312,7 +314,10 @@ input.invalid {
     <option value='Male'>Male</option>
     <option value='Female'>Female</option>
     <option value='Prefer&#x20;not&#x20;to&#x20;identify'>Prefer not to identify</option>
-  </select><div class='zcwf_col_help'></div></div></div>
+  </select><div class='zcwf_col_help'></div></div>
+  <div id="genderInputWarning" class="warning-message" style="display: none;">
+    Please select our gender.
+  </div></div>
 </div>
 </div>
 
@@ -321,6 +326,9 @@ input.invalid {
 <div class="background_div">  
   <h2 class="help_text">How old are you?</h2>
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ2CF57'>Age</label></div><div class='zcwf_col_fld'><input type='number' id='COBJ2CF57' name='COBJ2CF57' maxlength='9' class="select_option"></input><div class='zcwf_col_help'></div></div></div>
+  <div id="ageInputWarning" class="warning-message" style="display: none;">
+    Age must be between 18 and 90.
+  </div>
 </div>
 </div>
 
@@ -329,6 +337,9 @@ input.invalid {
 <div class="background_div">
   <h2 class="help_text">How many kids do you have?</h2>
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ2CF58'></label></div><div class='zcwf_col_fld'><input type='number' id='COBJ2CF58' name='COBJ2CF58' maxlength='9' class="select_option"></input><div class='zcwf_col_help'></div></div></div>
+  <div id="ageInputWarning" class="warning-message" style="display: none;">
+    Enter the Number of kids you have.
+  </div>
 </div>
 </div>
 
@@ -600,10 +611,63 @@ if  (currentTab==0){
     document.getElementById("dependWarning").style.display = "none"; // Hide the email warning message
   }
   }
+  if  (currentTab==1){
+    var ZipCodeInput = document.getElementById("COBJ2CF56"); // Email input
+    console.log(ZipCodeInput.value)
+    var zipCodeValue = ZipCodeInput.value;
+    var zipCodePattern = /^\d{5}(?:-\d{4})?$/;
+    if (!zipCodePattern.test(zipCodeValue)) {
+      ZipCodeInput.classList.add("invalid");
+      document.getElementById("zipCodeWarning").style.display = "block"; // Display the ZIP code warning message
+      valid = false;
+    } else {
+      ZipCodeInput.classList.remove("invalid");
+      document.getElementById("zipCodeWarning").style.display = "none"; // Hide the ZIP code warning message
+    }
+  }
+  if  (currentTab==2){
+    var genderInput = document.getElementById("COBJ2CF2"); // Email input
+    if (genderInput.value == '-None-') {
+    genderInput.classList.add("invalid");
+    document.getElementById("genderInputWarning").style.display = "block"; // Display the email warning message
+    valid = false;
+  } else {
+    genderInput.classList.remove("invalid");
+    document.getElementById("genderInputWarning").style.display = "none"; // Hide the email warning message
+  }
+  }
+  if (currentTab === 3) {
+    // Validate age in the first step
+    var ageInput = document.getElementById("COBJ2CF57"); // Email input
+    var ageValue = ageInput.value;
+    console.log(ageValue)
+    if (ageValue < 18 || ageValue > 90) {
+      
+      ageInput.classList.add("invalid");
+      document.getElementById("ageInputWarning").style.display = "block"; // Display the age warning message
+      valid = false;
+    } else {
+      ageInput.classList.remove("invalid");
+      document.getElementById("ageInputWarning").style.display = "none"; // Hide the age warning message
+    }
+  }
 
 
-
-
+  if (currentTab === 4) {
+    // Validate age in the first step
+    var ageInput = document.getElementById("COBJ2CF57"); // Email input
+    var ageValue = ageInput.value;
+    console.log(ageValue)
+    if (ageValue < 18 || ageValue > 90) {
+      
+      ageInput.classList.add("invalid");
+      document.getElementById("ageInputWarning").style.display = "block"; // Display the age warning message
+      valid = false;
+    } else {
+      ageInput.classList.remove("invalid");
+      document.getElementById("ageInputWarning").style.display = "none"; // Hide the age warning message
+    }
+  }
 
 
 
