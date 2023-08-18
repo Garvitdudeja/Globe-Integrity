@@ -104,7 +104,7 @@
       border-radius: 10px 10px 0px 0px;
     }
     
-    .tab {
+    .tabCustom {
       margin: auto;
       padding: 20px;
       width: 100%;
@@ -116,12 +116,12 @@
       height: 80px;
     }
     
-    .tab:hover {
+    .tabCustom:hover {
       background-color: white;
       color: #696e77;
     }
     
-    .tab.active {
+    .tabCustom.active {
       background-color: white;
       color: #696e77;
     }
@@ -519,9 +519,9 @@
 
       <section class="tabsSection">
         <div class="tabs">
-          <div class="tab active" data-tab="tab1">Policy Review</div>
-          <div class="tab" data-tab="tab2">Insurance</div>
-          <div class="tab" data-tab="tab3" >Investments</div>
+          <div class="tabCustom active" data-tab="tab1">Policy Review</div>
+          <div class="tabCustom" data-tab="tab2">Insurance</div>
+          <div class="tabCustom" data-tab="tab3" >Investments</div>
         </div>
         <div class="tab-content" data-tab="tab1">
           <h3 style="color: #696e77; line-height: 35px">
@@ -2311,7 +2311,7 @@
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 
     <script>
-      const tabs = document.querySelectorAll('.tab');
+      const tabs = document.querySelectorAll('.tabCustom');
       const tabContents = document.querySelectorAll('.tab-content');
       
       tabs.forEach(tab => {
