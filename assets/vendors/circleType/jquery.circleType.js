@@ -12,7 +12,6 @@ $.fn.circleType = function(options) {
         position: 'relative'
     };
     if (typeof($.fn.lettering) !== 'function') {
-        console.log('Lettering.js is required');
         return;
     }
     return this.each(function () {
@@ -99,7 +98,6 @@ $.fn.circleType = function(options) {
             
             if (settings.fitText) {
                 if (typeof($.fn.fitText) !== 'function') {
-                    console.log('FitText.js is required when using the fitText option');
                 } else {
                     $(elem).fitText();
                     $(window).resize(function () {

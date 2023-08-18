@@ -1211,7 +1211,6 @@
       }
       if  (currentTab==1){
         var ZipCodeInput = document.getElementById("COBJ2CF56"); // Email input
-        console.log(ZipCodeInput.value)
         var zipCodeValue = ZipCodeInput.value;
         var zipCodePattern = /^\d{5}(?:-\d{4})?$/;
         if (!zipCodePattern.test(zipCodeValue)) {
@@ -1238,7 +1237,6 @@
         // Validate age in the first step
         var ageInput = document.getElementById("COBJ2CF57"); // Email input
         var ageValue = ageInput.value;
-        console.log(ageValue)
         if (ageValue < 18 || ageValue > 90) {
           
           ageInput.classList.add("invalid");
@@ -1255,7 +1253,6 @@
         // Validate age in the first step
         var ageInput = document.getElementById("COBJ2CF57"); // Email input
         var ageValue = ageInput.value;
-        console.log(ageValue)
         if (ageValue < 18 || ageValue > 90) {
           
           ageInput.classList.add("invalid");
