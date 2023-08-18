@@ -95,7 +95,59 @@
     <link rel="stylesheet" href="assets/css/w3.css" />
     <link rel="stylesheet" id="langLtr" href="assets/css/insur.css" />
     <link rel="stylesheet" href="assets/css/insur-responsive.css" />
-    <link rel="stylesheet" href="assets/css/Tabs.css" />
+    <style>
+      .tabs {
+      padding: 10px 10px 0px 10px;
+      background-color: #015fc9;
+      display: flex;
+      gap:10px; 
+      border-radius: 10px 10px 0px 0px;
+    }
+    
+    .tab {
+      margin: auto;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-radius: 10px 10px 0px 0px;
+      height: 80px;
+    }
+    
+    .tab:hover {
+      background-color: white;
+      color: #696e77;
+    }
+    
+    .tab.active {
+      background-color: white;
+      color: #696e77;
+    }
+    
+    .tab-content {
+      display: none;
+      margin-top: 10px;
+      padding: 40px 50px;
+
+    }
+    .tabsSection{
+      width: 80%;
+      align-items: center; 
+      text-align: left;
+      margin: auto;
+      position: relative;
+      top:-90px;
+      z-index: 1;
+}
+    @media only screen and (max-width: 500px)  {
+      .tabsSection{
+        width: 100%;
+      }
+    }
+    
+    </style>
     <script src="less.js" type="text/javascript"></script>
   </head>
 
@@ -465,135 +517,125 @@
 
       <!--Feature Three Start-->
 
-      <section class="wrapper">
-        <ul class="tabs" style="padding: 0px 20px">
-          <li class="active">Policy Review</li>
-          <li>Insurance<br /></li>
-          <li>Investments<br /></li>
-        </ul>
-
-        <ul class="tab__content">
-          <li class="active">
-            <div class="content__wrapper">
-              <h3 style="color: #696e77; line-height: 35px">
-                Unlock the full potential of your financial future with our
-                expert policy review services. Our team of dedicated
-                professionals is here to help you make informed decisions,
-                optimize your coverage, and secure the best options for your
-                needs.
-              </h3>
-              <ul style="list-style: none; padding-top: 20px">
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b>Enhanced Coverage: </b> Review policies to match your
-                  current needs accurately.
-                </li>
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b>Savings Potential: </b> Discover chances to reduce costs
-                  without compromising coverage.
-                </li>
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b>Life Adjustments: </b> Keep policies updated with life
-                  changes for ongoing protection.
-                </li>
-              </ul>
-              <div class="w-100" style="text-align: center;">
-                <a href="contact.html#crmWebToEntityForm" class="thm-btn comment-form__btn" style="margin: 10px auto">
-                  Start Reviewing
-                </a>
-              </div>
-            </div>
+      <section class="tabsSection">
+        <div class="tabs">
+          <div class="tab active" data-tab="tab1">Policy Review</div>
+          <div class="tab" data-tab="tab2">Insurance</div>
+          <div class="tab" data-tab="tab3" >Investments</div>
+        </div>
+        <div class="tab-content" data-tab="tab1">
+          <h3 style="color: #696e77; line-height: 35px">
+            Unlock the full potential of your financial future with our
+            expert policy review services. Our team of dedicated
+            professionals is here to help you make informed decisions,
+            optimize your coverage, and secure the best options for your
+            needs.
+          </h3>
+          <ul style="list-style: none; padding-top: 20px">
+            <li style="margin: 10px">
+              <i
+                class="fa-regular fa-circle-check p-2"
+                style="color: #015fc9"
+              ></i
+              ><b>Enhanced Coverage: </b> Review policies to match your
+              current needs accurately.
+            </li>
+            <li style="margin: 10px">
+              <i
+                class="fa-regular fa-circle-check p-2"
+                style="color: #015fc9"
+              ></i
+              ><b>Savings Potential: </b> Discover chances to reduce costs
+              without compromising coverage.
+            </li>
+            <li style="margin: 10px">
+              <i
+                class="fa-regular fa-circle-check p-2"
+                style="color: #015fc9"
+              ></i
+              ><b>Life Adjustments: </b> Keep policies updated with life
+              changes for ongoing protection.
+            </li>
+          </ul>
+          <div class="w-100" style="text-align: center;">
+            <a href="contact.html#crmWebToEntityForm" class="thm-btn comment-form__btn" style="margin: 10px auto">
+              Start Reviewing
+            </a>
+          </div>  
+        </div>
+        <div class="tab-content" data-tab="tab2">  <h3 style="color: #696e77; line-height: 35px">
+          Our advisors secure your family and goals with versatile
+          insurance, defending income and ensuring financial stability.
+        </h3>
+        <ul style="list-style: none; padding-top: 20px">
+          <li style="margin: 10px">
+            <i
+              class="fa-regular fa-circle-check p-2"
+              style="color: #015fc9"
+            ></i
+            ><b>Life insurance:</b> Providing a safety net for your loved
+            ones' future.
           </li>
-          <li>
-            <div class="content__wrapper">
-              <h3 style="color: #696e77; line-height: 35px">
-                Our advisors secure your family and goals with versatile
-                insurance, defending income and ensuring financial stability.
-              </h3>
-              <ul style="list-style: none; padding-top: 20px">
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b>Life insurance:</b> Providing a safety net for your loved
-                  ones' future.
-                </li>
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b> Disability insurance: </b>Safeguarding your income during
-                  unexpected challenges.
-                </li>
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b>Long-term care:</b> Ensuring you're prepared for extended
-                  care needs.
-                </li>
-              </ul>
-              <div class="w-100" style="text-align: center;">
-                <a href="contact.html#crmWebToEntityForm" class="thm-btn comment-form__btn" style="margin: 10px auto">
-                  Get Insurance
-                </a>
-            </div>
+          <li style="margin: 10px">
+            <i
+              class="fa-regular fa-circle-check p-2"
+              style="color: #015fc9"
+            ></i
+            ><b> Disability insurance: </b>Safeguarding your income during
+            unexpected challenges.
           </li>
-          <li>
-            <div class="content__wrapper">
-              <h3 style="color: #696e77; line-height: 35px">
-                Our financial advisors guide you in making wise financial
-                decisions regardless of market fluctuations, empowering you to
-                pursue your dreams with unwavering confidence.
-              </h3>
-              <ul style="list-style: none; padding-top: 20px">
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b>Investment and retirement strategies:</b> Crafting a
-                  roadmap for a secure financial future.
-                </li>
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b> Wealth management: </b>Nurturing and growing your assets
-                  with personalized expertise.
-                </li>
-                <li style="margin: 10px">
-                  <i
-                    class="fa-regular fa-circle-check p-2"
-                    style="color: #015fc9"
-                  ></i
-                  ><b>Exclusive market commentary:</b> Providing insights to
-                  make informed financial choices.
-                </li>
-              </ul>
-              <div class="w-100" style="text-align: center;">
-                <a href="contact.html#crmWebToEntityForm" class="thm-btn comment-form__btn" style="margin: 10px auto">
-                  Start Investing
-                </a>
-            </div>
+          <li style="margin: 10px">
+            <i
+              class="fa-regular fa-circle-check p-2"
+              style="color: #015fc9"
+            ></i
+            ><b>Long-term care:</b> Ensuring you're prepared for extended
+            care needs.
           </li>
         </ul>
+        <div class="w-100" style="text-align: center;">
+          <a href="contact.html#crmWebToEntityForm" class="thm-btn comment-form__btn" style="margin: 10px auto">
+            Get Insurance
+          </a>
+      </div></div>
+        <div class="tab-content" data-tab="tab3"> <h3 style="color: #696e77; line-height: 35px">
+          Our financial advisors guide you in making wise financial
+          decisions regardless of market fluctuations, empowering you to
+          pursue your dreams with unwavering confidence.
+        </h3>
+        <ul style="list-style: none; padding-top: 20px">
+          <li style="margin: 10px">
+            <i
+              class="fa-regular fa-circle-check p-2"
+              style="color: #015fc9"
+            ></i
+            ><b>Investment and retirement strategies:</b> Crafting a
+            roadmap for a secure financial future.
+          </li>
+          <li style="margin: 10px">
+            <i
+              class="fa-regular fa-circle-check p-2"
+              style="color: #015fc9"
+            ></i
+            ><b> Wealth management: </b>Nurturing and growing your assets
+            with personalized expertise.
+          </li>
+          <li style="margin: 10px">
+            <i
+              class="fa-regular fa-circle-check p-2"
+              style="color: #015fc9"
+            ></i
+            ><b>Exclusive market commentary:</b> Providing insights to
+            make informed financial choices.
+          </li>
+        </ul>
+        <div class="w-100" style="text-align: center;">
+          <a href="contact.html#crmWebToEntityForm" class="thm-btn comment-form__btn" style="margin: 10px auto">
+            Start Investing
+          </a>
+      </div></div>
       </section>
+        
 
       <!--Feature Three End-->
 
@@ -2269,84 +2311,39 @@
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 
     <script>
-      $(document).ready(function () {
-        // Variables
-        var clickedTab = $(".tabs > .active");
-        var tabWrapper = $(".tab__content");
-        var activeTab = tabWrapper.find(".active");
-        var activeTabHeight = activeTab.outerHeight();
-
-        // Show tab on page load
-        activeTab.show();
-
-        // Set height of wrapper on page load
-        tabWrapper.height(activeTabHeight);
-
-        $(".tabs > li").on("click", function () {
-          // Remove class from active tab
-          $(".tabs > li").removeClass("active");
-
-          // Add class active to clicked tab
-          $(this).addClass("active");
-
-          // Update clickedTab variable
-          clickedTab = $(".tabs .active");
-
-          // fade out active tab
-          activeTab.fadeOut(250, function () {
-            // Remove active class all tabs
-            $(".tab__content > li").removeClass("active");
-
-            // Get index of clicked tab
-            var clickedTabIndex = clickedTab.index();
-
-            // Add class active to corresponding tab
-            $(".tab__content > li").eq(clickedTabIndex).addClass("active");
-
-            // update new active tab
-            activeTab = $(".tab__content > .active");
-
-            // Update variable
-            activeTabHeight = activeTab.outerHeight();
-
-            // Animate height of wrapper to new tab height
-            tabWrapper
-              .stop()
-              .delay(50)
-              .animate(
-                {
-                  height: activeTabHeight,
-                },
-                500,
-                function () {
-                  // Fade in active tab
-                  activeTab.delay(50).fadeIn(250);
-                }
-              );
+      const tabs = document.querySelectorAll('.tab');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const selectedTab = tab.dataset.tab;
+      
+          // Hide all tab contents
+          tabContents.forEach(content => {
+            content.style.display = 'none';
           });
+      
+          // Show the clicked tab content
+          const selectedContent = document.querySelector(`.tab-content[data-tab="${selectedTab}"]`);
+          selectedContent.style.display = 'block';
+      
+          // Remove 'active' class from all tabs
+          tabs.forEach(t => {
+            t.classList.remove('active');
+          });
+      
+          // Add 'active' class to the clicked tab
+          tab.classList.add('active');
         });
-
-        // Variables
-        var colorButton = $(".colors li");
-
-        colorButton.on("click", function () {
-          // Remove class from currently active button
-          $(".colors > li").removeClass("active-color");
-
-          // Add class active to clicked button
-          $(this).addClass("active-color");
-
-          // Get background color of clicked
-          var newColor = $(this).attr("data-color");
-
-          // Change background of everything with class .bg-color
-          $(".bg-color").css("background-color", newColor);
-
-          // Change color of everything with class .text-color
-          $(".text-color").css("color", newColor);
-        });
+      
+        // Initially display content for the active tab (Tab 1)
+        if (tab.classList.contains('active')) {
+          const initialContent = tab.dataset.tab;
+          document.querySelector(`.tab-content[data-tab="${initialContent}"]`).style.display = 'block';
+        }
       });
-    </script>
+      
+      </script>
     <!-- template js -->
     <script src="assets/js/insur.js"></script>
   </body>
