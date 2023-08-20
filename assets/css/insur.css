@@ -1998,6 +1998,7 @@
   .main-slider .swiper-slide {
     position: relative;
     background-color: var(--insur-extra);
+    /* width: 200px; */
   }
   
   .main-slider .container {
