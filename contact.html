@@ -142,6 +142,7 @@
         word-wrap: normal;
         direction: ltr;
         -webkit-font-feature-settings: "liga";
+        font-weight: lighter;
         -webkit-font-smoothing: antialiased;
       }
     </style>
@@ -177,6 +178,9 @@
         padding: 40px; */
         width: 100%;
         /* min-width: 300px; */
+      }
+      .radio-text{
+        font-size: initial;
       }
 
       /* Style the input fields */
@@ -222,6 +226,9 @@
       /* Mark the steps that are finished and valid: */
       .step.finish {
         background-color: #04aa6d;
+      }
+      html{
+        scroll-behavior: smooth;
       }
     </style>
 
@@ -513,7 +520,7 @@
      >
        <div class="container">
          <div class="row">
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
                <label class="labl">
                  <input
@@ -535,12 +542,12 @@
                    >
                      real_estate_agent
                    </span>
-                   Buy a Home
+                   <p class="radio-text">Buy a Home</p>
                  </div>
                </label>
              </div>
            </div>
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
                <label class="labl" style="flex: 1">
                  <input type="radio" name="radioname" value="one_value" />
@@ -559,12 +566,12 @@
                        school
                        </span>
                    </span>
-                   Save for College
+                   <p class="radio-text">Save for College</p>
                  </div>
                </label>
              </div>
            </div>
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
                <label class="labl" style="flex: 1">
                  <input type="radio" name="radioname" value="one_value" />
@@ -581,14 +588,14 @@
                    >
                    beach_access
                    </span>
-                   Save for Retiremnet
+                   <p class="radio-text">Save for Retiremnet</p>
                  </div>
                </label>
              </div>
            </div>
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
-               <label class="labl" style="">
+               <label class="labl" style="flex: 1">
                  <input type="radio" name="radioname" value="one_value" />
                  <div
                    style="
@@ -603,14 +610,14 @@
                    >
                      savings
                    </span>
-                   Protect My Income
+                   <p class="radio-text">Protect My Income</p>
                  </div>
                </label>
              </div>
            </div>
          </div>
          <div class="row">
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
                <label class="labl" style="flex: 1">
                  <input type="radio" name="radioname" value="one_value" />
@@ -627,12 +634,13 @@
                    >
                      bedroom_baby
                    </span>
-                   Plan for Growing Family
+                   <p class="radio-text">Plan for Growing Family
+                   </p>
                  </div>
                </label>
              </div>
            </div>
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
                <label class="labl" style="flex: 1">
                  <input type="radio" name="radioname" value="one_value" />
@@ -649,12 +657,12 @@
                    >
                    diversity_1
                    </span>
-                   Protect My Family
+                   <p class="radio-text">Protect My Income</p>
                  </div>
                </label>
              </div>
            </div>
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
                <label class="labl" style="flex: 1">
                  <input type="radio" name="radioname" value="one_value" />
@@ -671,12 +679,12 @@
                    >
                      trending_up
                    </span>
-                   Grow My Business
+                   <p class="radio-text">Grow My Business</p>
                  </div>
                </label>
              </div>
            </div>
-           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+           <div class="col-sm-6 col-lg-3 col-md-6  mb-3">
              <div class="box">
                <label class="labl" style="flex: 1">
                  <input type="radio" name="radioname" value="one_value" />
@@ -693,7 +701,7 @@
                    >
                      wallet
                    </span>
-                   Grow My Investments
+                   <p class="radio-text">Grow My Investments</p>
                  </div>
                </label>
              </div>
@@ -1426,6 +1434,7 @@
         var x = document.getElementsByClassName("tab");
         // Exit the function if any field in the current tab is invalid:
         if (n == 1 && !validateForm()) return false;
+        document.getElementById('regForm').scrollIntoView();
         // Hide the current tab:
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
