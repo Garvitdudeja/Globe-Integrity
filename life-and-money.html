@@ -501,11 +501,13 @@
 
      <div
      class="tab"
+     id = "tab"
      style="
        text-align: center;
        color: white;
        font-size: 1.2rem;
        line-height: 2rem;
+       padding-top: 70px;
      "
    >
      What's your biggest financial goal ?
@@ -1434,7 +1436,11 @@
         var x = document.getElementsByClassName("tab");
         // Exit the function if any field in the current tab is invalid:
         if (n == 1 && !validateForm()) return false;
-        document.getElementById('regForm').scrollIntoView();
+        document.getElementById('tab').scrollIntoView({
+            behavior: 'auto',
+            block: 'end',
+            inline: 'center'
+        });
         // Hide the current tab:
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
