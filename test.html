@@ -184,7 +184,9 @@ color: white;
           
           <div class="background_div">
             <h2 class="help_text">What's your Gender?</h2>
-            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ2CF2'>Gender</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt select_option' id='COBJ2CF2' name='COBJ2CF2' >
+
+
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF32'>Gender</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt select_option' id='LEADCF32' name='LEADCF32' >
               <option value='-None-'>-None-</option>
               <option value='Male'>Male</option>
               <option value='Female'>Female</option>
@@ -311,12 +313,12 @@ color: white;
   <div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'>Insurance Calculator</div>
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div>
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF53'>Number of kids</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF53' name='LEADCF53' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
-  <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF32'>Gender</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='LEADCF32' name='LEADCF32'  >
+  <!-- <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF32'>Gender</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='LEADCF32' name='LEADCF32'  >
               <option value='-None-'>-None-</option>
               <option value='Male'>Male</option>
               <option value='Female'>Female</option>
               <option value='Prefer&#x20;not&#x20;to&#x20;identify'>Prefer not to identify</option>
-          </select><div class='zcwf_col_help'></div></div></div>
+          </select><div class='zcwf_col_help'></div></div></div> -->
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF52'>Monthlly Expenses</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF52' name='LEADCF52' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF51'>Age</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF51' name='LEADCF51' maxlength='9'></input><div class='zcwf_col_help'></div></div></div>
   <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF69'>Annual Income</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF69' name='LEADCF69' maxlength='16'></input><div class='zcwf_col_help'></div></div></div>
@@ -604,7 +606,7 @@ color: white;
           
           <div class="background_div">
             <h2 class="help_text">What's your Gender?</h2>
-            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='COBJ2CF2'>Gender</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt select_option' id='COBJ2CF2' name='COBJ2CF2' >
+            <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF32'>Gender</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt select_option' id='LEADCF32' name='LEADCF32' >
               <option value='-None-'>-None-</option>
               <option value='Male'>Male</option>
               <option value='Female'>Female</option>
@@ -950,7 +952,7 @@ color: white;
                   }
                 }
                 if  (currentTab==2){
-                  var genderInput = document.getElementById("COBJ2CF2"); // Email input
+                  var genderInput = document.getElementById("LEADCF32"); // Email input
                   if (genderInput.value == '-None-') {
                   genderInput.classList.add("invalid");
                   document.getElementById("genderInputWarning").style.display = "block"; // Display the email warning message
