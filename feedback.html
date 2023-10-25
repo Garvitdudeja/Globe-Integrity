@@ -77,6 +77,8 @@ button:hover {
             <button type="submit">Submit</button>
         </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
     <script>
         const feedbackForm = document.getElementById('feedbackForm');
@@ -85,34 +87,33 @@ feedbackForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const formData = new FormData(feedbackForm);
-    console.log("Form Data:");
+    console.log("Form Data:", formData);
+
+    const data = {};
+
     formData.forEach((value, key) => {
         console.log(`${key}: ${value}`);
+
+        data[key] = value;
     });
+
+    console.log(data, "data")
 
     // You can construct an API request here using the 'formData' object
     // and send it to your API endpoint using fetch() or any other method.
 
-    const URL = "https://www.zohoapis.com/crm/v2/functions/Update_Client_Feedback_in_Deal/actions/execute?auth_type=apikey&zapikey=1003.ea52eed87a0014942321fe35b0a9b557.2958e2de5bb055884936bb746b431c82"
+    // const URL = "https://feedbackapi-rdlq.onrender.com/data"
+    const URL = "http://localhost:4000/data"
 
     // Example fetch request:
-    fetch(URL, {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Feedback submitted successfully.');
-            feedbackForm.reset();
-        } else {
-            alert('Error submitting feedback.');
-        }
-    })
-    .catch(error => {
-        console.error(error.message);
-        alert('An error occurred while submitting feedback.');
-    });
-});
+    axios.post(URL,{data: data})
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(error => {
+                    console.log(error)
+                });
+        });
 
     </script>
 </body>
