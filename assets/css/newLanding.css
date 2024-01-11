@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.firstContainer{
+    background-color: black;
+}
+
+.footerContainer{
+    background-color: #636363;
+}
+
+.footerInternalContainer{
+    display: flex;
+    justify-content: space-between;
+    
+}
