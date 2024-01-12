@@ -1,7 +1,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    color: white;
     font-family: 'Montserrat';
 }
 
@@ -17,4 +16,13 @@
     display: flex;
     justify-content: space-between;
     
+}
+.FormContainer{
+    color: black
+}
+
+
+.bigText{
+    color: white;
+
 }
