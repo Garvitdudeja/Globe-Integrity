@@ -1,70 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Style for the custom dropdown */
-        .custom-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Style for the dropdown button */
-        .dropdown-btn {
-            padding: 10px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-        }
-
-        /* Style for the dropdown content */
-        .dropdown-content {
-            display: block; /* Always visible */
-            position: absolute;
-            background-color: #f9f9f9;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        /* Style for the checkboxes within the dropdown */
-        .dropdown-content input {
-            margin-right: 5px;
-        }
-    </style>
-    <title>Custom Multi-Select Dropdown with Checkboxes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select to Checkboxes</title>
+  <style>
+    /* Add some styling for better presentation */
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="custom-dropdown">
-    <div class="dropdown-btn" onclick="toggleDropdown()">Select your favorite fruits</div>
-    <div class="dropdown-content" id="fruitDropdown">
-        <input type="checkbox" name="fruits[]" value="apple"> Apple<br>
-        <input type="checkbox" name="fruits[]" value="banana"> Banana<br>
-        <input type="checkbox" name="fruits[]" value="orange"> Orange<br>
-        <input type="checkbox" name="fruits[]" value="grape"> Grape<br>
-        <input type="checkbox" name="fruits[]" value="strawberry"> Strawberry<br>
-    </div>
-</div>
+<select id="originalSelect" multiple>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+  <!-- Add more options as needed -->
+</select>
 
 <script>
-    // Function to toggle the dropdown
-    function toggleDropdown() {
-        var dropdown = document.getElementById("fruitDropdown");
-        dropdown.style.display = (dropdown.style.display === "none") ? "block" : "none";
-    }
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the original select element
+    var originalSelect = document.getElementById('originalSelect');
 
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function (event) {
-        if (!event.target.matches('.dropdown-btn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.style.display === "block") {
-                    openDropdown.style.display = "none";
-                }
-            }
-        }
+    // Create checkboxes based on the options in the select element
+    for (var i = 0; i < originalSelect.options.length; i++) {
+      var option = originalSelect.options[i];
+
+      // Create a label element
+      var label = document.createElement('label');
+
+      // Create a checkbox element
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.value = option.value;
+
+      // Set the label text to match the option text
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(option.text));
+
+      // Append the label to the document body
+      document.body.appendChild(label);
     }
+  });
 </script>
 
 </body>
