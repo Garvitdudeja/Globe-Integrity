@@ -39,6 +39,9 @@
           👇🏼
         </h1>
       </div>
+      <button onclick="btn()">
+        Make change
+      </button>
       <div class="Form">
         <!-- Note :
    - You can modify the font style and form style to suit your website. 
@@ -330,7 +333,24 @@
   </body>
   <script src="./assets/js/newLanding.js"></script>
   <script>
-    console.log(document.getElementById("LEADCF38").value)
-    document.getElementById("LEADCF38").value="Tax-Free&#x20;Retirement&#x20;Income"
+    const btn = ()=>{
+    // Get the select element by its ID
+var selectField = document.getElementById("LEADCF38");
+
+// Set the selected options (replace with the values you want to set)
+var selectedValues = ["Tax-Free Retirement Income","No Tax Liability on Growth"];
+
+// Loop through the options and set the "selected" attribute
+for (var i = 0; i < selectField.options.length; i++) {
+    console.log(selectField.options[i])
+
+  if (selectedValues.includes(selectField.options[i].value)) {
+    selectField.options[i].selected = true;
+  } else {
+    selectField.options[i].selected = false;
+  }
+}
+console.log(document.getElementById('LEADCF38').value)
+    }
   </script>
 </html>
