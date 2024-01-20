@@ -1,0 +1,192 @@
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+var One = new Set();
+var Two = new Set();
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == x.length - 1) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n);
+}
+
+function nextPrev(n) {
+    if(!validateForm()){
+        return
+    }
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+    console.log("validateFormCalled", currentTab)
+  // This function deals with validation of the form fields
+  var x,
+    y,
+    i,
+    valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+
+  // condition Checking
+  if (currentTab == 0) {
+    const Tax_Income = document.getElementById("Tax-Income");
+    const No_Tax = document.getElementById("No-Tax");
+    const Zero_Risk = document.getElementById("Zero-Risk");
+    const Preservation = document.getElementById("Preservation");
+    console.log(Tax_Income.checked)
+    if (Tax_Income.checked) {
+      One.add(Tax_Income.value);
+    }
+    if (No_Tax.checked) {
+      One.add(No_Tax.value);
+    }
+    if (Zero_Risk.checked) {
+      One.add(Zero_Risk.value);
+    }
+    if (Preservation.checked) {
+      One.add(Preservation.value);
+    }
+    if (!Tax_Income.checked) {
+        One.delete(Tax_Income.value);
+      }
+      if (!No_Tax.checked) {
+        One.delete(No_Tax.value);
+      }
+      if (!Zero_Risk.checked) {
+        One.delete(Zero_Risk.value);
+      }
+      if (!Preservation.checked) {
+        One.delete(Preservation.value);
+      }
+    console.log(Array.from(One).toString())
+    document.getElementById("LEADCF36").value = Array.from(One).toString(" ")
+    if (Array.from(One).length === 0 ){
+        return false
+    }
+  }
+  if (currentTab === 1 ){
+    const k = document.getElementById("401k");
+    const IRA = document.getElementById("IRA");
+    const HoldingCash = document.getElementById("HoldingCash");
+    const ActiveTrading = document.getElementById("ActiveTrading");
+    const Self = document.getElementById("Self");
+    if (k.checked) {
+      Two.add(k.value);
+    }
+    if (IRA.checked) {
+      Two.add(IRA.value);
+    }
+    if (HoldingCash.checked) {
+      Two.add(HoldingCash.value);
+    }
+    if (ActiveTrading.checked) {
+      Two.add(ActiveTrading.value);
+    }if (Self.checked) {
+        Two.add(Self.value);
+      }
+    if (!k.checked) {
+        Two.delete(k.value);
+      }
+      if (!IRA.checked) {
+        Two.delete(IRA.value);
+      }
+      if (!HoldingCash.checked) {
+        Two.delete(HoldingCash.value);
+      }
+      if (!ActiveTrading.checked) {
+        Two.delete(ActiveTrading.value);
+      }
+      if (!Self.checked) {
+        Two.delete(Self.value);
+      }
+    console.log(Array.from(Two).toString())
+    document.getElementById("LEADCF37").value = Array.from(Two).toString(" ")
+    if (Array.from(Two).length === 0 ){
+        return false
+    }
+  }
+
+
+  if(currentTab ===3){
+    var saving = document.querySelector('input[name="Saving"]:checked')?.value;
+    if (saving===undefined){
+        return false
+    }
+    document.getElementById('LEADCF35').value = saving
+
+
+  }
+  if(currentTab ===2){
+    var Emp = document.querySelector('input[name="Emp"]:checked')?.value;
+    if (Emp===undefined){
+        return false
+    }
+    document.getElementById('LEADCF34').value = Emp
+
+
+  }
+
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i,
+    x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
+
+
+
+
+$('input[name="Emp"]').on("click", function(e) {
+    nextPrev(1)
+})
+$('input[name="Saving"]').on("click", function(e) {
+    nextPrev(1)
+})
