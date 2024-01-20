@@ -35,9 +35,10 @@ function nextPrev(n) {
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
   // if you have reached the end of the form... :
+  console.log(currentTab)
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("regForm").submit();
+    document.getElementById("webform").submit();
     return false;
   }
   // Otherwise, display the correct tab:
@@ -165,7 +166,7 @@ function validateForm() {
 
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
+    // document.getElementsByClassName("step")[currentTab].className += " finish";
   }
   return valid; // return the valid status
 }
@@ -178,7 +179,7 @@ function fixStepIndicator(n) {
     x[i].className = x[i].className.replace(" active", "");
   }
   //... and adds the "active" class to the current step:
-  x[n].className += " active";
+  // x[n].className += " active";
 }
 
 
