@@ -63,19 +63,24 @@
   <div class="tab">
     <div id="IULWarning" >Please Select All that Apply</div>
 
-    <p>What Benefits of the IUL interest you the most? (Select all that apply) *</p>
-      
-    <input type="checkbox" class="CheckBox" id="Tax-Income" value="Tax-Free Retirement Income"/><span><label for="Tax-Income">Tax-Free Retirement Income</label></span>
-    <br>
-    <input type="checkbox" class="CheckBox" id="No-Tax" value="No Tax Liability on Growth"/><label for="No-Tax">No Tax Liability on Growth</label>
-    <br>
+    <p style="margin-bottom: 1rem;">What Benefits of the IUL interest you the most? (Select all that apply) *</p>
+    <div class="CheckBoxContainer">
+      <input type="checkbox" class="CheckBox" id="Tax-Income" value="Tax-Free Retirement Income" />
+      <label for="Tax-Income">Tax-Free Retirement Income</label>
+    </div>    <br>
+    <div class="CheckBoxContainer">
+      <input type="checkbox" class="CheckBox" id="No-Tax" value="No Tax Liability on Growth"/><label for="No-Tax">No Tax Liability on Growth</label>
+    </div>
+      <br>
+    <div class="CheckBoxContainer">
     <input type="checkbox" class="CheckBox" id="Zero-Risk" value="Zero Risk or Exposure to Market Downturns"/><label for="Zero-Risk">Zero Risk or Exposure to Market Downturns</label>
+    </div>
     <br>
     <input type="checkbox" class="CheckBox" id="Preservation" value="Preservation of Capital"/><label for="Preservation">Preservation of Capital</label>
   </div>
   <div class="tab">
     <div id="investmentWarning" >Please Select All that Apply</div>
-    <p>What Investment Strategies are you currently using? (Select all that apply) *</p>
+    <p style="margin-bottom: 1rem;">What Investment Strategies are you currently using? (Select all that apply) *</p>
     <input type="checkbox" class="CheckBox" id="401k" value="401k"/><span><label for="401k">401k</label></span>
     <br>
     <input type="checkbox" class="CheckBox" id="IRA" value="No Tax Liability on Growth"/><label for="IRA">IRA</label>
@@ -126,31 +131,27 @@
           <br>
           <div class='zcwf_col_fld'>
               <input type='number' id='LEADCF16' name='LEADCF16' maxlength='255'>
-          </input><div class='zcwf_col_help'>
-      
-          </div></div></div>
+          </input></div></div>
   </div>
   
   <div class="tab">
       <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
           <label for='First_Name'>First Name<span style='color:red;'>*</span></label></div>
           <div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input>
-              <div class='zcwf_col_help'>
-              </div>
           </div>
       </div>
   
       <div class='zcwf_row'>
           <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div>
           <div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input>
-              <div class='zcwf_col_help'></div></div></div>
+              </div></div>
               <div class='zcwf_row'>
                 <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
                 <label for='Phone'>Phone</label></div>
               <div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input>
-                <div class='zcwf_col_help'></div></div></div>
+                </div></div>
                 <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                  <label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+                  <label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email' name='Email' maxlength='100'></input></div></div>
                 
   </div>
   

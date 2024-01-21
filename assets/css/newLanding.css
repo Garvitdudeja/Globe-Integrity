@@ -159,3 +159,32 @@ a{
 }
 
 
+@media only screen and (max-width: 768px) {
+  label{
+      margin-bottom: 0rem !important;
+      margin-left: 4px !important;
+      font-size: 15px;
+      
+  }
+  .imageContainer{
+    display: none;
+  }
+  .firstContainer{
+    padding-top: 4rem;
+  }
+  .CheckBoxContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .CheckBox {
+    margin-right: 5px;
+    height: 13px;
+    width: 17px; /* Adjust the margin as needed */
+  }
+  .footerContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
