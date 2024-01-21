@@ -7,8 +7,27 @@ html {
     height: 100%;
 }
 
+.wrapper{
+  background-color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+
 .firstContainer{
-    background-color: black;
+    width: 80%;
+    text-align: center;
+}
+
+.imageContainer{
+  width: 150px;
+  margin: 0rem 0rem 4rem 10rem;
+  padding-top: 3rem;
+}
+
+.comapanyLogo{
+  width: 100%;
 }
 
 .footerContainer{
@@ -30,7 +49,12 @@ html {
 
 }
 
+.bigText2{
+  padding: 1rem 0rem;
+  color: #ef5b26;
+  font-size: xxx-large;
 
+}
 
 
 
@@ -85,9 +109,6 @@ html {
   }
 
 
-
-
-
-
-
-  
+.hiddenInput{
+  display: none;
+}

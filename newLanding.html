@@ -16,398 +16,414 @@
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="firstContainer">
-      <div>Logo</div>
-      <div>
-        <h1 class="bigText">Build a Guaranteed Compound Interest Tax Free Retirement</h1>
-        <h1 class="bigText">Discover the Wealth Secrets of the IUL</h1>
-      </div>
-      <div>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/5pB6h6CjtKk?si=wxURanI8H5dI9Zbq"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <h1 class="bigText">
-          To discover if you qualify for an IUL, take our 30 second survey below
-          👇🏼
-        </h1>
-      </div>
-      <button onclick="btn()">
-        Make change
-      </button>
-      <div class="Form">
-        <!-- Note :
-   - You can modify the font style and form style to suit your website. 
-   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
-   - The Mandatory check script can modified as to suit your business needs. 
-   - It is important that you test the modified form before going live.-->
-<div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 600px;'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-     <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
-     <form id='webform' action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads5572526000007718001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000007718001()' accept-charset='UTF-8'>
-   <input type='text' style='display:none;' name='xnQsjsdp' value='c351220a40bf2aa20c9f78e01164d5bb3822ec703f075b9c5bbb5630340317c7'></input> 
-   <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
-
-
-<!-- Tetseydsr -->
-<h1>Register:</h1>
-
-<!-- One "tab" for each step in the form: -->
-<div class="tab">What Benefits of the IUL interest you the most? (Select all that apply) *
-    <br/>
-  <input type="checkbox" id="Tax-Income" value="Tax-Free Retirement Income"/><span><label for="Tax-Income">Tax-Free Retirement Income</label></span>
-  <br>
-  <input type="checkbox" id="No-Tax" value="No Tax Liability on Growth"/><label for="No-Tax">No Tax Liability on Growth</label>
-  <br>
-  <input type="checkbox" id="Zero-Risk" value="Zero Risk or Exposure to Market Downturns"/><label for="Zero-Risk">Zero Risk or Exposure to Market Downturns</label>
-  <br>
-  <input type="checkbox" id="Preservation" value="Preservation of Capital"/><label for="Preservation">Preservation of Capital</label>
-</div>
-<div class="tab">What Investment Strategies are you currently using? (Select all that apply) *
-    <br/>
-  <input type="checkbox" id="401k" value="401k"/><span><label for="401k">401k</label></span>
-  <br>
-  <input type="checkbox" id="IRA" value="No Tax Liability on Growth"/><label for="IRA">IRA</label>
-  <br>
-  <input type="checkbox" id="HoldingCash" value="Holding Cash"/><label for="HoldingCash">Holding Cash</label>
-  <br>
-  <input type="checkbox" id="ActiveTrading" value="Active Trading"/><label for="ActiveTrading">Active Trading</label>
-  <br>
-  <input type="checkbox" id="Self" value="Self Directed Brokerage Account"/><label for="Self">Self directed brokerage account</label>
-</div>
-  <div class="tab">
-    What is your current primary source of income? *
-    <br>
-    <input type="radio" id="SelfEmp" name="Emp" value="Self-Employed">
-    <label for="SelfEmp">Self-Employed</label><br>
-    <input type="radio" id="Business" name="Emp" value="Business Owner">
-    <label for="Business">Business Owner</label><br>  
-    <input type="radio" id="Employed" name="Emp" value="Employed">
-    <label for="Employed">Employed</label><br>
-    <input type="radio" id="Retired" name="Emp" value="Retired">
-    <label for="Retired">Retired</label><br>
-  </div>
-<div class="tab">
-    <div id="Saving">
-        About how much do you save in a typical month? *
-        <br>
-        <input type="radio" id="less300" name="Saving" value="Less than $300">
-        <label for="less300">Less than $300</label><br>
-        <input type="radio" id="bt3and5" name="Saving" value="$300 - $500">
-        <label for="bt3and5">$300 - $500</label><br>  
-        <input type="radio" id="bt5and1" name="Saving" value="$500 - $1,000">
-        <label for="bt5and1">$500 - $1,000</label><br>
-        <input type="radio" id="gt1" name="Saving" value="More than $1,000">
-        <label for="gt1">More than $1,000</label><br>
-    </div>
-</div>
-
-<div class="tab">Birthday:
-    <div class='zcwf_row'>
-        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-            <label for='LEADCF16'>What is your current age&#x3f;</label>
+    <div class="wrapper">
+      <div class="firstContainer">
+        <div class="imageContainer">
+          <img src="assets/images/resources/logo-1.webp" class="comapanyLogo" />
         </div>
-        <div class='zcwf_col_fld'>
-            <input type='text' id='LEADCF16' name='LEADCF16' maxlength='255'>
-        </input><div class='zcwf_col_help'>
-    
-        </div></div></div>
-</div>
-
-<div class="tab">Login Info:
-    <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-        <label for='First_Name'>First Name<span style='color:red;'>*</span></label></div>
-        <div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input>
-            <div class='zcwf_col_help'>
-    
-            </div>
+        <div>
+          <h3 class="bigText">Build a Guaranteed Compound Interest Tax Free Retirement</h3>
+          <h2 class="bigText2">Discover the Wealth Secrets of the IUL</h2>
         </div>
-    </div>
-
-    <div class='zcwf_row'>
-        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div>
-        <div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input>
-            <div class='zcwf_col_help'></div></div></div>
-</div>
-
-<div style="overflow:auto;">
-  <div style="float:right;">
-    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-  </div>
-</div>
-
-<!-- Circles which indicates the steps of the form: -->
-<div style="text-align:center;margin-top:40px;">
-  <span class="step"></span>
-  <span class="step"></span>
-  <span class="step"></span>
-  <span class="step"></span> 
-  <span class="step"></span>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <input type='text' style='display:none;' name='xmIwtLD' value='dc146009200346ab82b1b45a358a3276c837fab19942de11938cb8431316ec240e3c1864472dd6fca97439b35f49cd6f'></input> 
-   <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
-   <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;globeintegrity.com&#x2f;' > </input>
-       <!-- Do not remove this code. -->
-  <style>
-  html,body{
-      margin: 0px;
-  }
-  #crmWebToEntityForm.zcwf_lblLeft {
-      width:100%;
-      padding: 25px;
-      margin: 0 auto;
-      box-sizing: border-box;
-  }
-  #crmWebToEntityForm.zcwf_lblLeft * {
-      box-sizing: border-box;
-  }
-  #crmWebToEntityForm{text-align: left;}
-  #crmWebToEntityForm * {
-      direction: ltr;
-  }
-  .zcwf_lblLeft .zcwf_title {
-      word-wrap: break-word;
-      padding: 0px 6px 10px;
-      font-weight:bold }.zcwf_lblLeft.cpT_primaryBtn:hover{
-      background: linear-gradient(#02acff 0,#006be4 100%) no-repeat padding-box !important;
-      box-shadow: 0 -2px 0 0 #0159b9 inset !important;
-      border: 0 !important;
-      color: #fff !important;
-      outline: 0 !important;
-  }.zcwf_lblLeft .zcwf_col_fld input[type=text], input[type=password], .zcwf_lblLeft .zcwf_col_fld textarea {
-      width: 60%;
-      border: 1px solid #c0c6cc !important;
-      resize: vertical;
-      border-radius: 2px;
-      float: left;
-  }
-  .zcwf_lblLeft .zcwf_col_lab {
-      width: 30%;
-      word-break: break-word;
-      padding: 0px 6px 0px;
-      margin-right: 10px;
-      margin-top: 5px;
-      float: left;
-      min-height: 1px;
-  }
-  .zcwf_lblLeft .zcwf_col_fld {
-      float: left;
-      width: 68%;
-      padding: 0px 6px 0px;
-      position: relative;
-      margin-top: 5px;
-  }
-  .zcwf_lblLeft .zcwf_privacy{padding: 6px;}
-  .zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
-  .dIB{display: inline-block;}
-  .zcwf_lblLeft .zcwf_col_fld_slt {
-      width: 60%;
-      border: 1px solid #ccc;
-      background: #fff;
-      border-radius: 4px;
-      font-size: 12px;
-      float: left;
-      resize: vertical;
-      padding: 2px 5px;
-  }
-  .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after {
-      content: '';
-      display: table;
-      clear: both;
-  }
-  .zcwf_lblLeft .zcwf_col_help {
-      float: left;
-      margin-left: 7px;
-      font-size: 12px;
-      max-width: 35%;
-      word-break: break-word;
-  }
-  .zcwf_lblLeft .zcwf_help_icon {
-      cursor: pointer;
-      width: 16px;
-      height: 16px;
-      display: inline-block;
-      background: #fff;
-      border: 1px solid #c0c6cc;
-      color: #c1c1c1;
-      text-align: center;
-      font-size: 11px;
-      line-height: 16px;
-      font-weight: bold;
-      border-radius: 50%;
-  }
-  .zcwf_lblLeft .zcwf_row {margin: 15px 0px;}
-  .zcwf_lblLeft .formsubmit {
-      margin-right: 5px;
-      cursor: pointer;
-      color: var(--baseColor);
-      font-size: 12px;
-  }
-  .zcwf_lblLeft .zcwf_privacy_txt {
-      width: 90%;
-      color: rgb(0, 0, 0);
-      font-size: 12px;
-      font-family: Arial;
-      display: inline-block;
-      vertical-align: top;
-      color: var(--baseColor);
-      padding-top: 2px;
-      margin-left: 6px;
-  }
-  .zcwf_lblLeft .zcwf_button {
-      font-size: 12px;
-      color: var(--baseColor);
-      border: 1px solid #c0c6cc;
-      padding: 3px 9px;
-      border-radius: 4px;
-      cursor: pointer;
-      max-width: 120px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-  }
-  .zcwf_lblLeft .zcwf_tooltip_over{
-      position: relative;
-  }
-  .zcwf_lblLeft .zcwf_tooltip_ctn{
-      position: absolute;
-      background: #dedede;
-      padding: 3px 6px;
-      top: 3px;
-      border-radius: 4px;word-break: break-word;
-      min-width: 100px;
-      max-width: 150px;
-      color: var(--baseColor);
-      z-index: 100;
-  }
-  .zcwf_lblLeft .zcwf_ckbox{
-      float: left;
-  }
-  .zcwf_lblLeft .zcwf_file{
-      width: 55%;
-      box-sizing: border-box;
-      float: left;
-  }
-  .clearB:after{
-      content:'';
-      display: block;
-      clear: both;
-  }
-  @media all and (max-width: 600px) {
-      .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
-          width: auto;
-          float: none !important;
-      }
-      .zcwf_lblLeft .zcwf_col_help {width: 40%;}
-  }
-  </style>
-  <div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'>Advertisement</div>
-
-
-                
-                
-                <div class='zcwf_row'>
-                    <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                        <label for='LEADCF36'>What Benefits of the IUL interest you the most&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF36' name='LEADCF36' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF35'>About how much do you save in a typical month&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF35' name='LEADCF35' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF34'>What is your current primary source of income&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF34' name='LEADCF34' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Phone'>Phone</label></div><div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF37'>What Investment Strategies are you currently using</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF37' name='LEADCF37' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Mobile'>Mobile</label></div><div class='zcwf_col_fld'><input type='text' id='Mobile' name='Mobile' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
-
-
-
-    <div class='zcwf_row'>
-
-        <div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
-      <script>
-  
-         function checkMandatory5572526000007718001() {
-          var mndFileds = new Array('First Name','Last Name');
-          var fldLangVal = new Array('First\x20Name','Last\x20Name');
-          for(i=0;i<mndFileds.length;i++) {
-            var fieldObj=document.forms['WebToLeads5572526000007718001'][mndFileds[i]];
-            if(fieldObj) {
-              if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
-               if(fieldObj.type =='file')
-                  { 
-                   alert('Please select a file to upload.'); 
-                   fieldObj.focus(); 
-                   return false;
-                  } 
-              alert(fldLangVal[i] +' cannot be empty.'); 
-                        fieldObj.focus();
-                        return false;
-              }  else if(fieldObj.nodeName=='SELECT') {
-                       if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
-                  alert(fldLangVal[i] +' cannot be none.'); 
-                  fieldObj.focus();
-                  return false;
-                 }
-              } else if(fieldObj.type =='checkbox'){
-                  if(fieldObj.checked == false){
-                  alert('Please accept  '+fldLangVal[i]);
-                  fieldObj.focus();
-                  return false;
-                 } 
-               } 
-               try {
-                   if(fieldObj.name == 'Last Name') {
-                  name = fieldObj.value;
-                     }
-              } catch (e) {}
-              }
-          }document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
-      }
-  
-  function tooltipShow5572526000007718001(el){
-      var tooltip = el.nextElementSibling;
-      var tooltipDisplay = tooltip.style.display;
-      if(tooltipDisplay == 'none'){
-          var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
-          for(i=0; i<allTooltip.length; i++){
-              allTooltip[i].style.display='none';
-          }
-          tooltip.style.display = 'block';
-      }else{
-          tooltip.style.display='none';
-      }
-  }
-  </script>
-      <!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=7024c07edfeb7ac1d62f8717af5b0bc1ce3131cd046ea59f058879b887f30efdb83cf29f1366e6578573fb0be6aa1a94gid33c7c370f71b0688ec8f2c0e7e83d57140814abbbd9fa59f828a9abbe8f3675cgidc3669175c4021819a1e6407f2ececf7e4c02be1b6d5d6c1d00cc2bc503d564ebgid1602553ba7cf4ed25c5b00b26dc519f58b8e776d692e7c2825dea09ab3e0ed68&tw=b3d2c8e9a1281f831e721abeb76eeb40341eaf53dfb54f76493f7cb780c12f99'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>
-  </div>
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/5pB6h6CjtKk?si=wxURanI8H5dI9Zbq"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div>
+          <h1 class="bigText2">
+            To discover if you qualify for an IUL, take our 30 second survey below
+            👇🏼
+          </h1>
+        </div>
         
+        <div class="Form">
+          <!-- Note :
+     - You can modify the font style and form style to suit your website. 
+     - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
+     - The Mandatory check script can modified as to suit your business needs. 
+     - It is important that you test the modified form before going live.-->
+  <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='border-radius: 4px; background-color: white;color: black;max-width: 600px;'>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+       <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
+       <form id='webform' action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads5572526000007718001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000007718001()' accept-charset='UTF-8'>
+     <input type='text' style='display:none;' name='xnQsjsdp' value='c351220a40bf2aa20c9f78e01164d5bb3822ec703f075b9c5bbb5630340317c7'></input> 
+     <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+  
+  
+  <!-- Tetseydsr -->
+  <h1>Register:</h1>
+  
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">What Benefits of the IUL interest you the most? (Select all that apply) *
+      <br/>
+    <input type="checkbox" id="Tax-Income" value="Tax-Free Retirement Income"/><span><label for="Tax-Income">Tax-Free Retirement Income</label></span>
+    <br>
+    <input type="checkbox" id="No-Tax" value="No Tax Liability on Growth"/><label for="No-Tax">No Tax Liability on Growth</label>
+    <br>
+    <input type="checkbox" id="Zero-Risk" value="Zero Risk or Exposure to Market Downturns"/><label for="Zero-Risk">Zero Risk or Exposure to Market Downturns</label>
+    <br>
+    <input type="checkbox" id="Preservation" value="Preservation of Capital"/><label for="Preservation">Preservation of Capital</label>
+  </div>
+  <div class="tab">What Investment Strategies are you currently using? (Select all that apply) *
+      <br/>
+    <input type="checkbox" id="401k" value="401k"/><span><label for="401k">401k</label></span>
+    <br>
+    <input type="checkbox" id="IRA" value="No Tax Liability on Growth"/><label for="IRA">IRA</label>
+    <br>
+    <input type="checkbox" id="HoldingCash" value="Holding Cash"/><label for="HoldingCash">Holding Cash</label>
+    <br>
+    <input type="checkbox" id="ActiveTrading" value="Active Trading"/><label for="ActiveTrading">Active Trading</label>
+    <br>
+    <input type="checkbox" id="Self" value="Self Directed Brokerage Account"/><label for="Self">Self directed brokerage account</label>
+  </div>
+    <div class="tab">
+      What is your current primary source of income? *
+      <br>
+      <input type="radio" id="SelfEmp" name="Emp" value="Self-Employed">
+      <label for="SelfEmp">Self-Employed</label><br>
+      <input type="radio" id="Business" name="Emp" value="Business Owner">
+      <label for="Business">Business Owner</label><br>  
+      <input type="radio" id="Employed" name="Emp" value="Employed">
+      <label for="Employed">Employed</label><br>
+      <input type="radio" id="Retired" name="Emp" value="Retired">
+      <label for="Retired">Retired</label><br>
+    </div>
+  <div class="tab">
+      <div id="Saving">
+          About how much do you save in a typical month? *
+          <br>
+          <input type="radio" id="less300" name="Saving" value="Less than $300">
+          <label for="less300">Less than $300</label><br>
+          <input type="radio" id="bt3and5" name="Saving" value="$300 - $500">
+          <label for="bt3and5">$300 - $500</label><br>  
+          <input type="radio" id="bt5and1" name="Saving" value="$500 - $1,000">
+          <label for="bt5and1">$500 - $1,000</label><br>
+          <input type="radio" id="gt1" name="Saving" value="More than $1,000">
+          <label for="gt1">More than $1,000</label><br>
+      </div>
+  </div>
+  
+  <div class="tab">Birthday:
+      <div class='zcwf_row'>
+          <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+              <label for='LEADCF16'>What is your current age&#x3f;</label>
+          </div>
+          <div class='zcwf_col_fld'>
+              <input type='text' id='LEADCF16' name='LEADCF16' maxlength='255'>
+          </input><div class='zcwf_col_help'>
+      
+          </div></div></div>
+  </div>
+  
+  <div class="tab">Login Info:
+      <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+          <label for='First_Name'>First Name<span style='color:red;'>*</span></label></div>
+          <div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input>
+              <div class='zcwf_col_help'>
+              </div>
+          </div>
+      </div>
+  
+      <div class='zcwf_row'>
+          <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div>
+          <div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input>
+              <div class='zcwf_col_help'></div></div></div>
+              <div class='zcwf_row'>
+                <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                <label for='Phone'>Phone</label></div>
+              <div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input>
+                <div class='zcwf_col_help'></div></div></div>
+                <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                  <label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email' name='Email' maxlength='100'></input><div class='zcwf_col_help'></div></div></div>
+                
+  </div>
+  
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;" class="hiddenInput">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span> 
+    <span class="step"></span>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+     <input type='text' style='display:none;' name='xmIwtLD' value='dc146009200346ab82b1b45a358a3276c837fab19942de11938cb8431316ec240e3c1864472dd6fca97439b35f49cd6f'></input> 
+     <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
+     <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;globeintegrity.com&#x2f;' > </input>
+         <!-- Do not remove this code. -->
+    <style>
+    html,body{
+        margin: 0px;
+    }
+    #crmWebToEntityForm.zcwf_lblLeft {
+        width:100%;
+        padding: 25px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    #crmWebToEntityForm.zcwf_lblLeft * {
+        box-sizing: border-box;
+    }
+    #crmWebToEntityForm{text-align: left;}
+    #crmWebToEntityForm * {
+        direction: ltr;
+    }
+    .zcwf_lblLeft .zcwf_title {
+        word-wrap: break-word;
+        padding: 0px 6px 10px;
+        font-weight:bold }.zcwf_lblLeft.cpT_primaryBtn:hover{
+        background: linear-gradient(#02acff 0,#006be4 100%) no-repeat padding-box !important;
+        box-shadow: 0 -2px 0 0 #0159b9 inset !important;
+        border: 0 !important;
+        color: #fff !important;
+        outline: 0 !important;
+    }.zcwf_lblLeft .zcwf_col_fld input[type=text], input[type=password], .zcwf_lblLeft .zcwf_col_fld textarea {
+        width: 60%;
+        border: 1px solid #c0c6cc !important;
+        resize: vertical;
+        border-radius: 2px;
+        float: left;
+    }
+    .zcwf_lblLeft .zcwf_col_lab {
+        width: 30%;
+        word-break: break-word;
+        padding: 0px 6px 0px;
+        margin-right: 10px;
+        margin-top: 5px;
+        float: left;
+        min-height: 1px;
+    }
+    .zcwf_lblLeft .zcwf_col_fld {
+        float: left;
+        width: 68%;
+        padding: 0px 6px 0px;
+        position: relative;
+        margin-top: 5px;
+    }
+    .zcwf_lblLeft .zcwf_privacy{padding: 6px;}
+    .zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
+    .dIB{display: inline-block;}
+    .zcwf_lblLeft .zcwf_col_fld_slt {
+        width: 60%;
+        border: 1px solid #ccc;
+        background: #fff;
+        border-radius: 4px;
+        font-size: 12px;
+        float: left;
+        resize: vertical;
+        padding: 2px 5px;
+    }
+    .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .zcwf_lblLeft .zcwf_col_help {
+        float: left;
+        margin-left: 7px;
+        font-size: 12px;
+        max-width: 35%;
+        word-break: break-word;
+    }
+    .zcwf_lblLeft .zcwf_help_icon {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #c0c6cc;
+        color: #c1c1c1;
+        text-align: center;
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: bold;
+        border-radius: 50%;
+    }
+    .zcwf_lblLeft .zcwf_row {margin: 15px 0px;}
+    .zcwf_lblLeft .formsubmit {
+        margin-right: 5px;
+        cursor: pointer;
+        color: var(--baseColor);
+        font-size: 12px;
+    }
+    .zcwf_lblLeft .zcwf_privacy_txt {
+        width: 90%;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-family: Arial;
+        display: inline-block;
+        vertical-align: top;
+        color: var(--baseColor);
+        padding-top: 2px;
+        margin-left: 6px;
+    }
+    .zcwf_lblLeft .zcwf_button {
+        font-size: 12px;
+        color: var(--baseColor);
+        border: 1px solid #c0c6cc;
+        padding: 3px 9px;
+        border-radius: 4px;
+        cursor: pointer;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .zcwf_lblLeft .zcwf_tooltip_over{
+        position: relative;
+    }
+    .zcwf_lblLeft .zcwf_tooltip_ctn{
+        position: absolute;
+        background: #dedede;
+        padding: 3px 6px;
+        top: 3px;
+        border-radius: 4px;word-break: break-word;
+        min-width: 100px;
+        max-width: 150px;
+        color: var(--baseColor);
+        z-index: 100;
+    }
+    .zcwf_lblLeft .zcwf_ckbox{
+        float: left;
+    }
+    .zcwf_lblLeft .zcwf_file{
+        width: 55%;
+        box-sizing: border-box;
+        float: left;
+    }
+    .clearB:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+    @media all and (max-width: 600px) {
+        .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
+            width: auto;
+            float: none !important;
+        }
+        .zcwf_lblLeft .zcwf_col_help {width: 40%;}
+    }
+    </style>
+    <div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'></div>
+  
+  
+                  
+                  
+                  <div class='zcwf_row hiddenInput'>
+                      <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                          <label for='LEADCF36'>What Benefits of the IUL interest you the most&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF36' name='LEADCF36' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row hiddenInput'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF35'>About how much do you save in a typical month&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF35' name='LEADCF35' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row hiddenInput'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF34'>What is your current primary source of income&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF34' name='LEADCF34' maxlength='255'></input><div class='zcwf_col_help'></div></div></div>
+                          
+                          
+  
+  
+  
+                            <div class='zcwf_row hiddenInput'>
+                              <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF37'>What Investment Strategies are you currently using</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF37' name='LEADCF37' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row hiddenInput'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Mobile'>Mobile</label></div><div class='zcwf_col_fld'><input type='text' id='Mobile' name='Mobile' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
+  
+  
+  
+      <div class='zcwf_row hiddenInput'>
+  
+          <div class='zcwf_col_lab'></div><div class='zcwf_col_fld '><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
+        <script>
+    
+           function checkMandatory5572526000007718001() {
+            var mndFileds = new Array('First Name','Last Name');
+            var fldLangVal = new Array('First\x20Name','Last\x20Name');
+            for(i=0;i<mndFileds.length;i++) {
+              var fieldObj=document.forms['WebToLeads5572526000007718001'][mndFileds[i]];
+              if(fieldObj) {
+                if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+                 if(fieldObj.type =='file')
+                    { 
+                     alert('Please select a file to upload.'); 
+                     fieldObj.focus(); 
+                     return false;
+                    } 
+                alert(fldLangVal[i] +' cannot be empty.'); 
+                          fieldObj.focus();
+                          return false;
+                }  else if(fieldObj.nodeName=='SELECT') {
+                         if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+                    alert(fldLangVal[i] +' cannot be none.'); 
+                    fieldObj.focus();
+                    return false;
+                   }
+                } else if(fieldObj.type =='checkbox'){
+                    if(fieldObj.checked == false){
+                    alert('Please accept  '+fldLangVal[i]);
+                    fieldObj.focus();
+                    return false;
+                   } 
+                 } 
+                 try {
+                     if(fieldObj.name == 'Last Name') {
+                    name = fieldObj.value;
+                       }
+                } catch (e) {}
+                }
+            }document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+        }
+    
+    function tooltipShow5572526000007718001(el){
+        var tooltip = el.nextElementSibling;
+        var tooltipDisplay = tooltip.style.display;
+        if(tooltipDisplay == 'none'){
+            var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+            for(i=0; i<allTooltip.length; i++){
+                allTooltip[i].style.display='none';
+            }
+            tooltip.style.display = 'block';
+        }else{
+            tooltip.style.display='none';
+        }
+    }
+    </script>
+        <!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=7024c07edfeb7ac1d62f8717af5b0bc1ce3131cd046ea59f058879b887f30efdb83cf29f1366e6578573fb0be6aa1a94gid33c7c370f71b0688ec8f2c0e7e83d57140814abbbd9fa59f828a9abbe8f3675cgidc3669175c4021819a1e6407f2ececf7e4c02be1b6d5d6c1d00cc2bc503d564ebgid1602553ba7cf4ed25c5b00b26dc519f58b8e776d692e7c2825dea09ab3e0ed68&tw=b3d2c8e9a1281f831e721abeb76eeb40341eaf53dfb54f76493f7cb780c12f99'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>
+    </div>
+          
+        </div>
       </div>
     </div>
     <footer class="footerContainer">
