@@ -6,26 +6,30 @@ var Two = new Set();
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
+  document.getElementById('incomeWarning').style.display='none'
+  document.getElementById('savingWarning').style.display='none'
+  document.getElementById('IULWarning').style.display='none'
+  document.getElementById('investmentWarning').style.display='none'
+  document.getElementById('ageWarning').style.display='none'
+
   x[n].style.display = "block";
   // ... and fix the Previous/Next buttons:
   if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("prevBtn").style.visibility = "hidden";
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("prevBtn").style.visibility = "";
   }
   if (n == x.length - 1) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Next <i class=\"fa-solid fa-arrow-right\"></i>";
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n);
 }
 
 function nextPrev(n) {
-    if(!validateForm()){
-        return
-    }
+    
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
@@ -99,7 +103,11 @@ function validateForm() {
     console.log(Array.from(One).toString())
     document.getElementById("LEADCF36").value = Array.from(One).toString(" ")
     if (Array.from(One).length === 0 ){
+      document.getElementById("IULWarning").style.display= 'block';
+      document.getElementById("IULWarning").style.color= 'red';
         return false
+    }else{
+      document.getElementById("IULWarning").style.display= 'none';
     }
   }
   if (currentTab === 1 ){
@@ -140,7 +148,12 @@ function validateForm() {
     console.log(Array.from(Two).toString())
     document.getElementById("LEADCF37").value = Array.from(Two).toString(" ")
     if (Array.from(Two).length === 0 ){
+      document.getElementById("investmentWarning").style.display= 'block';
+      document.getElementById("investmentWarning").style.color= 'red';
         return false
+    }
+    else{
+      document.getElementById("investmentWarning").style.display= 'none';
     }
   }
 
@@ -148,20 +161,35 @@ function validateForm() {
   if(currentTab ===3){
     var saving = document.querySelector('input[name="Saving"]:checked')?.value;
     if (saving===undefined){
+      document.getElementById("savingWarning").style.display= 'block';
+      document.getElementById("savingWarning").style.color= 'red';
         return false
+    }else{
+      document.getElementById("savingWarning").style.display= 'none';
     }
     document.getElementById('LEADCF35').value = saving
-
-
+  }
+  if(currentTab ===4){
+    var age = document.getElementById('LEADCF16')?.value;
+    if (age < 18 || age > 90){
+      document.getElementById("ageWarning").style.display= 'block';
+      document.getElementById("ageWarning").style.color= 'red';
+        return false
+    }else{
+      document.getElementById("ageWarning").style.display= 'none';
+    }
   }
   if(currentTab ===2){
     var Emp = document.querySelector('input[name="Emp"]:checked')?.value;
     if (Emp===undefined){
+        document.getElementById("incomeWarning").style.display = "block"; 
+        document.getElementById("incomeWarning").style.color = "red"; 
         return false
     }
+    else{
+      document.getElementById("incomeWarning").style.display = "none"; 
+    }
     document.getElementById('LEADCF34').value = Emp
-
-
   }
 
   // If the valid status is true, mark the step as finished and valid:
@@ -191,3 +219,44 @@ $('input[name="Emp"]').on("click", function(e) {
 $('input[name="Saving"]').on("click", function(e) {
     nextPrev(1)
 })
+
+
+
+
+
+
+
+
+
+
+// function getResponses(valis_auth_tokens, requests){
+//   for(let i in requests){
+//     var l = []
+//     var x =""
+//       const tokenMatch = i[1].match(/token=([^&]+)/);
+//       valis_auth_tokens.forEach((token) => {
+//           if(tokenMatch.localeCompare(token)==0){
+//             const matches = i[1].match(/[?&]([^&=]+)=([^&]+)/g);
+//             const queryParams = {};
+//             if (matches) {
+//               matches.forEach(match => {
+//                 const [key, value] = match.substring(1).split('=');
+//                 if(key=="token"){
+//                   x+=""
+//                 }
+//                 else{
+//                   x += key+","+value
+//                 }
+//               });
+//             }
+//             console.log("VALID,",x)
+//             l.push("VALID,",x)
+//           }
+//           else{
+//             l.push("INVALID")
+//           }
+//   })
+// }
+// return l
+
+// }

@@ -31,7 +31,9 @@ html {
 }
 
 .footerContainer{
-    background-color: #636363;
+  background-color: #636363;
+  color: white;
+  padding: 4rem 10rem
 }
 
 .footerInternalContainer{
@@ -50,7 +52,7 @@ html {
 }
 
 .bigText2{
-  padding: 1rem 0rem;
+  padding: 2rem 0rem;
   color: #ef5b26;
   font-size: xxx-large;
 
@@ -84,6 +86,7 @@ html {
   /* Hide all steps by default: */
   .tab {
     display: none;
+    padding: 25px;
   }
   
   /* Make circles that indicate the steps of the form: */
@@ -112,3 +115,47 @@ html {
 .hiddenInput{
   display: none;
 }
+
+.nextContainer{
+  background-color: #006eee;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nextButton{
+  background-color: #0066dd;
+  padding: 0.5rem 1.3rem;
+  border: none;
+  color: white;
+}
+
+.CheckBox{
+  margin-right: 0.5rem;
+}
+
+.zcwf_col_lab{
+  width: 100%;
+  /* text-align: center; */
+}
+
+#LEADCF16{
+  width: 100%;
+}
+
+.imageContainer2{
+  width: 100px;
+  padding-bottom: 1rem;
+}
+
+.Form{
+  margin-bottom: 10rem;
+}
+
+a{
+  color: white !important;
+}
+
+
