@@ -21,9 +21,12 @@ html {
 }
 
 .imageContainer{
-  width: 150px;
+  width: 120px;
+}
+.CompanyLogo{
   margin: 0rem 0rem 4rem 10rem;
   padding-top: 3rem;
+  text-align: left;
 }
 
 .comapanyLogo{
@@ -166,7 +169,7 @@ a{
       font-size: 15px;
       
   }
-  .imageContainer{
+  .imageContainer, .CompanyLogo{
     display: none;
   }
   .firstContainer{
@@ -188,3 +191,4 @@ a{
     padding: 2rem;
   }
 }
+
