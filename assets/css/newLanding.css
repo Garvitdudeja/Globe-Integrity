@@ -1,178 +1,180 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
-.wrapper{
+.wrapper {
   background-color: black;
   text-align: center;
   display: flex;
   justify-content: center;
-
 }
 
-.firstContainer{
-    width: 80%;
-    text-align: center;
+.firstContainer {
+  width: 80%;
+  text-align: center;
 }
 
-.imageContainer{
+.imageContainer {
   width: 120px;
 }
-.CompanyLogo{
+.CompanyLogo {
   margin: 0rem 0rem 4rem 10rem;
   padding-top: 3rem;
   text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 
-.comapanyLogo{
+.comapanyLogo {
   width: 100%;
 }
+.companyText {
+  color: whitesmoke;
+  text-align: justify;
+  margin-top: auto;
+  font-family: "EB Garamond", serif;
+  font-size: larger;
+  letter-spacing: 1px;
+}
 
-.footerContainer{
+.footerContainer {
   background-color: #636363;
   color: white;
-  padding: 4rem 10rem
+  padding: 4rem 10rem;
 }
 
-.footerInternalContainer{
-    display: flex;
-    justify-content: space-between;
-    
+.footerInternalContainer {
+  display: flex;
+  justify-content: space-between;
 }
-.FormContainer{
-    color: black
-}
-
-
-.bigText{
-    color: white;
-
+.FormContainer {
+  color: black;
 }
 
-.bigText2{
+.bigText {
+  color: white;
+}
+
+.bigText2 {
   padding: 2rem 0rem;
   color: #ef5b26;
   font-size: xxx-large;
-
 }
-
-
 
 /* New CSS */
 /* Style the form */
 #regForm {
-    background-color: #ffffff;
-    margin: 100px auto;
-    padding: 40px;
-    width: 70%;
-    min-width: 300px;
-  }
-  
-  /* Style the input fields */
-  input {
-    padding: 10px;
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
-  }
-  
-  /* Mark input boxes that gets an error on validation: */
-  input.invalid {
-    background-color: #ffdddd;
-  }
-  
-  /* Hide all steps by default: */
-  .tab {
-    display: none;
-    padding: 25px;
-  }
-  
-  /* Make circles that indicate the steps of the form: */
-  .step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
-  }
-  
-  /* Mark the active step: */
-  .step.active {
-    opacity: 1;
-  }
-  
-  /* Mark the steps that are finished and valid: */
-  .step.finish {
-    background-color: #04AA6D;
-  }
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
 
+/* Style the input fields */
+input {
+  padding: 10px;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
 
-.hiddenInput{
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+  padding: 25px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04aa6d;
+}
+
+.hiddenInput {
   display: none;
 }
 
-.nextContainer{
+.nextContainer {
   background-color: #006eee;
 }
 
-.buttonContainer{
+.buttonContainer {
   display: flex;
   justify-content: space-between;
 }
 
-.nextButton{
+.nextButton {
   background-color: #0066dd;
   padding: 0.5rem 1.3rem;
   border: none;
   color: white;
 }
 
-.CheckBox{
+.CheckBox {
   margin-right: 0.5rem;
 }
 
-.zcwf_col_lab{
+.zcwf_col_lab {
   width: 100%;
   /* text-align: center; */
 }
 
-#LEADCF16{
+#LEADCF16 {
   width: 100%;
 }
 
-.imageContainer2{
+.imageContainer2 {
   width: 100px;
   padding-bottom: 1rem;
 }
 
-.Form{
+.Form {
   margin-bottom: 10rem;
 }
 
-a{
+a {
   color: white !important;
 }
 
-
 @media only screen and (max-width: 768px) {
-  label{
-      margin-bottom: 0rem !important;
-      margin-left: 4px !important;
-      font-size: 15px;
-      
+  label {
+    margin-bottom: 0rem !important;
+    margin-left: 4px !important;
+    font-size: 15px;
   }
-  .imageContainer, .CompanyLogo{
+  .imageContainer,
+  .CompanyLogo {
     display: none;
   }
-  .firstContainer{
+  .firstContainer {
     padding-top: 4rem;
   }
   .CheckBoxContainer {
@@ -185,10 +187,9 @@ a{
     height: 13px;
     width: 17px; /* Adjust the margin as needed */
   }
-  .footerContainer{
+  .footerContainer {
     display: flex;
     flex-direction: column;
     padding: 2rem;
   }
 }
-
