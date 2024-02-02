@@ -164,11 +164,25 @@ a {
   color: white !important;
 }
 
+.bigText21{  
+  padding: 2rem 3rem;
+  color: #ef5b26;
+  font-size: xxx-large;  
+}
+
 @media only screen and (max-width: 768px) {
   label {
     margin-bottom: 0rem !important;
     margin-left: 4px !important;
     font-size: 15px;
+  }
+  .bigText21{
+    font-size: revert;
+    padding: 2rem 0rem;
+  }
+  .bigText2{
+    font-size: revert;
+    padding: 2rem 0rem;
   }
   .imageContainer,
   .CompanyLogo {
