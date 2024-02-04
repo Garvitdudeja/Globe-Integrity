@@ -190,13 +190,14 @@ input.invalid {
     padding-top: 4rem;
   }
   .CheckBoxContainer {
+    margin: 0px;
+    padding: 0px;
     display: flex;
     align-items: center;
   }
 
   .CheckBox {
     margin-right: 5px;
-    height: 13px;
     width: 17px; /* Adjust the margin as needed */
   }
   .footerContainer {

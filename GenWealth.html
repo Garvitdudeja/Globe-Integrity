@@ -110,17 +110,19 @@
     <div class="CheckBoxContainer">
       <input type="checkbox" class="CheckBox" id="Tax-Income" value="Tax-Free Retirement Income" />
       <label for="Tax-Income">Tax-Free Retirement Income</label>
-    </div>    <br>
+    </div>  
     <div class="CheckBoxContainer">
       <input type="checkbox" class="CheckBox" id="No-Tax" value="No Tax Liability on Growth"/><label for="No-Tax">No Tax Liability on Growth</label>
     </div>
-      <br>
+  
     <div class="CheckBoxContainer">
     <input type="checkbox" class="CheckBox" id="Zero-Risk" value="Zero Risk or Exposure to Market Downturns"/><label for="Zero-Risk">Zero Risk or Exposure to Market Downturns</label>
     </div>
-    <br>
-    <input type="checkbox" class="CheckBox" id="Preservation" value="Preservation of Capital"/><label for="Preservation">Preservation of Capital</label>
+
+    <div class="CheckBoxContainer">
+      <input type="checkbox" class="CheckBox" id="Preservation" value="Preservation of Capital"/><label for="Preservation">Preservation of Capital</label>
   </div>
+    </div>
   <div class="tab">
     <div id="investmentWarning" >Please Select All that Apply</div>
     <p style="margin-bottom: 1rem;">What Investment Strategies are you currently using? (Select all that apply) *</p>
@@ -524,7 +526,6 @@ for (var i = 0; i < selectField.options.length; i++) {
     selectField.options[i].selected = false;
   }
 }
-console.log(document.getElementById('LEADCF38').value)
     }
   </script>
   <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
