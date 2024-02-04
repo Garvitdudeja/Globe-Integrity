@@ -63,7 +63,7 @@ html {
 
 .bigText2 {
   padding: 2rem 0rem;
-  color: #ef5b26;
+  color: #2d3269;
   font-size: xxx-large;
 }
 
@@ -160,9 +160,7 @@ input.invalid {
   margin-bottom: 10rem;
 }
 
-a {
-  color: white !important;
-}
+
 
 .bigText21{  
   padding: 2rem 3rem;
@@ -206,4 +204,26 @@ a {
     flex-direction: column;
     padding: 2rem;
   }
+}
+
+
+
+.footer-main{
+  background-color: #f4f4f4;
+  padding: 2rem 0px;
+}
+
+.footBox1{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 2rem;
+}
+
+.footBox2{
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
 }
