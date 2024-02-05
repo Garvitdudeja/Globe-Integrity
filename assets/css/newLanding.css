@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 html {
   height: 100%;
 }
@@ -20,7 +25,7 @@ html {
 }
 
 .imageContainer {
-  width: 120px;
+  width: 85px;
 }
 .CompanyLogo {
   margin: 0rem 0rem 4rem 10rem;
@@ -39,8 +44,10 @@ html {
   text-align: justify;
   margin-top: auto;
   font-family: "EB Garamond", serif;
-  font-size: larger;
+  font-size: 40px;
   letter-spacing: 1px;
+
+  
 }
 
 .footerContainer {
@@ -62,7 +69,7 @@ html {
 }
 
 .bigText2 {
-  padding: 2rem 0rem;
+  padding: 0rem 0rem;
   color: #2d3269;
   font-size: xxx-large;
 }
