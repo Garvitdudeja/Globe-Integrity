@@ -4,7 +4,7 @@
 }
 
 body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -175,7 +175,54 @@ input.invalid {
   font-size: xxx-large;  
 }
 
+
+
+
+.footer-main{
+  background-color: #f4f4f4;
+  padding: 2rem 0px;
+}
+
+.footBox1{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 2rem;
+}
+
+.footBox2{
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+.CompanyLogoFooter{
+display: flex;
+}
+
+.companyTextFooter{
+  font-size: 2.3rem;
+  margin: auto;
+
+}
+
+
+.phoneFooter{
+  font-size: x-large; 
+  color: #fff;
+}
+
+.imageContainerFooter{
+  width: 7.5rem
+}
+
 @media only screen and (max-width: 768px) {
+  .companyTextFooter{
+    font-size: 1rem;
+    margin: auto;
+  }
   label {
     margin-bottom: 0rem !important;
     margin-left: 4px !important;
@@ -212,40 +259,14 @@ input.invalid {
     flex-direction: column;
     padding: 2rem;
   }
+  .phoneFooter{
+    font-size: 1rem;
+  }
+  .imageContainerFooter{
+    width: 5rem;
+  }
+
 }
 
 
 
-.footer-main{
-  background-color: #f4f4f4;
-  padding: 2rem 0px;
-}
-
-.footBox1{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 2rem;
-}
-
-.footBox2{
-  text-align: center;
-}
-
-a{
-  text-decoration: none;
-}
-
-.CompanyLogoFooter{
-display: flex;
-}
-
-.companyTextFooter{
-  font-size: 8px;
-}
-
-
-.phoneFooter{
-  font-size: x-large; 
-  color: #fff;
-}
