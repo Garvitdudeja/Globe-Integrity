@@ -235,3 +235,17 @@ gap: 2rem;
 a{
   text-decoration: none;
 }
+
+.CompanyLogoFooter{
+display: flex;
+}
+
+.companyTextFooter{
+  font-size: 8px;
+}
+
+
+.phoneFooter{
+  font-size: x-large; 
+  color: #fff;
+}
