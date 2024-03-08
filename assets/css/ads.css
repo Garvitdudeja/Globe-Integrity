@@ -1,0 +1,75 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.navbarContainer {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+}
+.phoneContent {
+  display: none;
+  text-align: center;
+}
+.navCompanyName {
+  color: #105fa8;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 0;
+  /* width: 100%; */
+}
+
+.navbarContainer {
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.container1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #5d5d5d;
+  letter-spacing: 0.02em;
+  padding: 2rem 0rem 2rem 2rem;
+}
+
+.videoContainer {
+  width: 50vw;
+  /* text-align: center; */
+  /* margin: 0 auto; */
+}
+.heroContainer{
+    display: flex;
+    flex-direction: row; /* Items will be in a row */
+    justify-content: space-between; /* Items will be at the start and end of the container */
+    align-items: center; /* Vertically center items */
+}
+.tab{
+    background: linear-gradient(135deg, #003866, #005e8c);
+    color: #fff;
+    height: 100%;
+}
+.nextButton ,.buttonContainer{
+    background: linear-gradient(135deg, #003866, #005e8c);
+}
+.Form{
+    margin: auto;
+}
+.formContainer{
+    margin: auto 0px;
+    height: 100%;
+    padding-right: 1rem;
+}
+@media only screen and (min-width: 700px) {
+  .phoneContent {
+    display: block;
+  }
+}
