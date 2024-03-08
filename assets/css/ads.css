@@ -14,6 +14,7 @@ body {
   justify-content: space-between;
   position: sticky;
   top: 0px;
+  z-index: 999;
 }
 .phoneContent {
   display: none;
@@ -44,11 +45,11 @@ body {
 .videoContainer {
   width: 50vw;
   /* text-align: center; */
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 .heroContainer{
     display: flex;
-    flex-direction: row; /* Items will be in a row */
+    flex-direction: column; /* Items will be in a row */
     justify-content: space-between; /* Items will be at the start and end of the container */
     align-items: center; /* Vertically center items */
 }
@@ -66,10 +67,28 @@ body {
 .formContainer{
     margin: auto 0px;
     height: 100%;
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
+}
+.desContainer{
+    margin: 0px 0px 0px 2rem;
+}
+.desIcon {
+    width: 1.8rem;
+    display: inline;
 }
 @media only screen and (min-width: 700px) {
   .phoneContent {
     display: block;
   }
 }
+@media only screen and (min-width: 768px) {
+    .heroContainer {
+      flex-direction: row;
+    }
+    .videoContainer{
+        margin: 0px;
+    }
+    .formContainer{
+    padding-right: 1rem;
+    }
+  }
