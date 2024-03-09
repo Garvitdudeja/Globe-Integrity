@@ -39,18 +39,22 @@ body {
   line-height: 2.4rem;
   color: #5d5d5d;
   letter-spacing: 0.02em;
-  padding: 2rem 0rem 2rem 2rem;
+  /* padding: 2rem 0rem 2rem 2rem; */
+  padding: 1rem;
+}
+p,li{
+  color: #5d5d5d
 }
 
 .videoContainer {
-  width: 50vw;
+  /* width: 50vw; */
   /* text-align: center; */
   margin: 0 auto;
 }
 .heroContainer{
     display: flex;
     flex-direction: column; /* Items will be in a row */
-    justify-content: space-between; /* Items will be at the start and end of the container */
+    justify-content: space-around; /* Items will be at the start and end of the container */
     align-items: center; /* Vertically center items */
 }
 .tab{
@@ -76,6 +80,20 @@ body {
     width: 1.8rem;
     display: inline;
 }
+.gap-3{
+  gap: 0.8rem;
+}
+h3{
+  /* margin: 0 0 1.6rem; */
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3.6rem;
+  color: #444;
+}
+.footerContainer{
+  margin-top: 2rem;
+  background-color: #5d5d5d;
+}
 @media only screen and (min-width: 700px) {
   .phoneContent {
     display: block;
@@ -87,8 +105,17 @@ body {
     }
     .videoContainer{
         margin: 0px;
+        width: 50vw;
     }
     .formContainer{
     padding-right: 1rem;
+    }
+    .desContainer{
+    margin: 0px 0px 0px 8rem;
+    max-width: 60vw;
+    }
+    .heroContainer{
+      padding: 2rem 0rem 2rem 2rem;
+
     }
   }
