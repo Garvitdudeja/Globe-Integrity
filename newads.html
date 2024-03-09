@@ -14,6 +14,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/newLanding.css" />
@@ -38,7 +40,7 @@
         <h3 style="font-weight: 400">GenWealth</h3>
       </div>
       <div class="phoneContent">
-        <a href="tel:+1 8554969338">855-4969-338</a>
+        <a href="tel:+1 8554969338">855-496-9338</a>
         <p>Call to Request a Local Agent/Producer</p>
       </div>
     </div>
@@ -77,7 +79,7 @@
          - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
          - The Mandatory check script can modified as to suit your business needs. 
          - It is important that you test the modified form before going live.-->
-      <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='border-radius: 4px; background-color: white;color: black;max-width: 600px;'>
+      <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='border-radius: 4px;color: black;max-width: 600px;'>
           <meta name='viewport' content='width=device-width, initial-scale=1.0'>
            <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
            <form id='webform' action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads5572526000007718001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000007718001()' accept-charset='UTF-8'>
@@ -99,6 +101,12 @@
         
       <!-- One "tab" for each step in the form: -->
       <div class="tab">
+        <div class="intrested">
+          <h5>Interested in learning more?</h5>
+          <p class="text-light">We can't wait to get to know you. We'll have a local agent/producer contact you soon to schedule your personal conversation.</p>
+          
+        </div>
+     <br/>
         <div id="IULWarning" >Please Select All that Apply</div>
     
         <p style="margin-bottom: 1rem;color: #fff;">What Benefits of the IUL interest you the most? (Select all that apply) *</p>
@@ -119,6 +127,8 @@
       </div>
         </div>
       <div class="tab">
+        <h5>Interested in learning more?</h5>
+        <p class="text-light">We can't wait to get to know you. We'll have a local agent/producer contact you soon to schedule your personal conversation.</p>
         <div id="investmentWarning" >Please Select All that Apply</div>
         <p style="margin-bottom: 1rem;color: #fff;">What Investment Strategies are you currently using? (Select all that apply) *</p>
         <input type="checkbox" class="CheckBox" id="401k" value="401k"/><span><label for="401k">401k</label></span>
@@ -132,9 +142,11 @@
         <input type="checkbox" class="CheckBox" id="Self" value="Self Directed Brokerage Account"/><label for="Self">Self directed brokerage account</label>
       </div>
         <div class="tab">
+          <h5>Interested in learning more?</h5>
+          <p class="text-light">We can't wait to get to know you. We'll have a local agent/producer contact you soon to schedule your personal conversation.</p>
           <div id="incomeWarning" >Please Select A Income Source</div>
     
-          <p>What is your current primary source of income? *</p>
+          <p class="text-light">What is your current primary source of income? *</p>
           <input type="radio" id="SelfEmp" name="Emp" value="Self-Employed">
           <label for="SelfEmp">Self-Employed</label><br>
           <input type="radio" id="Business" name="Emp" value="Business Owner">
@@ -145,10 +157,12 @@
           <label for="Retired">Retired</label><br>
         </div>
       <div class="tab">
+        <h5>Interested in learning more?</h5>
+        <p class="text-light">We can't wait to get to know you. We'll have a local agent/producer contact you soon to schedule your personal conversation.</p>
           <div id="Saving">
           <div id="savingWarning" >Please Select How Much You Save</div>
     
-            <p>
+            <p class="text-light">
               About how much do you save in a typical month? *
             </p>
             <input type="radio" id="less300" name="Saving" value="Less than $300">
@@ -163,6 +177,8 @@
       </div>
       
       <div class="tab">
+        <h5>Interested in learning more?</h5>
+        <p class="text-light">We can't wait to get to know you. We'll have a local agent/producer contact you soon to schedule your personal conversation.</p>
           <div class='zcwf_row'>
           <div id="ageWarning" >Age must be between 18 to 90</div>
               <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
@@ -196,7 +212,7 @@
       </div>
       
       <div style="overflow:auto;"class="nextContainer" >
-        <div  class="buttonContainer">
+        <div  class="buttonContainer1">
           <button type="button" class="nextButton" id="prevBtn" onclick="nextPrev(-1)"><i class="fa-solid fa-arrow-left"></i>Previous</button>
           <button type="button" class="nextButton" id="nextBtn" onclick="nextPrev(1)">Next</button>
         </div>
@@ -298,7 +314,7 @@
         .zcwf_lblLeft .zcwf_col_fld_slt {
             width: 60%;
             border: 1px solid #ccc;
-            background: #fff;
+            /* background: #fff; */
             border-radius: 4px;
             font-size: 12px;
             float: left;
@@ -322,7 +338,7 @@
             width: 16px;
             height: 16px;
             display: inline-block;
-            background: #fff;
+            /* background: #fff; */
             border: 1px solid #c0c6cc;
             color: #c1c1c1;
             text-align: center;
@@ -366,7 +382,7 @@
         }
         .zcwf_lblLeft .zcwf_tooltip_ctn{
             position: absolute;
-            background: #dedede;
+            /* background: #dedede; */
             padding: 3px 6px;
             top: 3px;
             border-radius: 4px;word-break: break-word;
@@ -477,6 +493,9 @@
             </div>
         </div>
       </div>
+    <div class="text-center">
+      <img src="/assets/images/Custom/table.png" alt="">
+    </div>
     <!-- Description -->
     <div class="desContainer">
       <div>
@@ -558,67 +577,49 @@
     </footer>
   </body>
   <!-- Google Tag Manager (noscript) -->
+  <script src="./assets/js/newLanding.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16453676009">
+  </script>
+  <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+  <script>
+    const btn = ()=>{
+    // Get the select element by its ID
+var selectField = document.getElementById("LEADCF38");
+
+// Set the selected options (replace with the values you want to set)
+var selectedValues = ["Tax-Free Retirement Income","No Tax Liability on Growth"];
+
+// Loop through the options and set the "selected" attribute
+for (var i = 0; i < selectField.options.length; i++) {
+    console.log(selectField.options[i])
+
+  if (selectedValues.includes(selectField.options[i].value)) {
+    selectField.options[i].selected = true;
+  } else {
+    selectField.options[i].selected = false;
+  }
+}
+    }
+  </script>
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+
+
+gtag('config', 'AW-16453676009');
+</script>
+<!-- Google Tag Manager -->
+
+  <!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSQCH4CB"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=AW-16453676009"
-  ></script>
+  <!-- End Google Tag Manager (noscript) -->  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/5.4.2/typescript.min.js" integrity="sha512-wga6tmr/e9Gg0A1Ov3bXNmCvx+T4l/4QyaCHpgpN1X+YenP3z6EFUL243tN9w2vfTBmp/7Q9lWKGZgQIyMRIQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script
-    type="text/javascript"
-    src="https://crm.zoho.com/crm/javascript/zcga.js"
-  ></script>
-  <script src="./assets/js/newLanding.js"></script>
-  <script>
-    const btn = () => {
-      // Get the select element by its ID
-      var selectField = document.getElementById("LEADCF38");
-
-      // Set the selected options (replace with the values you want to set)
-      var selectedValues = [
-        "Tax-Free Retirement Income",
-        "No Tax Liability on Growth",
-      ];
-
-      // Loop through the options and set the "selected" attribute
-      for (var i = 0; i < selectField.options.length; i++) {
-        console.log(selectField.options[i]);
-
-        if (selectedValues.includes(selectField.options[i].value)) {
-          selectField.options[i].selected = true;
-        } else {
-          selectField.options[i].selected = false;
-        }
-      }
-    };
-  </script>
-  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-  <!-- Google tag (gtag.js) -->
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "AW-16453676009");
-  </script>
-
-  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-  <!-- Google tag (gtag.js) -->
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "AW-16453676009");
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
