@@ -60,7 +60,7 @@ p,li{
 .tab{
     /* background: linear-gradient(135deg, #003866, #005e8c); */
     color: #fff;
-    margin: auto;
+    margin: 0 auto;
     height: 100%;
     width: 80%;
     /* text-align: center; */
@@ -68,6 +68,11 @@ p,li{
 .nextButton ,.buttonContainer,.nextContainer{
     /* background: linear-gradient(135deg, #003866, #005e8c); */
     background-color: inherit;
+}
+.nextButton{
+  border: 2px solid #fff;
+  border-radius: 2px;
+
 }
 .nextContainer{
   width: 80%;
