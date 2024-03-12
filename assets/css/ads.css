@@ -55,14 +55,14 @@ p,li{
     display: flex;
     flex-direction: column; /* Items will be in a row */
     justify-content: space-around; /* Items will be at the start and end of the container */
-    align-items: center; /* Vertically center items */
+    /* align-items: center; Vertically center items */
 }
 .tab{
     /* background: linear-gradient(135deg, #003866, #005e8c); */
     color: #fff;
     margin: 0 auto;
     height: 100%;
-    width: 80%;
+    /* width: 80%; */
     /* text-align: center; */
 }
 .nextButton ,.buttonContainer,.nextContainer{
@@ -81,15 +81,17 @@ p,li{
 }
 .Form{
     margin: auto;
+    padding-bottom: 10px;
 }
 .formContainer{
-    margin: auto 0px;
-    height: 100%;
+    /* margin: auto 0px; */
+    /* height: 100%; */
     width: 100%;
     background: linear-gradient(135deg, #003866, #005e8c);
 
     /* padding-right: 1rem; */
 }
+button:focus {outline:0;}
 .desContainer{
     margin: 0px 0px 0px 2rem;
 }
@@ -119,6 +121,15 @@ h3{
     display: block;
   }
 }
+@media only screen and (max-width: 769px) {
+  .formContainer{
+    margin: 5px;
+    border-radius: 6px;
+    width: 90%;
+    margin: auto;
+
+  }
+}
 @media only screen and (min-width: 768px) {
     .heroContainer {
       flex-direction: row;
@@ -129,8 +140,13 @@ h3{
     }
     .formContainer{
     padding-right: 1rem;
-    height: 33rem;
+    /* height: 33rem; */
+    
     background: linear-gradient(135deg, #003866, #005e8c);
+    }
+    .Form{
+    margin: 60px auto;
+    padding-bottom: 10px;
     }
     .desContainer{
     margin: 0px 0px 0px 8rem;
@@ -139,5 +155,7 @@ h3{
     .heroContainer{
       padding: 0rem 0rem 2rem 2rem;
     }
-
+    .tab{
+    width: 80%;
+    }
   }
