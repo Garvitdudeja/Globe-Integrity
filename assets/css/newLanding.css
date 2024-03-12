@@ -236,9 +236,9 @@ display: flex;
     font-size: revert;
     padding: 2rem 0rem;
   }
-  .imageContainer {
+/*   .imageContainer {
     display: none;
-  }
+  } */
   .firstContainer {
     padding-top: 4rem;
   }
