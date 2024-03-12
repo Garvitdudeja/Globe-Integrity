@@ -116,6 +116,27 @@ h3{
 .intrested{
   text-align: center;
 }
+.CompanyLogo{
+  margin: 0px;
+  padding: 0;
+}
+.topper{
+  background-color: #DFF5FF;
+  padding: 8px 0px 6px 20px;
+  cursor: pointer;
+  
+}
+.companyText {
+  color: #2d3269;
+  text-align: justify;
+  margin-top: auto;
+  font-family: "EB Garamond", serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+.imageContainer{
+  width: 50px;
+}
 @media only screen and (min-width: 700px) {
   .phoneContent {
     display: block;
@@ -140,6 +161,7 @@ h3{
     }
     .formContainer{
     padding-right: 1rem;
+    margin-right: 15px;
     /* height: 33rem; */
     
     background: linear-gradient(135deg, #003866, #005e8c);

@@ -42,6 +42,14 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
     <!-- Navbar -->
+    <div class="topper" onclick="redirect()">
+      <div class="CompanyLogo" >
+        <div class="imageContainer">
+          <img src="assets/images/resources/logoNoText.webp" class="comapanyLogo" />
+        </div>
+        <h5 class="companyText">Globe Integrity</h5>
+      </div>
+    </div>
     <div class="navbarContainer">
       <div class="navCompanyName">
         <h3 style="font-weight: 400;color: #105fa8;">GenWealth</h3>
@@ -601,6 +609,10 @@
   </script>
   <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
   <script>
+    const redirect = ()=>{
+      console.log("redirect")
+      window.open("https://globeintegrity.com/","_self")
+    }
     const btn = ()=>{
     // Get the select element by its ID
 var selectField = document.getElementById("LEADCF38");
