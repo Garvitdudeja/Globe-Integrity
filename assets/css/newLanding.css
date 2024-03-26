@@ -30,6 +30,8 @@ html {
 .CompanyLogo {
   margin: 0rem 0rem 4rem 10rem;
   padding-top: 3rem;
+  padding: 2rem 4rem 2rem 0rem;
+
   text-align: left;
   display: flex;
   flex-direction: row;
