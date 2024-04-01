@@ -70,7 +70,7 @@ function validateForm() {
   }
 
   // condition Checking
-  if (currentTab == 0) {
+  if (currentTab == 1) {
     const Tax_Income = document.getElementById("Tax-Income");
     const No_Tax = document.getElementById("No-Tax");
     const Zero_Risk = document.getElementById("Zero-Risk");
@@ -110,7 +110,7 @@ function validateForm() {
       document.getElementById("IULWarning").style.display= 'none';
     }
   }
-  if (currentTab === 1 ){
+  if (currentTab === 2 ){
     const k = document.getElementById("401k");
     const IRA = document.getElementById("IRA");
     const HoldingCash = document.getElementById("HoldingCash");
@@ -158,7 +158,7 @@ function validateForm() {
   }
 
 
-  if(currentTab ===3){
+  if(currentTab ===4){
     var saving = document.querySelector('input[name="Saving"]:checked')?.value;
     if (saving===undefined){
       document.getElementById("savingWarning").style.display= 'block';
@@ -169,7 +169,7 @@ function validateForm() {
     }
     document.getElementById('LEADCF35').value = saving
   }
-  if(currentTab ===4){
+  if(currentTab ===5){
     var age = document.getElementById('LEADCF16')?.value;
     if (age < 18 || age > 90){
       document.getElementById("ageWarning").style.display= 'block';
@@ -179,7 +179,7 @@ function validateForm() {
       document.getElementById("ageWarning").style.display= 'none';
     }
   }
-  if(currentTab ===2){
+  if(currentTab ===3){
     var Emp = document.querySelector('input[name="Emp"]:checked')?.value;
     if (Emp===undefined){
         document.getElementById("incomeWarning").style.display = "block"; 

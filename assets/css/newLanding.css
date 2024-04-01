@@ -51,7 +51,9 @@ html {
 
   
 }
-
+input{
+  border-radius: 4px;
+}
 .footerContainer {
   background-color: #636363;
   color: white;
