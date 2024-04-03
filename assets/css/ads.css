@@ -122,7 +122,7 @@ h3{
 }
 .topper{
   background-color: #DFF5FF;
-  padding: 8px 0px 6px 2`0px;
+  padding: 8px 0px 6px 20px;
   cursor: pointer;
   
 }
@@ -135,7 +135,8 @@ h3{
   letter-spacing: 1px;
 }
 .imageContainer{
-  width: 50px;
+  width: 18rem;
+    /* margin: 0.7rem; */
 }
 @media only screen and (min-width: 700px) {
   .phoneContent {
