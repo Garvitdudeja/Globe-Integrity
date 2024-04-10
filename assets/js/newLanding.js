@@ -68,6 +68,14 @@ function validateForm() {
       valid = false;
     }
   }
+  if ( currentTab == 0 ){
+    const firstName = document.getElementById("First_Name").value
+    const lastName = document.getElementById("Last_Name").value
+    const Email = document.getElementById("Email").value
+    const Phone = document.getElementById("Phone").value
+    console.log(firstName)
+    document.getElementById("returnURL").value = "https://wealthmanagement.zohobookings.com/#/4491295000001065010?Name="+firstName+" "+lastName+'&Email='+Email+"&phone="+Phone 
+  }
 
   // condition Checking
   if (currentTab == 1) {
