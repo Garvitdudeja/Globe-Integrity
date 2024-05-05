@@ -1,1261 +1,667 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GlobeIntegrity</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IUL Marketplace</title>
+    <!-- Fav Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.webp" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicons/favicon-32x32.webp"/>
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicons/favicon-16x16.webp"/>
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+    <!-- Cutsom Css -->
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+
+    <link rel="stylesheet" href="./assets/css/landing.css">
+    <!-- Owl Crousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/newLanding.css" />
-    <link rel="stylesheet" href="/assets/css/ads.css" />
-<!-- Google Tag Manager -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MSQCH4CB');</script>
-  <!-- End Google Tag Manager -->
-
-
-
-  <!-- Testing css -->
-  <link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="assets/images/favicons/apple-touch-icon.webp"
-/>
-<link
-  rel="icon"
-  type="image/webp"
-  sizes="32x32"
-  href="assets/images/favicons/favicon-32x32.webp"
-/>
-<link
-  rel="icon"
-  type="image/webp"
-  sizes="16x16"
-  href="assets/images/favicons/favicon-16x16.webp"
-/>
-<link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-<meta name="description" content="Insur HTML 5 Template " />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link 
-  href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"
-/>
-
-    <link 
-  href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"
-/>
-
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-  rel="stylesheet"
-/>
-<!-- <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/> -->
-<link
-  rel="stylesheet"
-  href="assets/vendors/bootstrap/css/bootstrap.min.css"
-/>
-<link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-<link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
-<link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-<link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
-<link
-  rel="stylesheet"
-  href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css"
-/>
-<link
-  rel="stylesheet"
-  href="assets/vendors/nouislider/nouislider.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="assets/vendors/nouislider/nouislider.pips.css"
-/>
-<link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
-<link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
-<link rel="stylesheet" href="assets/vendors/insur-icons/style.css" />
-<link rel="stylesheet" href="assets/vendors/insur-two-icon/style.css" />
-<link
-  rel="stylesheet"
-  href="assets/vendors/tiny-slider/tiny-slider.min.css"
-/>
-<link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
-<link
-  rel="stylesheet"
-  href="assets/vendors/owl-carousel/owl.carousel.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="assets/vendors/owl-carousel/owl.theme.default.min.css"
-/>
-<!-- <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" /> -->
-<link
-  rel="stylesheet"
-  href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css"
-/>
-<link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
-<link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-<link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
-<link rel="stylesheet" href="assets/css/w3.css" />
-<link rel="stylesheet" id="langLtr" href="assets/css/insur.css" />
-<link rel="stylesheet" href="assets/css/insur-responsive.css" />
-  
-    <link rel="stylesheet" href="./assets/css/newLanding.css" />
-    <link rel="stylesheet" href="/assets/css/ads.css" />
-  </head>
-  <body style="overflow-x: hidden;">
-    <!-- Google Tag Manager (noscript) -->
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MSQCH4CB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+        <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSQCH4CB"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-    <!-- Navbar -->
-    <div class="topper" onclick="redirect()">
-      <div class="CompanyLogo" >
-        <div class="imageContainer">
-          <img src="assets/images/Custom/l7.png" class="comapanyLogo" />
-          
-        </div>
-      </div>
-    </div>
-    <div class="navbarContainer">
-      <div class="navCompanyName">
-        <h3 style="font-weight: 400;color: #105fa8;">IUL Marketplace</h3>
-      </div>
-      <div class="phoneContent">
-        <a href="tel:+1 8554969338">855-496-9338</a>
-        <p>Call to Request a certified advisor</p>
-      </div>
-    </div>
-    <!-- Container 1 -->
-    <div class="heroContainer mb-4">
-        <div class="container1">
-          <h3 style="font-weight: 400;" class="pb-2">Crafting Your Tax-Free Retirement Plan with Guaranteed Compound Interest
-          </h3>
-          <div class="videoContainer">
-              <video
-              class="video-js vjs-default-skin"
-                  id="my-video"
-                  class="video-js"
-                  controls
-                  preload="auto"
-                  width="1000"
-                  height="264"
-                  poster="./assets/images/brand/thumbnail.webp"
-                  data-setup='{"fluid": true}'
-              >
-                  <!-- <source src="https://app.gohighlevel.com/fc3fa19b-e3eb-4963-ba8b-ce5c8ed6db04" type="video/mp4" /> -->
-                  <source src="Financial.webm" type="video/webm" />
-                  <p class="vjs-no-js">
-                      To view this video please enable JavaScript, and consider upgrading to a
-                      web browser that
-                      <a href="https://videojs.com/html5-video-support/" target="_blank"
-                          >supports HTML5 video</a
-                      >
-                  </p>
-              </video>
-          </div>
-        </div>
-        <div class="formContainer">
-          <div class="Form">
-              <!-- Note :
-         - You can modify the font style and form style to suit your website. 
-         - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
-         - The Mandatory check script can modified as to suit your business needs. 
-         - It is important that you test the modified form before going live.-->
-      <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='border-radius: 4px;color: black;max-width: 600px;'>
-          <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-           <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
-           <form id='webform' action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads5572526000007718001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000007718001()' accept-charset='UTF-8'>
-         <input type='text' style='display:none;' name='xnQsjsdp' value='c351220a40bf2aa20c9f78e01164d5bb3822ec703f075b9c5bbb5630340317c7'></input> 
-         <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
-         <div class='zcwf_col_fld'><select style="display: none;" class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'  >
-          <option value='-None-'>-None-</option>
-          <option value='Cold&#x20;Call'>Cold Call</option>
-          <option value='External&#x20;Referral'>External Referral</option>
-          <option value='GI&#x20;Lead' selected>GI Lead</option>
-          <option value='Google&#x20;AdWords'>Google AdWords</option>
-          <option value='Growthsurance'>Growthsurance</option>
-          <option value='Policy&#x20;Review'>Policy Review</option>
-        </select>
-        <div class='zcwf_col_help'>
-        </div>
-      </div>
-      
-        
-      <!-- One "tab" for each step in the form: -->
-      <div class="tab" style="margin: auto;">
-        <p class="text-light">We're excited to   get to know you better. To see if you qualify, we'll have a certified advisor reach out to you soon to schedule your personal conversation.</p>
-        <div style="width: 80%;margin: auto;">
-        <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-            <label for='First_Name'>First Name<span style='color:red;'>*</span></label></div>
-            <div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input>
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+<section class="header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-3">
+                <div class="logo">
+                    <img src="./assets/images/landing/logo.svg" alt="logo">
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="headerContact">
+                    <div class="contactIcon">
+                        <img  src="./assets/images/landing/telIcon.svg" alt="">
+                    </div>
+                    <div class="contactNumber">
+                        <p class="subHeading16">Call to Request a certified advisor</p>
+                        <h3 class="headingBlue20">855-496-9338</h3>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <div class='zcwf_row'>
-            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div>
-            <div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input>
-                </div></div>
-                <div class='zcwf_row'>
-                  <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                  <label for='Phone'>Phone</label></div>
-                <div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input>
-                  </div></div>
-                  <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                    <label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email' name='Email' maxlength='100'></input></div></div>
-                  </div>
     </div>
-      <div class="tab">
-        <div class="intrested">
-          <h5>Interested in learning more?</h5>
-          <p class="text-light">We're excited to get to know you better. To see if you qualify, we'll have a certified advisor reach out to you soon to schedule your personal conversation.</p>
-          
-        </div>
-     <br/>
-        <div id="IULWarning" >Please Select All that Apply</div>
-    
-        <p style="margin-bottom: 1rem;color: #fff;">What Benefits of the IUL interest you the most? (Select all that apply) *</p>
-        <div class="CheckBoxContainer">
-          <input type="checkbox" class="CheckBox" id="Tax-Income" value="Tax-Free Retirement Income" />
-          <label for="Tax-Income">Tax-Free Retirement Income</label>
-        </div>  
-        <div class="CheckBoxContainer">
-          <input type="checkbox" class="CheckBox" id="No-Tax" value="No Tax Liability on Growth"/><label for="No-Tax">No Tax Liability on Growth</label>
-        </div>
-      
-        <div class="CheckBoxContainer">
-        <input type="checkbox" class="CheckBox" id="Zero-Risk" value="Zero Risk or Exposure to Market Downturns"/><label for="Zero-Risk">Zero Risk or Exposure to Market Downturns</label>
-        </div>
-    
-        <div class="CheckBoxContainer">
-          <input type="checkbox" class="CheckBox" id="Preservation" value="Preservation of Capital"/><label for="Preservation">Preservation of Capital</label>
-      </div>
-        </div>
-      <div class="tab">
-        <div class="intrested">
-          <h5>Interested in learning more?</h5>
-          <p class="text-light">We can't wait to get to know you. We'll have a certified advisor contact you soon to schedule your personal conversation.</p>
-        </div>
-        <div id="investmentWarning" >Please Select All that Apply</div>
-        <p style="margin-bottom: 1rem;color: #fff;">What Investment Strategies are you currently using? (Select all that apply) *</p>
-        <input type="checkbox" class="CheckBox" id="401k" value="401k"/><span><label for="401k">401k</label></span>
-        <br>
-        <input type="checkbox" class="CheckBox" id="IRA" value="No Tax Liability on Growth"/><label for="IRA">IRA</label>
-        <br>
-        <input type="checkbox" class="CheckBox" id="HoldingCash" value="Holding Cash"/><label for="HoldingCash">Holding Cash</label>
-        <br>
-        <input type="checkbox" class="CheckBox" id="ActiveTrading" value="Active Trading"/><label for="ActiveTrading">Active Trading</label>
-        <br>
-        <input type="checkbox" class="CheckBox" id="Self" value="Self Directed Brokerage Account"/><label for="Self">Self directed brokerage account</label>
-      </div>
-        <div class="tab">
-          <div class="intrested">
-            <h5>Interested in learning more?</h5>
-            <p class="text-light">We can't wait to get to know you. We'll have a certified advisor contact you soon to schedule your personal conversation.</p>
-            
-          </div>
-          <div id="incomeWarning" >Please Select A Income Source</div>
-    
-          <p class="text-light">What is your current primary source of income? *</p>
-          <input type="radio" id="SelfEmp" name="Emp" value="Self-Employed">
-          <label for="SelfEmp">Self-Employed</label><br>
-          <input type="radio" id="Business" name="Emp" value="Business Owner">
-          <label for="Business">Business Owner</label><br>  
-          <input type="radio" id="Employed" name="Emp" value="Employed">
-          <label for="Employed">Employed</label><br>
-          <input type="radio" id="Retired" name="Emp" value="Retired">
-          <label for="Retired">Retired</label><br>
-        </div>
-      <div class="tab">
-        <div class="intrested">
-          <h5>Interested in learning more?</h5>
-          <p class="text-light">We can't wait to get to know you. We'll have a certified advisor contact you soon to schedule your personal conversation.</p>
-          
-        </div>
-        <div id="Saving">
-          <div id="savingWarning" >Please Select How Much You Save</div>
-    
-            <p class="text-light">
-              About how much do you save in a typical month? *
-            </p>
-            <input type="radio" id="less300" name="Saving" value="Less than $300">
-              <label for="less300">Less than $300</label><br>
-              <input type="radio" id="bt3and5" name="Saving" value="$300 - $500">
-              <label for="bt3and5">$300 - $500</label><br>  
-              <input type="radio" id="bt5and1" name="Saving" value="$500 - $1,000">
-              <label for="bt5and1">$500 - $1,000</label><br>
-              <input type="radio" id="gt1" name="Saving" value="More than $1,000">
-              <label for="gt1">More than $1,000</label><br>
-          </div>
-      </div>
-      
-      <div class="tab">
-        <div class="intrested">
-          <h5>Interested in learning more?</h5>
-          <p class="text-light">We can't wait to get to know you. We'll havejs a certified advisor contact you soon to schedule your personal conversation.</p>
-          
-        </div>
-          <div class='zcwf_row'>
-          <div id="ageWarning" >Age must be between 18 to 90</div>
-              <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                  <label for='LEADCF16'>What is your current age&#x3f;</label>
-              </div>
-              <br>
-              <div class='zcwf_col_fld'>
-                  <input type='number' id='LEADCF16' name='LEADCF16' maxlength='255'>
-              </input></div></div>
-      </div>
-      
-      
-      
-      <div style="overflow:auto;"class="nextContainer" >
-        <div  class="buttonContainer1">
-          <button type="button" class="nextButton" id="prevBtn" onclick="nextPrev(-1)"><i class="fa-solid fa-arrow-left" style="margin-right: 5px;"></i>Previous</button>
-          <button type="button" class="nextButton" id="nextBtn" onclick="nextPrev(1)">Next</button>
-        </div>
-      </div>
-      
-      <!-- Circles which indicates the steps of the form: -->
-      <div  class="hiddenInput">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span> 
-        <span class="step"></span>
-      </div>
-         <input type='text' style='display:none;' name='xmIwtLD' value='dc146009200346ab82b1b45a358a3276c837fab19942de11938cb8431316ec240e3c1864472dd6fca97439b35f49cd6f'></input> 
-         <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
-         <!-- <input type='text' style='display:none;' name='returnURL' id="returnURL" value='http://globeintegrity.com/booking.html' > </input> -->
-         <input type='text' style='display:none;' name='returnURL' id="returnURL" value='https://spencerwolkov-globeintegrity.zohobookings.com/#/4491295000001065010' > </input>
-         <!-- <input type='text' style='display:none;' name='returnURL' value='https://spencerwolkov-globeintegrity.zohobookings.com/#/4491295000001065010' > </input> -->
-             <!-- Do not remove this code. -->
-        <style>
-        html,body{
-            margin: 0px;
-        }
-        #crmWebToEntityForm.zcwf_lblLeft {
-            width:100%;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-        #crmWebToEntityForm.zcwf_lblLeft * {
-            box-sizing: border-box;
-        }
-        #crmWebToEntityForm{text-align: left;}
-        #crmWebToEntityForm * {
-            direction: ltr;
-        }
-        .zcwf_lblLeft .zcwf_title {
-            word-wrap: break-word;
-            padding: 0px 6px 10px;
-            font-weight:bold }.zcwf_lblLeft.cpT_primaryBtn:hover{
-            background: linear-gradient(#02acff 0,#006be4 100%) no-repeat padding-box !important;
-            box-shadow: 0 -2px 0 0 #0159b9 inset !important;
-            border: 0 !important;
-            color: #fff !important;
-            outline: 0 !important;
-        }.zcwf_lblLeft .zcwf_col_fld input[type=text], input[type=password], .zcwf_lblLeft .zcwf_col_fld textarea {
-            width: 100%;
-            border: 1px solid #c0c6cc !important;
-            resize: vertical;
-            border-radius: 2px;
-            float: left;
-        }
-        .zcwf_lblLeft .zcwf_col_lab {
-            word-break: break-word;
-            padding: 0px 6px 0px;
-            margin-right: 10px;
-            margin-top: 5px;
-            float: left;
-            min-height: 1px;
-        }
-        .zcwf_lblLeft .zcwf_col_fld {
-            /* float: left; */
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            text-align: center;
-            padding: 0px 6px 0px;
-            position: relative;
-            margin-top: 5px;
-        }
-        .zcwf_lblLeft .zcwf_privacy{padding: 6px;}
-        .zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
-        .dIB{display: inline-block;}
-        .zcwf_lblLeft .zcwf_col_fld_slt {
-            width: 60%;
-            border: 1px solid #ccc;
-            /* background: #fff; */
-            border-radius: 4px;
-            font-size: 12px;
-            float: left;
-            resize: vertical;
-            padding: 2px 5px;
-        }
-        .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after {
-            content: '';
-            display: table;
-            clear: both;
-        }
-        .zcwf_lblLeft .zcwf_col_help {
-            float: left;
-            margin-left: 7px;
-            font-size: 12px;
-            max-width: 35%;
-            word-break: break-word;
-        }
-        .zcwf_lblLeft .zcwf_help_icon {
-            cursor: pointer;
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            /* background: #fff; */
-            border: 1px solid #c0c6cc;
-            color: #c1c1c1;
-            text-align: center;
-            font-size: 11px;
-            line-height: 16px;
-            font-weight: bold;
-            border-radius: 50%;
-        }
-        .zcwf_lblLeft .zcwf_row {margin: 15px 0px;}
-        .zcwf_lblLeft .formsubmit {
-            margin-right: 5px;
-            cursor: pointer;
-            color: var(--baseColor);
-            font-size: 12px;
-        }
-        .zcwf_lblLeft .zcwf_privacy_txt {
-            width: 90%;
-            color: rgb(0, 0, 0);
-            font-size: 12px;
-            font-family: Arial;
-            display: inline-block;
-            vertical-align: top;
-            color: var(--baseColor);
-            padding-top: 2px;
-            margin-left: 6px;
-        }
-        .zcwf_lblLeft .zcwf_button {
-            font-size: 12px;
-            color: var(--baseColor);
-            border: 1px solid #c0c6cc;
-            padding: 3px 9px;
-            border-radius: 4px;
-            cursor: pointer;
-            max-width: 120px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        .zcwf_lblLeft .zcwf_tooltip_over{
-            position: relative;
-        }
-        .zcwf_lblLeft .zcwf_tooltip_ctn{
-            position: absolute;
-            /* background: #dedede; */
-            padding: 3px 6px;
-            top: 3px;
-            border-radius: 4px;word-break: break-word;
-            min-width: 100px;
-            max-width: 150px;
-            color: var(--baseColor);
-            z-index: 100;
-        }
-        .zcwf_lblLeft .zcwf_ckbox{
-            float: left;
-        }
-        .zcwf_lblLeft .zcwf_file{
-            width: 55%;
-            box-sizing: border-box;
-            float: left;
-        }
-        .clearB:after{
-            content:'';
-            display: block;
-            clear: both;
-        }
-        @media all and (max-width: 600px) {
-            .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
-                width: auto;
-                float: none !important;
-            }
-            .zcwf_lblLeft .zcwf_col_help {width: 40%;}
-        }
-        </style>
-        <div class='zcwf_title hiddenInput' style='max-width: 600px;color: black; font-family:Arial;' ></div>
-      
-      
-                      
-                      
+</section>
+<section class="bannerSection">
+    <img src="./assets/images/landing/bannerRound1.png" alt="" class="bannerRound1">
+    <img src="./assets/images/landing/bannerRound2.png" alt="" class="bannerRound2">
+    <img src="./assets/images/landing/bannerRound3.png" alt="" class="bannerRound3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+               <h1 class="headingBlue50 text-center">Crafting Your Tax-Free Retirement Plan with </h1>
+               <div class="position-relative">
+                    <h1 class="headingBlue50 text-center underLine mb-5">Guaranteed Compound Interest</h1>
+                </div>
+               <p class="subHeading16 text-center">We're excited to get to know you better. To see if you qualify, we'll have a certified advisor reach out<br/> to you soon to schedule your personal conversation.</p>
+               <!-- <form class="mt-4">
+                <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control customControl" placeholder="First Name*">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control customControl" placeholder="Last Name*">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="tel" class="form-control customControl" placeholder="Phone">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control customControl" placeholder="Email">
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="continueBtn">Continue</button>
+                        </div>
+                    </div>
+               </form> -->
+               <div class="Form">
+                <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
+                   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
+                   <form id='webform' action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads5572526000007718001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory5572526000007718001()' accept-charset='UTF-8'>
+                    <input type='text' style='display:none;' name='xnQsjsdp' value='c351220a40bf2aa20c9f78e01164d5bb3822ec703f075b9c5bbb5630340317c7'></input> 
+                    <input type='hidden' name='zc_gad' id='zc_gad' value=''></input><div class='zcwf_col_fld'>
+                         <select style="display: none;" class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'  >
+                            <option value='-None-'>-None-</option>
+                            <option value='Cold&#x20;Call'>Cold Call</option>
+                            <option value='External&#x20;Referral'>External Referral</option>
+                            <option value='GI&#x20;Lead' selected>GI Lead</option>
+                            <option value='Google&#x20;AdWords'>Google AdWords</option>
+                            <option value='Growthsurance'>Growthsurance</option>
+                            <option value='Policy&#x20;Review'>Policy Review</option>
+                         </select>
+                         <div class='zcwf_col_help'>
+                         </div>
+                      </div>
+                      <!-- One "tab" for each step in the form: -->
+                      <div class="tab mt-5 p-0">
+                         <!-- <p class="text-light">We're excited to   get to know you better. To see if you qualify, we'll have a certified advisor reach out to you soon to schedule your personal conversation.</p> -->
+                         <div>
+                            <div class='zcwf_row row'>
+                               <!-- <div class='zcwf_col_lab '>
+                                  <label for='First_Name'>First Name<span style='color:red;'>*</span></label>
+                               </div> -->
+                               <div class='col-md-6'>
+                                <input type='text' class="customControl mb-4" id='First_Name' name='First Name' maxlength='40' placeholder="First Name"/>
+                               </div>
+                               <div class='col-md-6'>
+                                    <input type='text' class="customControl mb-4" placeholder="Last Name"  id='Last_Name' name='Last Name' maxlength='80'/>
+                               </div>
+                               <div class='col-md-6'>
+                                    <input type='text'  class="customControl mb-4" id='Phone' name='Phone' maxlength='30' placeholder="Phone"/>
+                               </div>
+                               <div class='col-md-6'>
+                                    <input type='text' class="customControl mb-4" ftype='email' autocomplete='false' id='Email' name='Email' maxlength='100' placeholder="Email"/>
+                                </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="tab  p-0 mt-4">
+                         <div class="intrested ">
+                            <h5 class="headingBlue40 text-center">Interested in learning more?</h5>
+                            <!-- <p class="text-light">We're excited to get to know you better. To see if you qualify, we'll have a certified advisor reach out to you soon to schedule your personal conversation.</p> -->
+                         </div>
+                         <!-- <br/> -->
+                         <div id="IULWarning" class="text-center">Please Select All that Apply</div>
+                         <p class="subHeading20 text-center">What Benefits of the IUL interest you the most? (Select all that apply) *</p>
+                         <div class="d-flex justify-content-center">
+                            <div class="checkboxInner">
+                                <div class="CheckBoxContainer">
+                                    <input type="checkbox" class="CheckBox" id="Tax-Income" value="Tax-Free Retirement Income" />
+                                    <label for="Tax-Income">Tax-Free Retirement Income</label>
+                                </div>
+                                <div class="CheckBoxContainer">
+                                    <input type="checkbox" class="CheckBox" id="No-Tax" value="No Tax Liability on Growth"/><label for="No-Tax">No Tax Liability on Growth</label>
+                                </div>
+                                <div class="CheckBoxContainer">
+                                    <input type="checkbox" class="CheckBox" id="Zero-Risk" value="Zero Risk or Exposure to Market Downturns"/><label for="Zero-Risk">Zero Risk or Exposure to Market Downturns</label>
+                                </div>
+                                <div class="CheckBoxContainer">
+                                    <input type="checkbox" class="CheckBox" id="Preservation" value="Preservation of Capital"/><label for="Preservation">Preservation of Capital</label>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="tab  p-0 mt-4">
+                         <div class="intrested">
+                            <h5 class="headingBlue40 text-center">Interested in learning more?</h5>
+                            <!-- <p class="text-light">We can't wait to get to know you. We'll have a certified advisor contact you soon to schedule your personal conversation.</p> -->
+                         </div>
+                         <div id="investmentWarning" class="text-center">Please Select All that Apply</div>
+                         <p class="subHeading20 text-center" >What Investment Strategies are you currently using? (Select all that apply) *</p>
+                         <div class="d-flex justify-content-center">
+                            <div class="checkboxInner">
+                                <input type="checkbox" class="CheckBox" id="401k" value="401k"/><span><label for="401k">401k</label></span>
+                                <br>
+                                <input type="checkbox" class="CheckBox" id="IRA" value="No Tax Liability on Growth"/><label for="IRA">IRA</label>
+                                <br>
+                                <input type="checkbox" class="CheckBox" id="HoldingCash" value="Holding Cash"/><label for="HoldingCash">Holding Cash</label>
+                                <br>
+                                <input type="checkbox" class="CheckBox" id="ActiveTrading" value="Active Trading"/><label for="ActiveTrading">Active Trading</label>
+                                <br>
+                                <input type="checkbox" class="CheckBox" id="Self" value="Self Directed Brokerage Account"/><label for="Self">Self directed brokerage account</label>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="tab  p-0 mt-4">
+                         <div class="intrested">
+                            <h5  class="headingBlue40 text-center">Interested in learning more?</h5>
+                            <!-- <p class="text-light">We can't wait to get to know you. We'll have a certified advisor contact you soon to schedule your personal conversation.</p> -->
+                         </div>
+                         <div id="incomeWarning" class="text-center">Please Select A Income Source</div>
+                         <p class="subHeading20 text-center">What is your current primary source of income? *</p>
+                         <div class="d-flex justify-content-center">
+                            <div class="checkboxInner">
+                            <input type="radio" id="SelfEmp" name="Emp" value="Self-Employed">
+                            <label for="SelfEmp">Self-Employed</label><br>
+                            <input type="radio" id="Business" name="Emp" value="Business Owner">
+                            <label for="Business">Business Owner</label><br>  
+                            <input type="radio" id="Employed" name="Emp" value="Employed">
+                            <label for="Employed">Employed</label><br>
+                            <input type="radio" id="Retired" name="Emp" value="Retired">
+                            <label for="Retired">Retired</label><br>
+                            </div>
+                        </div >
+                      </div>
+                      <div class="tab  p-0 mt-4">
+                         <div class="intrested">
+                            <h5 class="headingBlue40 text-center">Interested in learning more?</h5>
+                            <!-- <p class="text-light">We can't wait to get to know you. We'll have a certified advisor contact you soon to schedule your personal conversation.</p> -->
+                         </div>
+                         <div id="Saving">
+                            <div id="savingWarning" class="text-center">Please Select How Much You Save</div>
+                            <p class="subHeading20 text-center">
+                               About how much do you save in a typical month? *
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <div class="checkboxInner">
+                                    <input type="radio" id="less300" name="Saving" value="Less than $300">
+                                    <label for="less300">Less than $300</label><br>
+                                    <input type="radio" id="bt3and5" name="Saving" value="$300 - $500">
+                                    <label for="bt3and5">$300 - $500</label><br>  
+                                    <input type="radio" id="bt5and1" name="Saving" value="$500 - $1,000">
+                                    <label for="bt5and1">$500 - $1,000</label><br>
+                                    <input type="radio" id="gt1" name="Saving" value="More than $1,000">
+                                    <label for="gt1">More than $1,000</label><br>
+                                </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="tab  p-0 my-4">
+                         <div class="intrested">
+                            <h5 class="headingBlue40 text-center">Interested in learning more?</h5>
+                            <!-- <p class="text-light">We can't wait to get to know you. We'll havejs a certified advisor contact you soon to schedule your personal conversation.</p> -->
+                         </div>
+                         <div class='zcwf_row'>
+                            <div id="ageWarning" class="text-center" >Age must be between 18 to 90</div>
+                            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                               <label for='LEADCF16' class="subHeading16 mb-2">What is your current age&#x3f;</label>
+                            </div>
+                            
+                            <div class='zcwf_col_fld'>
+                               <input type='number' class="customControl" placeholder="Age" id='LEADCF16' name='LEADCF16' maxlength='255'>
+                               </input>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="row mt-3" >
+                         <div  class="col-6">
+                            <button type="button" class="continueBtn" id="prevBtn" onclick="nextPrev(-1)"><i class="fa-solid fa-arrow-left" ></i>Previous</button>
+                            
+                         </div>
+                         <div class="col-6 text-end">
+                            <button type="button" class="continueBtn" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                         </div>
+                      </div>
+                      <!-- Circles which indicates the steps of the form: -->
+                      <div  class="hiddenInput">
+                         <span class="step"></span>
+                         <span class="step"></span>
+                         <span class="step"></span>
+                         <span class="step"></span> 
+                         <span class="step"></span>
+                      </div>
+                      <input type='text' style='display:none;' name='xmIwtLD' value='dc146009200346ab82b1b45a358a3276c837fab19942de11938cb8431316ec240e3c1864472dd6fca97439b35f49cd6f'></input> 
+                      <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
+                      <!-- <input type='text' style='display:none;' name='returnURL' id="returnURL" value='http://globeintegrity.com/booking.html' > </input> -->
+                      <input type='text' style='display:none;' name='returnURL' id="returnURL" value='https://spencerwolkov-globeintegrity.zohobookings.com/#/4491295000001065010' > </input>
+                   
+                      <div class='zcwf_title hiddenInput' style='max-width: 600px;color: black; font-family:Arial;' ></div>
                       <div class='zcwf_row hiddenInput'>
-                          <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                              <label for='LEADCF36'>What Benefits of the IUL interest you the most&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF36' name='LEADCF36' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row hiddenInput'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF35'>About how much do you save in a typical month&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF35' name='LEADCF35' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row hiddenInput'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF34'>What is your current primary source of income&#x3f;</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF34' name='LEADCF34' maxlength='255'></input><div class='zcwf_col_help'></div></div></div>
-                              
-                              
-      
-      
-      
-                                <div class='zcwf_row hiddenInput'>
-                                  <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF37'>What Investment Strategies are you currently using</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF37' name='LEADCF37' maxlength='255'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row hiddenInput'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Mobile'>Mobile</label></div><div class='zcwf_col_fld'><input type='text' id='Mobile' name='Mobile' maxlength='30'></input><div class='zcwf_col_help'></div></div></div>
-      
-      
-      
-          <div class='zcwf_row hiddenInput'>
-      
-              <div class='zcwf_col_lab'></div><div class='zcwf_col_fld '><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
-            <script>
-        
-               function checkMandatory5572526000007718001() {
-                var mndFileds = new Array('First Name','Last Name');
-                var fldLangVal = new Array('First\x20Name','Last\x20Name');
-                for(i=0;i<mndFileds.length;i++) {
-                  var fieldObj=document.forms['WebToLeads5572526000007718001'][mndFileds[i]];
-                  if(fieldObj) {
-                    if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
-                     if(fieldObj.type =='file')
-                        { 
-                         alert('Please select a file to upload.'); 
-                         fieldObj.focus(); 
-                         return false;
-                        } 
-                    alert(fldLangVal[i] +' cannot be empty.'); 
-                              fieldObj.focus();
-                              return false;
-                    }  else if(fieldObj.nodeName=='SELECT') {
-                             if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
-                        alert(fldLangVal[i] +' cannot be none.'); 
-                        fieldObj.focus();
-                        return false;
-                       }
-                    } else if(fieldObj.type =='checkbox'){
-                        if(fieldObj.checked == false){
-                        alert('Please accept  '+fldLangVal[i]);
-                        fieldObj.focus();
-                        return false;
-                       } 
-                     } 
-                     try {
-                         if(fieldObj.name == 'Last Name') {
-                        name = fieldObj.value;
-                           }
-                    } catch (e) {}
-                    }
-                }document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
-            }
-        
-        function tooltipShow5572526000007718001(el){
-            var tooltip = el.nextElementSibling;
-            var tooltipDisplay = tooltip.style.display;
-            if(tooltipDisplay == 'none'){
-                var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
-                for(i=0; i<allTooltip.length; i++){
-                    allTooltip[i].style.display='none';
-                }
-                tooltip.style.display = 'block';
-            }else{
-                tooltip.style.display='none';
-            }
-        }
-        </script>
-            <!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=7024c07edfeb7ac1d62f8717af5b0bc1ce3131cd046ea59f058879b887f30efdb83cf29f1366e6578573fb0be6aa1a94gid33c7c370f71b0688ec8f2c0e7e83d57140814abbbd9fa59f828a9abbe8f3675cgidc3669175c4021819a1e6407f2ececf7e4c02be1b6d5d6c1d00cc2bc503d564ebgid1602553ba7cf4ed25c5b00b26dc519f58b8e776d692e7c2825dea09ab3e0ed68&tw=b3d2c8e9a1281f831e721abeb76eeb40341eaf53dfb54f76493f7cb780c12f99'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>
-        </div>
-              
-            </div>
-        </div>
-      </div>
-    <div class="text-center">
-      <img src="/assets/images/Custom/table.png" alt="">
-    </div>
-
-<!-- Testing -->
-<section class="about-three" style="padding-top: 4rem;">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-6">
-        <div class="about-three__left">
-          <div
-            class="about-three__img-box wow slideInLeft"
-            data-wow-delay="100ms"
-            data-wow-duration="2500ms"
-          >
-            <div class="about-three__img">
-              <img
-                src="assets/images/resources/about-three-img-1.webp"
-                alt=""
-              />
-            </div>
-            <div class="about-three__shape-1">
-              <img
-                src="assets/images/shapes/about-three-shape-1.webp"
-                alt=""
-              />
-            </div>
-            <div class="about-three__location">
-              <div
-                class="about-three__location-bg"
-                style="
-                  background-image: url(assets/images/shapes/about-three-shape-2.webp);
-                "
-              ></div>
-              <p class="about-three__location-text">
-                Over 60 <br />
-                Locations <br />
-                Worldwide
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-6">
-        <div class="about-three__right">
-          <div class="section-title text-left">
-            <div class="section-sub-title-box">
-              <p class="section-sub-title">about company</p>
-              <div class="section-title-shape-1">
-                <img
-                  src="assets/images/shapes/section-title-shape-1.webp"
-                  alt=""
-                />
-              </div>
-              <div class="section-title-shape-2">
-                <img
-                  src="assets/images/shapes/section-title-shape-2.webp"
-                  alt=""
-                />
-              </div>
-            </div>
-            <h1 class="section-title__title">
-              Crafting a brighter tomorrow for those dear to you.
-            </h1>
-          </div>
-          <div class="about-three__business-start">
-            <div class="about-three__business-start-icon">
-              <i
-                class="fa-regular fa-handshake fa-3x"
-                style="color: #5382d9"
-              ></i>
-            </div>
-            <div class="about-three__business-start-text-box">
-              <p class="about-three__business-start-text">
-                With more than 10 years of experience in the insurance
-                business, we know just what you need.
-              </p>
-            </div>
-          </div>
-          <p class="about-three__text">
-            At Globe Integrity, we have a team of advisors who specialize
-            in securing the ideal coverage for each individual client at a
-            highly competitive rate. With contracts in place with over 20
-            leading providers, our agents have the ability to produce
-            top-notch policies for our clients, irrespective of their age
-            or health circumstances.
-          </p>
-          <div class="about-three__bottom">
-            <div class="about-three__founder">
-              <div class="about-three__founder-img"></div>
-              <div class="about-three__founder-content">
-                <!-- <h3 class="about-three__founder-name">Spencer Wolkov</h3> -->
-                <p class="about-three__founder-sub-title">
-                  <!-- Founder of Globe integrity -->
-                </p>
-              </div>
-            </div>
-            <div class="about-three__btn-box">
-              <a href="life-and-money.html" class="thm-btn about-three__btn"
-                >Let’s Get Started</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="testimonial-three">
-  <div class="container">
-    <div class="testimonial-three__top">
-      <div class="row">
-        <div class="col-xl-6 col-lg-6">
-          <div class="testimonial-three__left">
-            <div class="section-title text-left">
-              <div class="section-sub-title-box">
-                <p class="section-sub-title">testimonials</p>
-                <div class="section-title-shape-1">
-                  <img
-                    src="assets/images/shapes/section-title-shape-1.webp"
-                    alt=""
-                  />
-                </div>
-                <div class="section-title-shape-2">
-                  <img
-                    src="assets/images/shapes/section-title-shape-2.webp"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <h2 class="section-title__title">
-                What our customers are talking about
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-6 col-lg-6">
-          <div class="testimonial-three__right">
-            <!-- <p class="testimonial-three__right-text">Pellentesque habitant morbi tristique senectus
-                              netus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec aliquet
-                              blandit enim feugiat mattis.</p> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-three__bottom">
-      <div class="row">
-        <div class="col-xl-12">
-          <div
-            class="owl-carousel owl-theme thm-owl__carousel testimonial-three__carousel"
-            data-owl-options='{
-                          "loop": true,
-                          "autoplay": true,
-                          "margin": 30,
-                          "nav": false,
-                          "dots": true,
-                          "smartSpeed": 500,
-                          "autoplayTimeout": 10000,
-                          "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-                          "responsive": {
-                              "0": {
-                                  "items": 1
-                              },
-                              "768": {
-                                  "items": 2
-                              },
-                              "992": {
-                                  "items": 2
-                              },
-                              "1200": {
-                                  "items": 3
+                         <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='LEADCF36'>What Benefits of the IUL interest you the most&#x3f;</label>
+                         </div>
+                         <div class='zcwf_col_fld'>
+                            <input type='text' id='LEADCF36' name='LEADCF36' maxlength='255'></input>
+                            <div class='zcwf_col_help'></div>
+                         </div>
+                      </div>
+                      <div class='zcwf_row hiddenInput'>
+                         <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF35'>About how much do you save in a typical month&#x3f;</label></div>
+                         <div class='zcwf_col_fld'>
+                            <input type='text' id='LEADCF35' name='LEADCF35' maxlength='255'></input>
+                            <div class='zcwf_col_help'></div>
+                         </div>
+                      </div>
+                      <div class='zcwf_row hiddenInput'>
+                         <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF34'>What is your current primary source of income&#x3f;</label></div>
+                         <div class='zcwf_col_fld'>
+                            <input type='text' id='LEADCF34' name='LEADCF34' maxlength='255'></input>
+                            <div class='zcwf_col_help'></div>
+                         </div>
+                      </div>
+                      <div class='zcwf_row hiddenInput'>
+                         <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF37'>What Investment Strategies are you currently using</label></div>
+                         <div class='zcwf_col_fld'>
+                            <input type='text' id='LEADCF37' name='LEADCF37' maxlength='255'></input>
+                            <div class='zcwf_col_help'></div>
+                         </div>
+                      </div>
+                      <div class='zcwf_row hiddenInput'>
+                         <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Mobile'>Mobile</label></div>
+                         <div class='zcwf_col_fld'>
+                            <input type='text' id='Mobile' name='Mobile' maxlength='30'></input>
+                            <div class='zcwf_col_help'></div>
+                         </div>
+                      </div>
+                      <div class='zcwf_row hiddenInput'>
+                         <div class='zcwf_col_lab'></div>
+                         <div class='zcwf_col_fld '><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div>
+                      </div>
+                      <script>
+                         function checkMandatory5572526000007718001() {
+                          var mndFileds = new Array('First Name','Last Name');
+                          var fldLangVal = new Array('First\x20Name','Last\x20Name');
+                          for(i=0;i<mndFileds.length;i++) {
+                            var fieldObj=document.forms['WebToLeads5572526000007718001'][mndFileds[i]];
+                            if(fieldObj) {
+                              if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+                               if(fieldObj.type =='file')
+                                  { 
+                                   alert('Please select a file to upload.'); 
+                                   fieldObj.focus(); 
+                                   return false;
+                                  } 
+                              alert(fldLangVal[i] +' cannot be empty.'); 
+                                        fieldObj.focus();
+                                        return false;
+                              }  else if(fieldObj.nodeName=='SELECT') {
+                                       if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+                                  alert(fldLangVal[i] +' cannot be none.'); 
+                                  fieldObj.focus();
+                                  return false;
+                                 }
+                              } else if(fieldObj.type =='checkbox'){
+                                  if(fieldObj.checked == false){
+                                  alert('Please accept  '+fldLangVal[i]);
+                                  fieldObj.focus();
+                                  return false;
+                                 } 
+                               } 
+                               try {
+                                   if(fieldObj.name == 'Last Name') {
+                                  name = fieldObj.value;
+                                     }
+                              } catch (e) {}
                               }
+                          }document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+                         }
+                         
+                         function tooltipShow5572526000007718001(el){
+                         var tooltip = el.nextElementSibling;
+                         var tooltipDisplay = tooltip.style.display;
+                         if(tooltipDisplay == 'none'){
+                          var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                          for(i=0; i<allTooltip.length; i++){
+                              allTooltip[i].style.display='none';
                           }
-                      }'
-          >
-            <!--Testimonial Three Single Start-->
-            <div class="item">
-              <div class="testimonial-three__single">
-                <!-- <div class="testimonial-three__client-img-box">
-                  <div class="testimonial-three__client-img">
-                    <img
-                      src="assets/images/testimonial/testimonial-3-1.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div class="testimonial-three__quote">
-                    <img
-                      src="assets/images/testimonial/testimonial-1-quote.webp"
-                      alt=""
-                    />
-                  </div>
-                </div> -->
-                <div class="testimonial-three__star">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
+                          tooltip.style.display = 'block';
+                         }else{
+                          tooltip.style.display='none';
+                         }
+                         }
+                      </script>
+                      <!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=7024c07edfeb7ac1d62f8717af5b0bc1ce3131cd046ea59f058879b887f30efdb83cf29f1366e6578573fb0be6aa1a94gid33c7c370f71b0688ec8f2c0e7e83d57140814abbbd9fa59f828a9abbe8f3675cgidc3669175c4021819a1e6407f2ececf7e4c02be1b6d5d6c1d00cc2bc503d564ebgid1602553ba7cf4ed25c5b00b26dc519f58b8e776d692e7c2825dea09ab3e0ed68&tw=b3d2c8e9a1281f831e721abeb76eeb40341eaf53dfb54f76493f7cb780c12f99'></script><!-- Do not remove this --- Analytics Tracking code ends. -->
+                   </form>
                 </div>
-                <p class="testimonial-three__text">
-                  Thanks to Globe Integrity, I finally found an insurance
-                  policy that perfectly suited my needs. Their friendly
-                  and knowledgeable team made the whole process
-                  effortless, and I feel confident knowing I'm in good
-                  hands for any future uncertainties."
-                </p>
-                <div class="testimonial-three__client">
-                  <h4 class="testimonial-three__client-name">
-                    Jess Apostol
-                  </h4>
-                  <!-- <p class="testimonial-three__client-sub-title">director</p> -->
-                </div>
-              </div>
+             </div>
+
             </div>
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <div class="item">
-              <div class="testimonial-three__single">
-                <!-- <div class="testimonial-three__client-img-box">
-                  <div class="testimonial-three__client-img">
-                    <img
-                      src="assets/images/testimonial/testimonial-3-2.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div class="testimonial-three__quote">
-                    <img
-                      src="assets/images/testimonial/testimonial-1-quote.webp"
-                      alt=""
-                    />
-                  </div>
-                </div> -->
-                <div class="testimonial-three__star">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-                <p class="testimonial-three__text">
-                  Choosing Globe Integrity for my insurance needs was one
-                  of the best decisions I made. Their team guided me
-                  through the process, ensuring I had the perfect coverage
-                  for my home and family. Prompt responses and hassle-free
-                  claims handling have given me peace of mind.
-                </p>
-                <div class="testimonial-three__client">
-                  <h4 class="testimonial-three__client-name">David</h4>
-                  <!-- <p class="testimonial-three__client-sub-title">director</p> -->
-                </div>
-              </div>
-            </div>
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <div class="item">
-              <div class="testimonial-three__single">
-                <!-- <div class="testimonial-three__client-img-box">
-                  <div class="testimonial-three__client-img">
-                    <img
-                      src="assets/images/testimonial/testimonial-3-3.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div class="testimonial-three__quote">
-                    <img
-                      src="assets/images/testimonial/testimonial-1-quote.webp"
-                      alt=""
-                    />
-                  </div>
-                </div> -->
-                <div class="testimonial-three__star">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-                <p class="testimonial-three__text">
-                  Globe Integrity has been my go-to insurance partner.
-                  Their expert team ensured I got the perfect coverage for
-                  my home and family. Prompt responses and hassle-free
-                  claims handling gave me peace of mind. Highly recommend!
-                  I trust these guys for all my insurance needs.
-                </p>
-                <div class="testimonial-three__client">
-                  <h4 class="testimonial-three__client-name">
-                    Kiara Hale
-                  </h4>
-                  <!-- <p class="testimonial-three__client-sub-title">director</p> -->
-                </div>
-              </div>
-            </div>
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <div class="item">
-              <div class="testimonial-three__single">
-                <!-- <div class="testimonial-three__client-img-box">
-                  <div class="testimonial-three__client-img">
-                    <img
-                      src="assets/images/testimonial/testimonial-3-4.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div class="testimonial-three__quote">
-                    <img
-                      src="assets/images/testimonial/testimonial-1-quote.webp"
-                      alt=""
-                    />
-                  </div>
-                </div> -->
-                <div class="testimonial-three__star">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-                <p class="testimonial-three__text">
-                  Exceptional service! Globe Integrity provided me with
-                  the perfect insurance coverage for my needs. Their team
-                  was professional and efficient, making the whole process
-                  a breeze. I feel confident and secure with them as my
-                  insurance partner. Highly recommended
-                </p>
-                <div class="testimonial-three__client">
-                  <h4 class="testimonial-three__client-name">
-                    Kevin Martin
-                  </h4>
-                  <!-- <p class="testimonial-three__client-sub-title">director</p> -->
-                </div>
-              </div>
-            </div>
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <div class="item">
-              <div class="testimonial-three__single">
-                <!-- <div class="testimonial-three__client-img-box">
-                  <div class="testimonial-three__client-img">
-                    <img
-                      src="assets/images/testimonial/testimonial-3-5.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div class="testimonial-three__quote">
-                    <img
-                      src="assets/images/testimonial/testimonial-1-quote.webp"
-                      alt=""
-                    />
-                  </div>
-                </div> -->
-                <div class="testimonial-three__star">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-                <p class="testimonial-three__text">
-                  Trusting Globe Integrity was a game-changer. Their
-                  tailored insurance solutions gave me peace of mind.
-                  Prompt service and hassle-free claims handling made all
-                  the difference. Highly recommend them for reliable
-                  coverage and excellent customer care.
-                </p>
-                <div class="testimonial-three__client">
-                  <h4 class="testimonial-three__client-name">Kriti</h4>
-                  <!-- <p class="testimonial-three__client-sub-title">director</p> -->
-                </div>
-              </div>
-            </div>
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <div class="item">
-              <div class="testimonial-three__single">
-                <!-- <div class="testimonial-three__client-img-box">
-                  <div class="testimonial-three__client-img">
-                    <img
-                      src="assets/images/testimonial/testimonial-3-6.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div class="testimonial-three__quote">
-                    <img
-                      src="assets/images/testimonial/testimonial-1-quote.webp"
-                      alt=""
-                    />
-                  </div>
-                </div> -->
-                <div class="testimonial-three__star">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-                <p class="testimonial-three__text">
-                  Globe Integrity exceeded my expectations. Their
-                  personalized insurance options were exactly what I
-                  needed. The team's responsiveness and hassle-free claims
-                  process were impressive. Now I can rest easy, knowing
-                  I'm in good hands. Highly recommended for peace of mind.
-                </p>
-                <div class="testimonial-three__client">
-                  <h4 class="testimonial-three__client-name">
-                    Brayn vintrube
-                  </h4>
-                  <!-- <p class="testimonial-three__client-sub-title">director</p> -->
-                </div>
-              </div>
-            </div>
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <!-- ///////////////////////////////////////////////////////////////////////////// -->
-            <!-- <div class="item">
-                              <div class="testimonial-three__single">
-                                  <div class="testimonial-three__client-img-box">
-                                      <div class="testimonial-three__client-img">
-                                          <img src="assets/images/testimonial/testimonial-3-1.webp" alt="">
-                                      </div>
-                                      <div class="testimonial-three__quote">
-                                          <img src="assets/images/testimonial/testimonial-1-quote.webp" alt="">
-                                      </div>
-                                  </div>
-                                  <div class="testimonial-three__star">
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                  </div>
-                                  <p class="testimonial-three__text">Pellentesque habitant morbi tristique
-                                      senectus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec
-                                      aliquet blandit enim feugiat mattis.</p>
-                                  <div class="testimonial-three__client">
-                                      <h4 class="testimonial-three__client-name">Smith Vectoria</h4>
-                                      <p class="testimonial-three__client-sub-title">director</p>
-                                  </div>
-                              </div>
-                          </div> -->
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <!-- /////////////////////////////////////////////////////////////////////// -->
-            <!-- <div class="item">
-                              <div class="testimonial-three__single">
-                                  <div class="testimonial-three__client-img-box">
-                                      <div class="testimonial-three__client-img">
-                                          <img src="assets/images/testimonial/testimonial-3-2.webp" alt="">
-                                      </div>
-                                      <div class="testimonial-three__quote">
-                                          <img src="assets/images/testimonial/testimonial-1-quote.webp" alt="">
-                                      </div>
-                                  </div>
-                                  <div class="testimonial-three__star">
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                  </div>
-                                  <p class="testimonial-three__text">Pellentesque habitant morbi tristique
-                                      senectus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec
-                                      aliquet blandit enim feugiat mattis.</p>
-                                  <div class="testimonial-three__client">
-                                      <h4 class="testimonial-three__client-name">Jessica Brown</h4>
-                                      <p class="testimonial-three__client-sub-title">director</p>
-                                  </div>
-                              </div>
-                          </div> -->
-            <!--Testimonial Three Single End-->
-            <!--Testimonial Three Single Start-->
-            <!-- /////////////////////////////////////////////////////////////////////////// -->
-            <!-- <div class="item">
-                              <div class="testimonial-three__single">
-                                  <div class="testimonial-three__client-img-box">
-                                      <div class="testimonial-three__client-img">
-                                          <img src="assets/images/testimonial/testimonial-3-3.webp" alt="">
-                                      </div>
-                                      <div class="testimonial-three__quote">
-                                          <img src="assets/images/testimonial/testimonial-1-quote.webp" alt="">
-                                      </div>
-                                  </div>
-                                  <div class="testimonial-three__star">
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                  </div>
-                                  <p class="testimonial-three__text">Pellentesque habitant morbi tristique
-                                      senectus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec
-                                      aliquet blandit enim feugiat mattis.</p>
-                                  <div class="testimonial-three__client">
-                                      <h4 class="testimonial-three__client-name">Kevin Martin</h4>
-                                      <p class="testimonial-three__client-sub-title">director</p>
-                                  </div>
-                              </div>
-                          </div> -->
-            <!--Testimonial Three Single End-->
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
-
-
-    <!-- Description -->
-    <div class="desContainer">
-      <div>
-        <h3 style="font-weight: 500" class="p-2">Our Policy Highlights</h3>
-        <div class="d-flex align-middle gap-3">
-          <img
-            src="/assets/images/Custom/icon-check-box-teal.svg"
-            class="desIcon"
-          />
-          <p class="pt-2 lg-pl-2 lh-2">
-            Flexibility to adjust your payment amounts and frequency
-          </p>
-        </div>
-        <div class="d-flex align-middle gap-3">
-          <img
-            src="/assets/images/Custom/icon-check-box-teal.svg"
-            class="desIcon"
-          />
-          <p class="pt-2 lg-pl-2 lh-2">
-            Ability to increase or decrease coverage amount based on changing
-            needs
-          </p>
-        </div>
-        <div class="d-flex align-middle gap-3">
-          <img
-            src="/assets/images/Custom/icon-check-box-teal.svg"
-            class="desIcon"
-          />
-          <p class="pt-2 lg-pl-2 lh-2">
-            Ability to accumulate cash for retirement, college funding, or
-            emergencies
-          </p>
-          </p>
-        </div>
-        <p>The amount that may be available through loans or withdrawals, as defined in the contract Withdrawing of funds will reduce your policy benefit Additional premium applies
-
-      </div>
-      <div>
-        <h3 style="font-weight: 500" class="p-2">Our Agents/Producers   
-        </h3>
-        <P>Your certified advisor is a life insurance professional and is ready to listen to your needs and help you find the right solution for you. Our agents/producers:        </P>
-        <ul>
-          <li>Are trained to listen and have a good understanding of your goals before offering a solution
-          </li>
-          <li>Have a team of advanced planning specialists to assist with your unique needs
-          </li>
-          <li>Offer a large portfolio of products to meet your needs at every stage in life
-          </li>
-        </ul>
-        <div><p>Policies are meant to be flexible, so your certified advisor can help you tailor them to your specific situation. If you have questions about life insurance, want to learn more about the policy details or just want to discuss your options, we’re here to help.
-        </p></div>
-      </div>
-    </div>
-    <footer class="footerContainer">
-      <div class="footerInternalContainer">
-        <div>
-            <div class="CompanyLogoFooter" >
-              <div class="imageContainerFooter">
-                <img src="assets/images/resources/logo-1.webp" class="comapanyLogo" />
-              </div>
-              <h5 class="companyTextFooter">IUL Marketplace</h5>
+<section class="youTubeSection">
+    <img src="./assets/images/landing/bannerRound4.png" alt="" class="bannerRound4">
+    <img src="./assets/images/landing/bannerRound5.png" alt="" class="bannerRound5">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="videoOuter">
+                    <div class="videoInner">
+                        <div class="videoContainer">
+                            <video
+                            class="video-js vjs-default-skin"
+                                id="my-video"
+                                class="video-js"
+                                controls
+                                preload="auto"
+                                width="1000"
+                                height="264"
+                                poster="./assets/images/brand/thumbnail.webp"
+                                data-setup='{"fluid": true}'
+                            >
+                                <!-- <source src="https://app.gohighlevel.com/fc3fa19b-e3eb-4963-ba8b-ce5c8ed6db04" type="video/mp4" /> -->
+                                <source src="Financial.webm" type="video/webm" />
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                        >supports HTML5 video</a
+                                    >
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                </div>
             </div>
-          <!-- <h5>Globe Integrity A Life Insurance Expert</h5> -->
-
         </div>
-        <div >
-          <h6>Contact US </h6>
-          <a class="phoneFooter" href="tel:8554969338">(+1) 8554969338</a></div>
-      </div>
-    </footer>
-    <footer>
-      <div class="footer-main">
-        <div class="footBox1">
-          <a>Terms of Service</a>
-          <a href="./Disclosure.html" style="color: black;">Disclosure</a>
+    </div>
+</section>
+<section class="texSection">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-1">
+                <table class="texTable">
+                    <thead>
+                        <tr>
+                            <td>IUL</td>
+                            <td>401K/IRA</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tax-free growth</td>
+                            <td>Tax-deferred growth</td>
+                        </tr>
+                        <tr>
+                            <td>Lifetime protection</td>
+                            <td>Limited term coverage</td>
+                        </tr>
+                        <tr>
+                            <td>Market gains with no<br/> downside risk</td>
+                            <td>Market volatility</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibility and liquidity</td>
+                            <td>Limited access to funds</td>
+                        </tr>
+                        <tr>
+                            <td>Estate planning advantages</td>
+                            <td>Estate taxes apply</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6 px-0 order-2">
+                <img  src="./assets/images/landing/texImg.png" alt="image" class="img-fluid">
+            </div>
         </div>
-        <p class="footBox2">Copyright ©2024 Globe Integrity Info. All Rights Reserved.</p>
-      </div>
-    </footer>
-    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-  <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-  <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-  <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-  <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-  <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-  <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-  <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-  <script src="assets/vendors/odometer/odometer.min.js"></script>
-  <script src="assets/vendors/swiper/swiper.min.js"></script>
-  <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
-  <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-  <script src="assets/vendors/wow/wow.js"></script>
-  <script src="assets/vendors/isotope/isotope.js"></script>
-  <script src="assets/vendors/countdown/countdown.min.js"></script>
-  <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
-  <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-  <script src="assets/vendors/vegas/vegas.min.js"></script>
-  <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-  <script src="assets/vendors/timepicker/timePicker.js"></script>
-  <script src="assets/vendors/circleType/jquery.circleType.js"></script>
-  <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
-  <script src="assets/js/insur.js"></script>
+    </div>
+</section>
+<section class="aboutSection">
+    <img src="./assets/images/landing/aboutRound1.png" alt="" class="aboutRound1">
+    <img src="./assets/images/landing/aboutRound2.png" alt="" class="aboutRound2">
+    <img src="./assets/images/landing/aboutRound3.png" alt="" class="aboutRound3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="aboutLeft">
+                    <img src="./assets/images/landing/toalUsers.png" alt="" class="totalUser">
+                    <img  src="./assets/images/landing/aboutImg.svg" alt="image" class="img-fluid">
+                </div>
+            </div>
+            <div class=" col-lg-6">
+               <div class="aboutCompanyOuter">
+                    <h5 class="aboutCompany">ABOUT COMPANY</h5>
+                    <h2 class="headingBlue40">Crafting a brighter tomorrow<br/> for those dear to you</h2>
+                    <div class="totalYearsOuter my-4">
+                        <div class="handIcon">
+                            <img  src="./assets/images/landing/handIcon.png" alt="icon">
+                        </div>
+                        <p class="subHeading20 mb-0">With more than 10 years of experience in the<br/> insurance business, we know just what you need.</p>
+                    </div>
+                    <p class="subHeading16">
+                        At Globe Integrity, we have a team of advisors who specialize in securing the ideal coverage for each individual client at a highly competitive rate. With contracts in place with over 20 leading providers, our agents have the ability to produce top-notch policies for our clients, irrespective of their age or health circumstances.
+                    </p>
+                    <div class="mt-3">
+                        <button class="continueBtn">Let’s Get Started</button>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr class="w-75 mx-auto mt-0">
+<section class="talkingSection">
+    <img src="./assets/images/landing/sliderRound1.png" alt="" class="sliderRound1">
+    <img src="./assets/images/landing/sliderRound2.png" alt="" class="sliderRound2">
+    <img src="./assets/images/landing/sliderRound3.png" alt="" class="sliderRound3">
 
-  </body>
-  <!-- Google Tag Manager (noscript) -->
-  <script src="./assets/js/newLanding.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16453676009">
-  </script>
-  <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
-  <script>
-    const redirect = ()=>{
-      console.log("redirect")
-      // window.open("https://globeintegrity.com/","_self")
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="headingBlue40">What our customers are <br> talking about</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                      <div class="ourSlider">
+                        <div class="pt-3">
+                            <img  src="./assets/images/landing/quotes.png" alt="image" class="sliderQuotes">
+                            <p class="subHeading16 mb-3">Choosing an indexed universal life policy was one of the best decisions I've made for my family's future. The process was smooth, and my advisor's guidance was invaluable. Now, I feel confident knowing that my policy is not only meeting but surpassing expectations. It's truly a weight off my shoulders!</p>
+                            <h6 >John Smith</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                        <div class="ourSlider">
+                          <div class="pt-3">
+                              <img  src="./assets/images/landing/quotes.png" alt="image" class="sliderQuotes">
+                              <p class="subHeading16 mb-3">Getting my indexed universal life policy was a breeze, thanks to my advisor's expertise and personalized approach. They walked me through every step of the process, ensuring I understood all the details. Now, seeing my policy exceed its projections gives me peace of mind and reassurance for the years ahead.</p>
+                              <h6 >Emily Johnson</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="ourSlider">
+                          <div class="pt-3">
+                              <img  src="./assets/images/landing/quotes.png" alt="image" class="sliderQuotes">
+                              <p class="subHeading16 mb-3">I was initially skeptical about indexed universal life insurance, but my advisor made the entire process seamless and straightforward. Their transparency and commitment to finding the best policy for my needs put me at ease. Today, I couldn't be happier with my decision. My policy's performance has exceeded expectations, providing a solid foundation for my family's financial security.</p>
+                              <h6 >Michael Davis</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="ourSlider">
+                          <div class="pt-3">
+                              <img  src="./assets/images/landing/quotes.png" alt="image" class="sliderQuotes">
+                              <p class="subHeading16 mb-3">Getting an indexed universal life policy was a game-changer for me. From the initial consultation to policy issuance, my advisor made the entire process effortless. Now, seeing my policy perform beyond what was projected is incredibly gratifying. I'm grateful for the peace of mind and financial security it provides for me and my loved ones.</p>
+                              <h6 >Jennifer Brown</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="ourSlider">
+                          <div class="pt-3">
+                              <img  src="./assets/images/landing/quotes.png" alt="image" class="sliderQuotes">
+                              <p class="subHeading16 mb-3">Choosing an indexed universal life policy was one of the smartest financial moves I've made. The process was seamless, thanks to my advisor's expertise and attention to detail. Their commitment to finding the right policy for my goals and their honest guidance throughout the process made all the difference. Now, seeing my policy exceed expectations is incredibly rewarding. I couldn't be happier with my decision.</p>
+                              <h6 >Christopher Taylor</h6>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="policySection">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6 px-0">
+                <img  src="./assets/images/landing/policyImg.png" alt="image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <div class="policyRight">
+                <h2 class="headingBlue40 mb-4">Our Policy Highlights</h2>
+                <ul class="policyList">
+                    <li><img  src="./assets/images/landing/tickIcon.svg" alt="icon" class="me-2 mt-2">Flexibility to adjust your payment amounts and frequency</li>
+                    <li><img  src="./assets/images/landing/tickIcon.svg" alt="icon" class="me-2 mt-2">Ability to increase or decrease coverage amount based on<br> changing needs</li>
+                    <li><img  src="./assets/images/landing/tickIcon.svg" alt="icon" class="me-2 mt-2">Ability to accumulate cash for retirement, college funding, or<br> emergencies</li>
+                </ul>
+                <p class="subHeading16">The amount that may be available through loans or withdrawals,<br> as defined in the contract Withdrawing of funds will reduce your <br> policy benefit Additional premium applies</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+<!-- <section class="agentSection">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <h2 class="headingBlue40 mb-4">Our Agents/Producers</h2>
+                <p class="subHeading16 mb-4">Your certified advisor is a life insurance professional and is ready to listen to your needs <br> and help you find the right solution for you. Our agents/producers:</p>
+                <img  src="./assets/images/landing/agentImg.png" alt="image" class="img-fluid">
+               
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-9">
+                            <div class="agentList mb-4">
+                                <div class="row">
+                                    <div class="col-md-4"> <p class="subHeading16"> Are trained to listen and have a good understanding of your goals before offering a solution</p></div>
+                                    <div class="col-md-4"> <p class="subHeading16"> Have a team of advanced planning specialists to assist with your unique needs</p></div>
+                                    <div class="col-md-4"> <p class="subHeading16"> Offer a large portfolio of products to meet your needs at every stage in life</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <p class="subHeading16">Policies are meant to be flexible, so your certified advisor can help you tailor them to your specific <br> situation. If you have questions about life insurance, want to learn more about the policy details or just <br> want to discuss your options, we’re here to help.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="contactSection">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6 px-0">
+                <img  src="./assets/images/landing/young.png" alt="image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2 class="headingBlue40 mb-4">Find a local insurance agent</h2>
+                <div class="headerContact mb-4">
+                    <div class="contactIcon">
+                        <img  src="./assets/images/landing/telIcon.svg" alt="">
+                    </div>
+                    <div class="contactNumber">
+                        <p class="subHeading16">Call Us:</p>
+                        <h3 class="headingBlue20">+1 8554969338</h3>
+                    </div>
+                </div>
+                <button class="continueBtn">Get a Quote</button>    
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footerSection">
+    <div class="upArrow"><img  src="./assets/images/landing/upArrow.png" alt=""></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img  src="./assets/images/landing/logo.svg" alt="image" class="img-fluid">
+                <div class="otherPagesLink my-2">
+                    <a href="" class="subHeading16">Terms of Service   |</a>
+                    <a href="" class="subHeading16">Disclosure</a>
+                </div>
+                <p class="subHeading16">Copyright ©2024 Globe Integrity Info. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Bootstrap Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+<script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+
+
+<script src="./assets/js/newLanding.js"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+    margin:5,
+    nav:false,
+    responsiveClass:true,
+    autoplay:true,
+    autoplayTimeout:2500,
+    dots:false,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
     }
-    const btn = ()=>{
-    // Get the select element by its ID
-var selectField = document.getElementById("LEADCF38");
-
-// Set the selected options (replace with the values you want to set)
-var selectedValues = ["Tax-Free Retirement Income","No Tax Liability on Growth"];
-
-// Loop through the options and set the "selected" attribute
-for (var i = 0; i < selectField.options.length; i++) {
-    console.log(selectField.options[i])
-
-  if (selectedValues.includes(selectField.options[i].value)) {
-    selectField.options[i].selected = true;
-  } else {
-    selectField.options[i].selected = false;
-  }
-}
-    }
-  </script>
-  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    });
+    </script>
+    
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16453676009">
+</script>
   <!-- Google tag (gtag.js) -->
 
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-
-
-gtag('config', 'AW-16453676009');
-</script>
-<!-- Google Tag Manager -->
-
-  <!-- End Google Tag Manager -->
-<!-- Google Tag Manager (noscript) -->
-  <!-- End Google Tag Manager (noscript) -->  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/5.4.2/typescript.min.js" integrity="sha512-wga6tmr/e9Gg0A1Ov3bXNmCvx+T4l/4QyaCHpgpN1X+YenP3z6EFUL243tN9w2vfTBmp/7Q9lWKGZgQIyMRIQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-  <!-- Testing Scripts -->
-  
-
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    
+    
+    gtag('config', 'AW-16453676009');
+    </script>
 </html>
