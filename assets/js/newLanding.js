@@ -229,6 +229,11 @@ $('input[name="Saving"]').on("click", function(e) {
 })
 
 
+const scrollTOForm = (id = "crmWebToEntityForm") =>{
+    const element = document.getElementById(id);
+    element.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+}
+
 
 
 
