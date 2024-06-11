@@ -308,8 +308,8 @@
   .section-title__title {
     margin: 0;
     color: var(--insur-black);
-    font-size: 45px;
-    line-height: 55px;
+    font-size: 30px;
+    line-height: 40px;
     font-weight: 700;
     letter-spacing: var(--insur-letter-spacing);
   }
@@ -2536,11 +2536,12 @@
   }
   
   .main-slider-three__title {
+    width: 60%;
     position: relative;
-    font-size: 70px;
+    font-size: 50px;
     color: var(--insur-white);
     font-weight: 700;
-    line-height: 70px;
+    line-height: 60px;
     margin-bottom: 19px;
     opacity: 0;
     visibility: hidden;
@@ -2574,6 +2575,7 @@
   }
   
   .main-slider-three .swiper-slide-active .main-slider-three__text {
+    width: 68%;
     visibility: visible;
     opacity: 0.70;
     -webkit-transform: translateY(0) translateX(0);
@@ -7698,7 +7700,7 @@
   }
   
   .about-three__business-start-text {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--insur-black);
     font-weight: 700;
     line-height: 36px;
@@ -21122,6 +21124,8 @@
     right: auto;
     left: 0;
   }
-
+.bold_bullet{
+  font-size: 20px;
+}
   
   

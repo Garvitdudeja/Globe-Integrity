@@ -1,0 +1,29 @@
+invoices = zoho.crm.searchRecords("Invoices","((Delivery_Date:equals:" + zoho.currenttime.getPrefix(" ").toString("yyyy-MM-dd") + ") AND (Packing_Time:starts_with:Morning ))");
+paramList = List();
+response = zoho.workdrive.createFolder("Invoices"+ zoho.currenttime.getPrefix(" ").toString("yyyy-MM-dd"), "u3gcga0d6c9f2bf8f41aca260ff53bf924986", "workdrive");
+info invoices.get(0);
+i = 0;
+output_settings = Map();
+output_settings.put("name","Invoices");
+// name for the combined document
+invoicesPdfList = List();
+bulkUpdate = List();
+for each  rec in invoices
+{
+	bulkUpdate.add({"id":rec.get("id"),"Status":"To Print"});
+}
+for each  rec in invoices
+{
+	download = invokeurl
+	[
+		url :"https://www.zohoapis.com/crm/v2/settings/inventory_templates/" + 6084215000000457028 + "/actions/print_preview?record_id=" + rec.get("id") + "&print_type=pdf"
+		type :GET
+		connection:"crm"
+	];
+// 	invoicesPdfList.add(download);
+		temp = zoho.workdrive.uploadFile(download, response.get("data").get("id"), "Invoice.pdf", false,"workdrive");
+}
+
+
+
+info response ;

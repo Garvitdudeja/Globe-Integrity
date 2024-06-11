@@ -1635,6 +1635,9 @@
         font-size: 33px;
         line-height: 43px;
     }
+    .main-slider-three .swiper-slide-active .main-slider-three__text {
+        width: 90%;
+      }
 
 
 
