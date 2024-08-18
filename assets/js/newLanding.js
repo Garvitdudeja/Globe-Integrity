@@ -28,12 +28,14 @@ function showTab(n) {
   fixStepIndicator(n);
 }
 
-function nextPrev(n) {
+async function nextPrev(n) {
     
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
+  // Check if any field in the current tab is invalid:
+  var isFormValid = await validateForm();
   // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
+  if (n == 1 && !isFormValid) return false;
   // Hide the current tab:
   x[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
@@ -49,7 +51,7 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
-function validateForm() {
+async function validateForm() {
     console.log("validateFormCalled", currentTab)
   // This function deals with validation of the form fields
   var x,
@@ -75,6 +77,13 @@ function validateForm() {
     const Phone = document.getElementById("Phone").value
     console.log(firstName)
     document.getElementById("returnURL").value = "https://wealthmanagement.zohobookings.com/#/4491295000001065010?Name="+firstName+" "+lastName+'&Email='+Email+"&phone="+Phone 
+  
+    var isphoneNoValid = await validatePhoneNo(Phone);
+    console.log("isPhonevalid = " + isphoneNoValid );
+    if(isphoneNoValid == false) {
+      valid = false;
+      // document.getElementById("Phone").className += " invalid";
+    }
   }
 
   // condition Checking
@@ -236,7 +245,42 @@ const scrollTOForm = (id = "crmWebToEntityForm") =>{
 
 
 
+async function validatePhoneNo(phone){
+  var apiKey = "num_live_dzZIzVWY7zUYtDQ03KUKPsbbBVZAADCAd9Jof820";
+  var URL;
+  if(phone && phone.includes("+1")){
+    URL = `https://api.numlookupapi.com/v1/validate/${phone}?apikey=${apiKey}`
+  }
+  else{
+    URL = `https://api.numlookupapi.com/v1/validate/+1${phone}?apikey=${apiKey}`
 
+  }
+  var isphoneNoValid = false;
+  if(!phone || phone == "") {
+    return false;
+  }
+  document.getElementById("phoneWarning").className = "d-none"
+  await axios.get(URL,)
+    .then(response => {
+        //console.log(response);
+        const data = response.data;
+        if(data.valid==false){
+          // document.getElementById("Phone").style = "background-color:  background-color: #ffdddd;"
+          console.log(document.getElementById("Phone"),"element")
+          document.getElementById("Phone").style.background = "#ffdddd";
+          document.getElementById("phoneWarning").className = "text-danger"
+        }
+        if(data && data.valid != null){
+          isphoneNoValid = data.valid;
+          document.getElementById("Phone") = "customControl mb-4"
+        }
+
+    })
+    .catch(error => {
+        console.log(error)
+    }); 
+  return isphoneNoValid;
+}
 
 
 
