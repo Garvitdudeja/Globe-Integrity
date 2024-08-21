@@ -299,3 +299,9 @@ body {
   margin-top: 5px;
   display: block;
 }
+a{
+  text-decoration: none !important;
+}
+.tribtn{
+  color: #002677 !important;
+}
