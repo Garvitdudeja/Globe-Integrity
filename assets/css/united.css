@@ -153,12 +153,13 @@ body {
 }
 
 .insurance-banner-outer {
-  height: calc(100vh - 190px);
+  /* height: calc(100vh - 190px); */
 }
 
 .food-banner-img {
   width: 100%;
   height: 100%;
+  max-height: 20rem;
   object-view-box: inset(0% 0% 3% 3%);
   object-fit: cover;
 }
@@ -265,4 +266,35 @@ body {
   border-width: 8px 2px 8px 8px;
   border-radius: 10px;
   margin: 30px 0;
+}
+
+.timer-outer{
+  background-color: #e5f8fb;
+  color: #002677;
+}
+
+.timer-text{
+  font-weight: bold;
+}
+
+.timer-box {
+  background-color: #002677;
+  color: #ffffff; /* White text */
+  padding: 10px 15px;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.timer-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
 }

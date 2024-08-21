@@ -34,7 +34,7 @@
       <div class="header-main">
         <div class="header-inner container">
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 invisible">
               <button class="ready-to-shop">
                 Ready To Shop
                 <span class="material-symbols-outlined location-icon">
@@ -44,7 +44,7 @@
             </div>
             <div class="col-8">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 invisible">
                   <div class="d-flex justify-content-end">
                     <div class="search-box">
                       <input
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="d-flex justify-content-end gap-4">
-                    <div class="dropdown">
+                    <div class="dropdown invisible">
                       <button
                         class="dropdown-toggle dropdown-btn"
                         type="button"
@@ -73,7 +73,7 @@
                         Find a Doctor
                       </button>
                     </div>
-                    <div class="dropdown">
+                    <div class="dropdown invisible">
                       <button
                         class="dropdown-toggle dropdown-btn"
                         type="button"
@@ -99,7 +99,10 @@
                             </ul> -->
                     </div>
                     <button class="phone-btn">
-                      <img alt="phone-logo" src="assets/images/team/phone-icon.svg" />
+                      <img
+                        alt="phone-logo"
+                        src="assets/images/team/phone-icon.svg"
+                      />
                     </button>
                   </div>
                 </div>
@@ -107,7 +110,16 @@
             </div>
           </div>
           <div class="row logo-section">
-            <div class="col-4">
+            <div class="col-3">
+              <div class="logo-outer">
+                <img
+                  alt="company-logo w-100"
+                  src="assets/images/Custom/greyLogo.png"
+                  style="width: 18rem; padding-top: 9px"
+                />
+              </div>
+            </div>
+            <div class="col-2">
               <div class="logo-outer">
                 <img
                   alt="company-logo w-100"
@@ -115,7 +127,7 @@
                 />
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-8 invisible">
               <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex gap-4">
                   <button class="common-buttons">
@@ -138,7 +150,49 @@
         </div>
       </div>
       <!-- Plans Section  -->
+      <section class="plan-cards-outer container">
+        <div class="d-flex justify-content-between p-4 timer-outer">
+          <div class="ml-4">
+            <div>
+              <h5 class="timer-text">
+                It's not too late to get insurance that continues for nearly 3 years!<br />
+                <span class="lead">Apply for TriTerm Medical for a limited time only</span>
+              </h5>
+            </div>
+            <div>
+              <span>Apply Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="mr-4 d-flex align-items-center" id="timer">
+            <div class="d-flex flex-column">
+              <div class="timer-box">
+                <span id="days" class="timer-value">12</span>
+              </div>
+              <div class="timer-label m-auto pt-2">Days</div>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="timer-box">
+                <span id="hours" class="timer-value">00</span>
+              </div>
+              <div class="timer-label m-auto pt-2">Hours</div>
+            </div>
+           <div class="d-flex flex-column">
+            <div class="timer-box">
+              <span id="minutes" class="timer-value">00</span>
+            </div>
+            <div class="timer-label m-auto pt-2">Minutes</div>
+           </div>
+            <div class="d-flex flex-column">
+              <div class="timer-box">
+                <span id="seconds" class="timer-value">00</span>
+              </div>
+              <div class="timer-label m-auto pt-2">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="pans-sections-main container">
+        
         <div class="insurance-banner-outer">
           <img
             class="food-banner-img"
@@ -161,7 +215,7 @@
       </div>
 
       <!-- complementry Section  -->
-      <section class="complementry-outer">
+      <section class="plan-cards-outer container">
         <h1 class="text-center">Complementary insurance plans</h1>
         <p class="text-center pt-4">
           See our suggestions for insurance plans that work well together. All
@@ -176,24 +230,54 @@
             <div class="card-main">
               <div class="card-header-outer">
                 <div class="card-header-inner">
-                  <a href="#">Short Term + Dental</a>
+                  <a href="#">TriTerm Medical + Dental</a>
                   <img alt="card-logo" src="assets/images/team/teeth.png" />
                 </div>
               </div>
               <div class="card-body-inner">
                 <h1 class="card-head">
-                  Avoid holes in your health coverage … and your smile.
+                  The total package: nearly 3 years of medical coverage plus
+                  dental benefits.
                 </h1>
                 <div class="card-body-section">
                   <ul>
                     <li>
-                      Short Term health insurance can fill a temporary hole in
-                      your insurance coverage until you find a long-term
-                      solution.1
+                      TriTerm Medical can include preventive care, prescriptions
+                      and more.
                     </li>
                     <li>
-                      Dental insurance provides coverage for common dental care
-                      issues.
+                      Round out your coverage with dental insurance for regular
+                      dental care.
+                    </li>
+                  </ul>
+                  <div class="d-flex justify-content-center pt-5 pb-3">
+                    <button class="view-plan-btn view-plan-card">
+                      View Plans
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="card-main">
+              <div class="card-header-outer">
+                <div class="card-header-inner">
+                  <a href="#">TriTerm Medical + Hospital & Doctor Fixed Indemnity</a>
+                  <img alt="card-logo" src="assets/images/team/teeth.png" />
+                </div>
+              </div>
+              <div class="card-body-inner">
+                <h1 class="card-head">
+                  Cover more costs for preventive care and emergencies
+                </h1>
+                <div class="card-body-section">
+                  <ul>
+                    <li>
+                      TriTerm Medical offers more robust benefits than other types of short-term health insurance.
+                    </li>
+                    <li>
+                      Hospital & Doctor Fixed Indemnity insurance pays fixed benefits for services like doctor office visits, prescriptions and hospital stays.
                     </li>
                   </ul>
                   <div class="d-flex justify-content-center pt-5 pb-3">
@@ -242,24 +326,21 @@
             <div class="card-main">
               <div class="card-header-outer">
                 <div class="card-header-inner">
-                  <a href="#">Short Term + Dental</a>
+                  <a href="#">Hospital & Doctor Fixed Indemnity + Vision</a>
                   <img alt="card-logo" src="assets/images/team/teeth.png" />
                 </div>
               </div>
               <div class="card-body-inner">
                 <h1 class="card-head">
-                  Avoid holes in your health coverage … and your smile.
+                  Help with major medical gaps  
                 </h1>
                 <div class="card-body-section">
                   <ul>
                     <li>
-                      Short Term health insurance can fill a temporary hole in
-                      your insurance coverage until you find a long-term
-                      solution.1
+                      Hospital and Doctor Fixed Indemnity insurance pays set cash benefit amounts for covered expenses. <sup>1</sup>
                     </li>
                     <li>
-                      Dental insurance provides coverage for common dental care
-                      issues.
+                      Vision insurance provides routine eye exams, access to discounts for vision laser surgery, and the choice of coverage for eyeglass lenses and frames.
                     </li>
                   </ul>
                   <div class="d-flex justify-content-center pt-5 pb-3">
@@ -275,25 +356,50 @@
             <div class="card-main">
               <div class="card-header-outer">
                 <div class="card-header-inner">
-                  <a href="#">Short Term + Dental</a>
+                  <a href="#">Dental + Vision</a>
                   <img alt="card-logo" src="assets/images/team/teeth.png" />
                 </div>
               </div>
               <div class="card-body-inner">
                 <h1 class="card-head">
-                  Avoid holes in your health coverage … and your smile.
+                  Popular products that help round out health insurance coverage 
                 </h1>
                 <div class="card-body-section">
                   <ul>
                     <li>
-                      Short Term health insurance can fill a temporary hole in
-                      your insurance coverage until you find a long-term
-                      solution.1
+                      Dental and vision Insurance plans with no maximum age limits <sup>3</sup> -ideal if you're on Medicare or if your employer doesn't offer plans for you or your loved ones.
                     </li>
                     <li>
-                      Dental insurance provides coverage for common dental care
-                      issues.
+                      Receive dental preventive care and eye exams with no waiting periods or deductibles.                    </li>
+                  </ul>
+                  <div class="d-flex justify-content-center pt-5 pb-3">
+                    <button class="view-plan-btn view-plan-card">
+                      View Plans
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="card-main">
+              <div class="card-header-outer">
+                <div class="card-header-inner">
+                  <a href="#">Accident + Dental</a>
+                  <img alt="card-logo" src="assets/images/team/teeth.png" />
+                </div>
+              </div>
+              <div class="card-body-inner">
+                <h1 class="card-head">
+                  Plan for the unexpected and the routine
+                </h1>
+                <div class="card-body-section">
+                  <ul>
+                    <li>
+                      Accident insurance helps with those medical expenses you don't see coming.
                     </li>
+                    <li>
+                      Dental insurance covers cleanings and X-rays that may head off more expensive problems.                    </li>
                   </ul>
                   <div class="d-flex justify-content-center pt-5 pb-3">
                     <button class="view-plan-btn view-plan-card">
@@ -306,6 +412,49 @@
           </div>
         </div>
       </section>
+      <section class="plan-cards-outer container">
+        <div>
+          <sup>1</sup> Short term health insurance does not qualify as minimum essential coverage as defined in the Affordable Care Act and may not cover all Essential Health Benefits in your state. Signing up for this coverage may result in a tax penalty. Plans are subject to medical underwriting, and do not cover preexisting conditions.
+        </div>
+        <div>
+          <sup>2</sup> THIS PLAN PROVIDES LIMITED BENEFITS. This is a supplement to health insurance and is not a substitute for the minimum essential coverage required by the Affordable Care Act (ACA). Lack of major medical coverage (or other minimum essential coverage) may result in an additional payment with your taxes.
+        </div>
+        <div>
+          <sup>3</sup> Primary insured must be 18 years of age or older.
+        </div>
+      </section>
     </div>
   </body>
+  <script>
+    // Set the end date for the countdown (12 days from now)
+    const endDate = new Date('2024-09-02T00:00:00').getTime();
+  
+    // Update the countdown every 1 second
+    const x = setInterval(function() {
+  
+      // Get today's date and time
+      const now = new Date().getTime();
+  
+      // Find the distance between now and the end date
+      const distance = endDate - now;
+  
+      // Time calculations for days, hours, minutes, and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      // Output the result in elements with corresponding ids
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+  
+      // If the countdown is over, display some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
 </html>
