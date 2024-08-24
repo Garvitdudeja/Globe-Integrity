@@ -198,30 +198,37 @@ body {
   background-color: rgba(245, 245, 245, 0.5);
   padding: 21px 80px;
 }
+
 .health-insurance-tag {
   padding-top: 10px;
   padding-bottom: 30px;
 }
+
 .health-insurance-tag a {
   font-weight: 700;
   color: #000;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
   }
 }
+
 .health-insurance-tag i {
   font-size: 12px;
 }
+
 .complementry-outer h1 {
   color: #444;
   font-weight: 700;
 }
+
 .complementry-outer p {
   color: #757474;
   font-weight: 400;
   font-size: 16px;
 }
+
 .card-header-inner a {
   font-family: UHC Serif Headline;
   font-size: 28.83px;
@@ -229,14 +236,17 @@ body {
   font-weight: 700;
   color: #096ecf;
   line-height: 36px;
+
   &:hover {
     text-decoration: underline #096ecf;
   }
 }
+
 .view-plan-card {
   padding: 8px 20px !important;
   font-size: 20px !important;
 }
+
 .card-header-inner {
   display: flex;
   align-items: flex-start;
@@ -252,9 +262,11 @@ body {
   color: #757474;
   font-weight: 600;
 }
+
 .card-body-section ul {
-  padding:0px 32px;
+  padding: 0px 32px;
 }
+
 .card-head {
   color: #757474;
   font-weight: 600;
@@ -269,18 +281,28 @@ body {
   margin: 30px 0;
 }
 
-.timer-outer{
+.card-bottom-img img {
+  width: 100%;
+}
+
+.card-bottom-img {
+  margin: 10px auto;
+  width: 90%;
+}
+
+.timer-outer {
   background-color: #e5f8fb;
   color: #002677;
 }
 
-.timer-text{
+.timer-text {
   font-weight: bold;
 }
 
 .timer-box {
   background-color: #002677;
-  color: #ffffff; /* White text */
+  color: #ffffff;
+  /* White text */
   padding: 10px 15px;
   margin: 0 5px;
   text-align: center;
@@ -299,9 +321,11 @@ body {
   margin-top: 5px;
   display: block;
 }
-a{
+
+a {
   text-decoration: none !important;
 }
-.tribtn{
+
+.tribtn {
   color: #002677 !important;
 }

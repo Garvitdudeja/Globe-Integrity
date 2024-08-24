@@ -290,10 +290,6 @@
 
 
 
-
-
-
-
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .about-one__left {
@@ -1635,9 +1631,10 @@
         font-size: 33px;
         line-height: 43px;
     }
+
     .main-slider-three .swiper-slide-active .main-slider-three__text {
         width: 90%;
-      }
+    }
 
 
 
