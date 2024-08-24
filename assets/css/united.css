@@ -258,6 +258,11 @@ body {
   padding: 30px 25px;
 }
 
+.card-body-section{
+  padding: 1rem 32px;
+  
+}
+
 .card-body-section ul li {
   color: #757474;
   font-weight: 600;
