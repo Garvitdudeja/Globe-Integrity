@@ -1,4 +1,7 @@
+<!-- site key = 6Lejc2YqAAAAAB4T57LHLQ7SiaJdTdEBltVKdNdi
+secret kry = 6Lejc2YqAAAAAAA9GZDFa_gFeusGBZI71gkk9PZY -->
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -41,6 +44,34 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MSQCH4CB');</script>
     <!-- End Google Tag Manager -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lejc2YqAAAAAB4T57LHLQ7SiaJdTdEBltVKdNdi"></script>
+    <script>
+        function handleCaptch(e) {
+            console.log("first click");
+            e.preventDefault(); // Prevent the default form submission
+    
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6Lejc2YqAAAAAB4T57LHLQ7SiaJdTdEBltVKdNdi', { action: 'submit' }).then(function(token) {
+                    // Create a hidden input to store the token
+                    const form = document.getElementById('myForm');
+                    const hiddenInput = document.createElement('input');
+                    hiddenInput.setAttribute('type', 'hidden');
+                    hiddenInput.setAttribute('name', 'g-recaptcha-response');
+                    hiddenInput.setAttribute('value', token);
+                    form.appendChild(hiddenInput);
+    
+                    // Submit the form to your backend
+                    form.submit();
+                });
+            });
+        }
+    
+        function onSubmit() {
+            console.log("Form submitted successfully");
+            // You can add more logic here after form submission if needed
+        }
+    </script>
+    
 </head>
 <body>
         <!-- Google Tag Manager (noscript) -->
@@ -69,6 +100,14 @@
         </div>
     </div>
 </section>
+<form id="myForm" onsubmit="handleCaptch(event)">
+    <button class="g-recaptcha" 
+            data-sitekey="6Lejc2YqAAAAAB4T57LHLQ7SiaJdTdEBltVKdNdi" 
+            data-callback="onSubmit" 
+            data-action="submit">Submit</button>
+</form>
+
+
 <section class="bannerSection">
     <img src="./assets/images/landing/bannerRound1.png" alt="" class="bannerRound1">
     <img src="./assets/images/landing/bannerRound2.png" alt="" class="bannerRound2">
