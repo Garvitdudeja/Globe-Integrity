@@ -44,32 +44,8 @@ secret kry = 6Lejc2YqAAAAAAA9GZDFa_gFeusGBZI71gkk9PZY -->
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MSQCH4CB');</script>
     <!-- End Google Tag Manager -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lejc2YqAAAAAB4T57LHLQ7SiaJdTdEBltVKdNdi"></script>
-    <script>
-        function handleCaptch(e) {
-            console.log("first click");
-            e.preventDefault(); // Prevent the default form submission
-    
-            grecaptcha.ready(function() {
-                grecaptcha.execute('6Lejc2YqAAAAAB4T57LHLQ7SiaJdTdEBltVKdNdi', { action: 'submit' }).then(function(token) {
-                    // Create a hidden input to store the token
-                    const form = document.getElementById('myForm');
-                    const hiddenInput = document.createElement('input');
-                    hiddenInput.setAttribute('type', 'hidden');
-                    hiddenInput.setAttribute('name', 'g-recaptcha-response');
-                    hiddenInput.setAttribute('value', token);
-                    form.appendChild(hiddenInput);
-    
-                    // Submit the form to your backend
-                    form.submit();
-                });
-            });
-        }
-    
-        function onSubmit() {
-            console.log("Form submitted successfully");
-            // You can add more logic here after form submission if needed
-        }
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     </script>
     
 </head>
@@ -100,12 +76,6 @@ secret kry = 6Lejc2YqAAAAAAA9GZDFa_gFeusGBZI71gkk9PZY -->
         </div>
     </div>
 </section>
-<form id="myForm" onsubmit="handleCaptch(event)">
-    <button class="g-recaptcha" 
-            data-sitekey="6Lejc2YqAAAAAB4T57LHLQ7SiaJdTdEBltVKdNdi" 
-            data-callback="onSubmit" 
-            data-action="submit">Submit</button>
-</form>
 
 
 <section class="bannerSection">
@@ -288,6 +258,9 @@ secret kry = 6Lejc2YqAAAAAAA9GZDFa_gFeusGBZI71gkk9PZY -->
                                <input type='number' class="customControl" placeholder="Age" id='LEADCF16' name='LEADCF16' maxlength='255'>
                                </input>
                             </div>
+                            <div class="g-recaptcha text-center" data-sitekey="6Ld8hmYqAAAAAHxTtXY6jknz7D81GWAwiGb1Pq-_"></div>
+        
+                            <div id="captchaWarning" class="text-center text-danger" style="margin-top: 10px;">Please complete the CAPTCHA.</div>
                          </div>
                       </div>
                       <div class="row mt-3" >
