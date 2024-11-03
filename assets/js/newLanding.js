@@ -284,7 +284,8 @@ async function validatePhoneNo(phone){
 
     })
     .catch(error => {
-        console.log(error)
+        // console.log(error)
+        isphoneNoValid = true
     }); 
   return isphoneNoValid;
 }
