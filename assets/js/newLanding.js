@@ -11,7 +11,7 @@ function showTab(n) {
   document.getElementById('IULWarning').style.display='none'
   document.getElementById('investmentWarning').style.display='none'
   document.getElementById('ageWarning').style.display='none'
-  document.getElementById('captchaWarning').style.display='none'
+  // document.getElementById('captchaWarning').style.display='none'
 
   x[n].style.display = "block";
   // ... and fix the Previous/Next buttons:
@@ -189,12 +189,12 @@ async function validateForm() {
   }
   if(currentTab ===5){
     var age = document.getElementById('LEADCF16')?.value;
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-      document.getElementById("captchaWarning").style.display= 'block';
-      document.getElementById("captchaWarning").style.color= 'red';
-        return false; // Prevent form submission
-    }
+    // const recaptchaResponse = grecaptcha.getResponse();
+    // if (!recaptchaResponse) {
+    //   document.getElementById("captchaWarning").style.display= 'block';
+    //   document.getElementById("captchaWarning").style.color= 'red';
+    //     return false; // Prevent form submission
+    // }
     if (age < 18 || age > 90){
       document.getElementById("ageWarning").style.display= 'block';
       document.getElementById("ageWarning").style.color= 'red';
