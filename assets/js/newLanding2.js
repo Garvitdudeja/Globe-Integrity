@@ -6,10 +6,10 @@ var Two = new Set();
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
-  document.getElementById('incomeWarning').style.display='none'
-  document.getElementById('savingWarning').style.display='none'
+//   document.getElementById('incomeWarning').style.display='none'
+//   document.getElementById('savingWarning').style.display='none'
   document.getElementById('IULWarning').style.display='none'
-  document.getElementById('investmentWarning').style.display='none'
+//   document.getElementById('investmentWarning').style.display='none'
   document.getElementById('ageWarning').style.display='none'
   // document.getElementById('captchaWarning').style.display='none'
 
@@ -129,93 +129,93 @@ async function validateForm() {
 //       document.getElementById("IULWarning").style.display= 'none';
 //     }
 //   }
-  if (currentTab === 2 ){
-    const k = document.getElementById("401k");
-    const IRA = document.getElementById("IRA");
-    const HoldingCash = document.getElementById("HoldingCash");
-    const ActiveTrading = document.getElementById("ActiveTrading");
-    const Self = document.getElementById("Self");
-    if (k.checked) {
-      Two.add(k.value);
-    }
-    if (IRA.checked) {
-      Two.add(IRA.value);
-    }
-    if (HoldingCash.checked) {
-      Two.add(HoldingCash.value);
-    }
-    if (ActiveTrading.checked) {
-      Two.add(ActiveTrading.value);
-    }if (Self.checked) {
-        Two.add(Self.value);
-      }
-    if (!k.checked) {
-        Two.delete(k.value);
-      }
-      if (!IRA.checked) {
-        Two.delete(IRA.value);
-      }
-      if (!HoldingCash.checked) {
-        Two.delete(HoldingCash.value);
-      }
-      if (!ActiveTrading.checked) {
-        Two.delete(ActiveTrading.value);
-      }
-      if (!Self.checked) {
-        Two.delete(Self.value);
-      }
-    console.log(Array.from(Two).toString())
-    document.getElementById("LEADCF37").value = Array.from(Two).toString(" ")
-    if (Array.from(Two).length === 0 ){
-      document.getElementById("investmentWarning").style.display= 'block';
-      document.getElementById("investmentWarning").style.color= 'red';
-        return false
-    }
-    else{
-      document.getElementById("investmentWarning").style.display= 'none';
-    }
-  }
+//   if (currentTab === 2 ){
+//     const k = document.getElementById("401k");
+//     const IRA = document.getElementById("IRA");
+//     const HoldingCash = document.getElementById("HoldingCash");
+//     const ActiveTrading = document.getElementById("ActiveTrading");
+//     const Self = document.getElementById("Self");
+//     if (k.checked) {
+//       Two.add(k.value);
+//     }
+//     if (IRA.checked) {
+//       Two.add(IRA.value);
+//     }
+//     if (HoldingCash.checked) {
+//       Two.add(HoldingCash.value);
+//     }
+//     if (ActiveTrading.checked) {
+//       Two.add(ActiveTrading.value);
+//     }if (Self.checked) {
+//         Two.add(Self.value);
+//       }
+//     if (!k.checked) {
+//         Two.delete(k.value);
+//       }
+//       if (!IRA.checked) {
+//         Two.delete(IRA.value);
+//       }
+//       if (!HoldingCash.checked) {
+//         Two.delete(HoldingCash.value);
+//       }
+//       if (!ActiveTrading.checked) {
+//         Two.delete(ActiveTrading.value);
+//       }
+//       if (!Self.checked) {
+//         Two.delete(Self.value);
+//       }
+//     console.log(Array.from(Two).toString())
+//     document.getElementById("LEADCF37").value = Array.from(Two).toString(" ")
+//     if (Array.from(Two).length === 0 ){
+//       document.getElementById("investmentWarning").style.display= 'block';
+//       document.getElementById("investmentWarning").style.color= 'red';
+//         return false
+//     }
+//     else{
+//       document.getElementById("investmentWarning").style.display= 'none';
+//     }
+//   }
 
 
-  if(currentTab ===4){
-    var saving = document.querySelector('input[name="Saving"]:checked')?.value;
-    if (saving===undefined){
-      document.getElementById("savingWarning").style.display= 'block';
-      document.getElementById("savingWarning").style.color= 'red';
-        return false
-    }else{
-      document.getElementById("savingWarning").style.display= 'none';
-    }
-    document.getElementById('LEADCF35').value = saving
-  }
-  if(currentTab ===5){
-    var age = document.getElementById('LEADCF16')?.value;
-    // const recaptchaResponse = grecaptcha.getResponse();
-    // if (!recaptchaResponse) {
-    //   document.getElementById("captchaWarning").style.display= 'block';
-    //   document.getElementById("captchaWarning").style.color= 'red';
-    //     return false; // Prevent form submission
-    // }
-    if (age < 18 || age > 90){
-      document.getElementById("ageWarning").style.display= 'block';
-      document.getElementById("ageWarning").style.color= 'red';
-        return false
-    }else{
-      document.getElementById("ageWarning").style.display= 'none';
-    }
-  }
-  if(currentTab ===3){
-    var Emp = document.querySelector('input[name="Emp"]:checked')?.value;
-    if (Emp===undefined){
-        document.getElementById("incomeWarning").style.display = "block"; 
-        document.getElementById("incomeWarning").style.color = "red"; 
-        return false
-    }
-    else{
-      document.getElementById("incomeWarning").style.display = "none"; 
-    }
-    document.getElementById('LEADCF34').value = Emp
-  }
+//   if(currentTab ===4){
+//     var saving = document.querySelector('input[name="Saving"]:checked')?.value;
+//     if (saving===undefined){
+//       document.getElementById("savingWarning").style.display= 'block';
+//       document.getElementById("savingWarning").style.color= 'red';
+//         return false
+//     }else{
+//       document.getElementById("savingWarning").style.display= 'none';
+//     }
+//     document.getElementById('LEADCF35').value = saving
+//   }
+//   if(currentTab ===5){
+//     var age = document.getElementById('LEADCF16')?.value;
+//     // const recaptchaResponse = grecaptcha.getResponse();
+//     // if (!recaptchaResponse) {
+//     //   document.getElementById("captchaWarning").style.display= 'block';
+//     //   document.getElementById("captchaWarning").style.color= 'red';
+//     //     return false; // Prevent form submission
+//     // }
+//     if (age < 18 || age > 90){
+//       document.getElementById("ageWarning").style.display= 'block';
+//       document.getElementById("ageWarning").style.color= 'red';
+//         return false
+//     }else{
+//       document.getElementById("ageWarning").style.display= 'none';
+//     }
+//   }
+//   if(currentTab ===3){
+//     var Emp = document.querySelector('input[name="Emp"]:checked')?.value;
+//     if (Emp===undefined){
+//         document.getElementById("incomeWarning").style.display = "block"; 
+//         document.getElementById("incomeWarning").style.color = "red"; 
+//         return false
+//     }
+//     else{
+//       document.getElementById("incomeWarning").style.display = "none"; 
+//     }
+//     document.getElementById('LEADCF34').value = Emp
+//   }
 
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
