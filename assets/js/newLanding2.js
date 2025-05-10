@@ -8,7 +8,7 @@ function showTab(n) {
   var x = document.getElementsByClassName("tab");
 //   document.getElementById('incomeWarning').style.display='none'
 //   document.getElementById('savingWarning').style.display='none'
-  document.getElementById('IULWarning').style.display='none'
+//   document.getElementById('IULWarning').style.display='none'
 //   document.getElementById('investmentWarning').style.display='none'
   document.getElementById('ageWarning').style.display='none'
   // document.getElementById('captchaWarning').style.display='none'
@@ -188,22 +188,22 @@ async function validateForm() {
 //     }
 //     document.getElementById('LEADCF35').value = saving
 //   }
-//   if(currentTab ===5){
-//     var age = document.getElementById('LEADCF16')?.value;
-//     // const recaptchaResponse = grecaptcha.getResponse();
-//     // if (!recaptchaResponse) {
-//     //   document.getElementById("captchaWarning").style.display= 'block';
-//     //   document.getElementById("captchaWarning").style.color= 'red';
-//     //     return false; // Prevent form submission
-//     // }
-//     if (age < 18 || age > 90){
-//       document.getElementById("ageWarning").style.display= 'block';
-//       document.getElementById("ageWarning").style.color= 'red';
-//         return false
-//     }else{
-//       document.getElementById("ageWarning").style.display= 'none';
-//     }
-//   }
+  if(currentTab ===1){
+    var age = document.getElementById('LEADCF16')?.value;
+    // const recaptchaResponse = grecaptcha.getResponse();
+    // if (!recaptchaResponse) {
+    //   document.getElementById("captchaWarning").style.display= 'block';
+    //   document.getElementById("captchaWarning").style.color= 'red';
+    //     return false; // Prevent form submission
+    // }
+    if (age < 18 || age > 90){
+      document.getElementById("ageWarning").style.display= 'block';
+      document.getElementById("ageWarning").style.color= 'red';
+        return false
+    }else{
+      document.getElementById("ageWarning").style.display= 'none';
+    }
+  }
 //   if(currentTab ===3){
 //     var Emp = document.querySelector('input[name="Emp"]:checked')?.value;
 //     if (Emp===undefined){

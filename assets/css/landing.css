@@ -109,6 +109,13 @@ a{
     padding:16px 20px;
     width: 100%;
 }
+.customCheckbox{
+    box-shadow: 0px 14px 40px 0px #DFEAF8;
+    border-radius: 10px;
+    border:none;
+    background-color: var(--white);
+    padding:16px 20px;
+}
 .continueBtn{
     box-shadow: 10px 20px 30px 0px #205EC866;
     padding:13px 24px; 
