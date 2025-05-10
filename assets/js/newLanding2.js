@@ -76,6 +76,7 @@ async function validateForm() {
     const lastName = document.getElementById("Last_Name").value
     const Email = document.getElementById("Email").value
     const Phone = document.getElementById("Phone").value
+    document.getElementById("LEADCF109").checked = true;
     console.log(firstName)
     document.getElementById("returnURL").value = "https://wealthmanagement.zohobookings.com/#/4491295000001065010?Name="+firstName+" "+lastName+'&Email='+Email+"&phone="+Phone 
   
