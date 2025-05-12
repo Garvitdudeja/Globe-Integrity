@@ -6,8 +6,8 @@ var Two = new Set();
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
-//   document.getElementById('incomeWarning').style.display='none'
-//   document.getElementById('savingWarning').style.display='none'
+  document.getElementById('planWarning').style.display='none'
+  document.getElementById('saveWarning').style.display='none'
 //   document.getElementById('IULWarning').style.display='none'
 //   document.getElementById('investmentWarning').style.display='none'
   document.getElementById('ageWarning').style.display='none'
@@ -61,6 +61,7 @@ async function validateForm() {
     valid = true;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
+  z = x[currentTab].getElementsByTagName("select");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
@@ -68,6 +69,13 @@ async function validateForm() {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  for (let i = 0; i < z.length; i++) {
+    console.log(z[i].value , "haha")
+    if (z[i].value == "" || z[i].value == "-None-") {
+      z[i].className += " invalid";
       valid = false;
     }
   }
@@ -200,9 +208,26 @@ async function validateForm() {
     if (age < 18 || age > 90){
       document.getElementById("ageWarning").style.display= 'block';
       document.getElementById("ageWarning").style.color= 'red';
-        return false
+        valid = false
     }else{
       document.getElementById("ageWarning").style.display= 'none';
+    }
+    const Plan = document.getElementById('LEADCF130')
+    if(Plan.value == "" || Plan.value == "-None-"){
+      document.getElementById("planWarning").style.display= 'block';
+      document.getElementById("planWarning").style.color= 'red';
+      valid = false
+
+    }else{
+      document.getElementById("planWarning").style.display= 'none';
+    }
+    const Money = document.getElementById('LEADCF129')
+    if(Money.value == "" || Money.value == "-None-"){
+      document.getElementById("saveWarning").style.display= 'block';
+      document.getElementById("saveWarning").style.color= 'red';
+      valid = false
+    }else{
+      document.getElementById("saveWarning").style.display= 'none';
     }
   }
 //   if(currentTab ===3){
