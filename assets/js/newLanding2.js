@@ -11,6 +11,11 @@ function showTab(n) {
 //   document.getElementById('IULWarning').style.display='none'
 //   document.getElementById('investmentWarning').style.display='none'
   document.getElementById('ageWarning').style.display='none'
+  document.getElementById('CurrentPlanWarning').style.display='none'
+  document.getElementById('HealthWarning').style.display='none'
+  document.getElementById('DependentWarning').style.display='none'
+  document.getElementById('startWarning').style.display='none'
+
   // document.getElementById('captchaWarning').style.display='none'
 
   x[n].style.display = "block";
@@ -228,6 +233,38 @@ async function validateForm() {
       valid = false
     }else{
       document.getElementById("saveWarning").style.display= 'none';
+    }
+        const CurrentPlan = document.getElementById('LEADCF153')
+    if(CurrentPlan.value == "" || CurrentPlan.value == "-None-"){
+      document.getElementById("CurrentPlanWarning").style.display= 'block';
+      document.getElementById("CurrentPlanWarning").style.color= 'red';
+      valid = false
+    }else{
+      document.getElementById("saveWarning").style.display= 'none';
+    }
+        const Health = document.getElementById('LEADCF152')
+    if(Health.value == "" || Health.value == "-None-"){
+      document.getElementById("HealthWarning").style.display= 'block';
+      document.getElementById("HealthWarning").style.color= 'red';
+      valid = false
+    }else{
+      document.getElementById("HealthWarning").style.display= 'none';
+    }
+        const DependentWarning = document.getElementById('LEADCF152')
+    if(DependentWarning.value == "" || DependentWarning.value == "-None-"){
+      document.getElementById("DependentWarning").style.display= 'block';
+      document.getElementById("DependentWarning").style.color= 'red';
+      valid = false
+    }else{
+      document.getElementById("DependentWarning").style.display= 'none';
+    }
+        const Dependent = document.getElementById('LEADCF129')
+    if(Dependent.value == "" || Dependent.value == "-None-"){
+      document.getElementById("startWarning").style.display= 'block';
+      document.getElementById("startWarning").style.color= 'red';
+      valid = false
+    }else{
+      document.getElementById("startWarning").style.display= 'none';
     }
   }
 //   if(currentTab ===3){
