@@ -53,8 +53,7 @@ secret kry = 6Lejc2YqAAAAAAA9GZDFa_gFeusGBZI71gkk9PZY -->
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MSQCH4CB');</script>
     <!-- End Google Tag Manager -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-
+     <script src="https://www.google.com/recaptcha/api.js?render=6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W"></script>
     </script>
     
 </head>
@@ -178,8 +177,19 @@ secret kry = 6Lejc2YqAAAAAAA9GZDFa_gFeusGBZI71gkk9PZY -->
                                </input>
                             </div>
                             <div id="ageWarning" class="text-left" >Age must be between 18 to 90</div>
-                            <!-- <div class="g-recaptcha text-center" data-sitekey="6Ld8hmYqAAAAAHxTtXY6jknz7D81GWAwiGb1Pq-_"></div> -->
-        
+        				<div class = 'zcwf_row d-none'>
+					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+						<label for = 'LEADCF156'>
+							Google Recaptcha
+						</label>
+					</div>
+					<div class = 'zcwf_col_fld'>
+						<textarea style = 'font-family: Arial, sans-serif;' aria-multiline = 'true' id = 'LEADCF156' aria-required = 'false' aria-label = 'LEADCF156' name = 'LEADCF156'>
+						</textarea>
+						<div class = 'zcwf_col_help'>
+						</div>
+					</div>
+				</div>
                             <!-- <div id="captchaWarning" class="text-center text-danger" style="margin-top: 10px;">Please complete the CAPTCHA.</div> -->
                          </div>
                          				<div class = 'zcwf_row'>
@@ -433,6 +443,16 @@ Do you have children or anyone who depends on you financially?
                          <div class='zcwf_col_fld '><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div>
                       </div>
                       <script>
+                          document.getElementById('webform').addEventListener('submit', function (e) {
+    e.preventDefault(); // prevent default submit
+
+    grecaptcha.ready(function () {
+      grecaptcha.execute('6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W', {action: 'submit'}).then(function (token) {
+        document.getElementById('LEADCF156').value = token;
+        e.target.submit(); // now submit the form
+      });
+    });
+  });
                          function checkMandatory5572526000007718001() {
                           var mndFileds = new Array('First Name','Last Name');
                           var fldLangVal = new Array('First\x20Name','Last\x20Name');
