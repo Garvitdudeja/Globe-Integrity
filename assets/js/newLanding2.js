@@ -100,8 +100,8 @@ async function validateForm() {
           .then(res => res.json())
           .then(data => {
             console.log("reCAPTCHA response:", data);
-            if (data.success && data.score > 0.5) {
-              alert("Human verified!");
+            if (data.success ) {
+              document.getElementById("LEADCF156").value = data.score;
               // e.target.submit(); // real form submission
             } else {
               alert("reCAPTCHA failed.");
