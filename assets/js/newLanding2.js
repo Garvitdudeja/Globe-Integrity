@@ -91,6 +91,12 @@ async function validateForm() {
     const Phone = document.getElementById("Phone").value
     document.getElementById("LEADCF109").checked = true;
     console.log(firstName)
+     grecaptcha.ready(function () {
+      grecaptcha.execute('6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W', {action: 'submit'}).then(function (token) {
+        document.getElementById('LEADCF156').value = token;
+        e.target.submit(); // now submit the form
+      });
+    });
     document.getElementById("returnURL").value = "https://wealthmanagement.zohobookings.com/#/4491295000001065010?Name="+firstName+" "+lastName+'&Email='+Email+"&phone="+Phone+"&staffId=4491295000000030016"; 
   
     var isphoneNoValid = await validatePhoneNo(Phone);
@@ -337,7 +343,6 @@ async function validatePhoneNo(phone){
         const data = response.data;
         if(data.valid==false){
           // document.getElementById("Phone").style = "background-color:  background-color: #ffdddd;"
-          console.log(document.getElementById("Phone"),"element")
           document.getElementById("Phone").style.background = "#ffdddd";
           document.getElementById("phoneWarning").className = "text-danger"
         }
