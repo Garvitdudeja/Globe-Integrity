@@ -91,11 +91,31 @@ async function validateForm() {
     const Phone = document.getElementById("Phone").value
     document.getElementById("LEADCF109").checked = true;
     console.log(firstName)
-     grecaptcha.ready(function () {
+        grecaptcha.ready(function () {
       grecaptcha.execute('6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W', {action: 'submit'}).then(function (token) {
-        document.getElementById('LEADCF156').value = token;
-        console.log("token", token)
-        e.target.submit(); // now submit the form
+        console.log("Token:", token);
+
+        // Prepare FormData
+        var formData = new FormData();
+        // Send POST to your Zoho custom function
+        fetch("https://www.zohoapis.com/crm/v7/functions/recaptcha_verify/actions/execute?auth_type=apikey&zapikey=1003.ea52eed87a0014942321fe35b0a9b557.2958e2de5bb055884936bb746b431c82", {
+          method: "POST",
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Zoho Response:", data);
+
+          if (data.code === "success" && data.details.output.success === true && data.details.output.score > 0.5) {
+            alert("Human verified! Proceeding with form...");
+            // Submit the original form if needed
+          } else {
+            alert("reCAPTCHA verification failed. Please try again.");
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
       });
     });
     document.getElementById("returnURL").value = "https://wealthmanagement.zohobookings.com/#/4491295000001065010?Name="+firstName+" "+lastName+'&Email='+Email+"&phone="+Phone+"&staffId=4491295000000030016"; 
