@@ -94,6 +94,7 @@ async function validateForm() {
      grecaptcha.ready(function () {
       grecaptcha.execute('6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W', {action: 'submit'}).then(function (token) {
         document.getElementById('LEADCF156').value = token;
+        console.log("token", token)
         e.target.submit(); // now submit the form
       });
     });
