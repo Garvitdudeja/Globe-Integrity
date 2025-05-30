@@ -90,6 +90,17 @@ async function validateForm() {
     const Email = document.getElementById("Email").value
     const Phone = document.getElementById("Phone").value
     document.getElementById("LEADCF109").checked = true;
+
+// Add:
+let ip;
+fetch('https://ipapi.co/json/')
+  .then(res => res.json())
+  .then(data => {
+    ip = data.ip;
+  document.getElementById("LEADCF157").value = ip;
+
+  });
+
     grecaptcha.ready(function () {
       grecaptcha.execute("6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W", { action: "submit" }).then(function (token) {
         fetch("https://recaptcha-verify-delta.vercel.app/api/verify-recaptcha", {
@@ -119,115 +130,8 @@ async function validateForm() {
     }
   }
 
-  // condition Checking
-  //   if (currentTab == 1) {
-  //     const Tax_Income = document.getElementById("Tax-Income");
-  //     const No_Tax = document.getElementById("No-Tax");
-  //     const Zero_Risk = document.getElementById("Zero-Risk");
-  //     const Preservation = document.getElementById("Preservation");
-  //     console.log(Tax_Income.checked)
-  //     if (Tax_Income.checked) {
-  //       One.add(Tax_Income.value);
-  //     }
-  //     if (No_Tax.checked) {
-  //       One.add(No_Tax.value);
-  //     }
-  //     if (Zero_Risk.checked) {
-  //       One.add(Zero_Risk.value);
-  //     }
-  //     if (Preservation.checked) {
-  //       One.add(Preservation.value);
-  //     }
-  //     if (!Tax_Income.checked) {
-  //         One.delete(Tax_Income.value);
-  //       }
-  //       if (!No_Tax.checked) {
-  //         One.delete(No_Tax.value);
-  //       }
-  //       if (!Zero_Risk.checked) {
-  //         One.delete(Zero_Risk.value);
-  //       }
-  //       if (!Preservation.checked) {
-  //         One.delete(Preservation.value);
-  //       }
-  //     console.log(Array.from(One).toString())
-  //     document.getElementById("LEADCF36").value = Array.from(One).toString(" ")
-  //     console.log(One, "here")
-  //     if (false){
-  //       document.getElementById("IULWarning").style.display= 'block';
-  //       document.getElementById("IULWarning").style.color= 'red';
-  //         return false
-  //     }else{
-  //       document.getElementById("IULWarning").style.display= 'none';
-  //     }
-  //   }
-  //   if (currentTab === 2 ){
-  //     const k = document.getElementById("401k");
-  //     const IRA = document.getElementById("IRA");
-  //     const HoldingCash = document.getElementById("HoldingCash");
-  //     const ActiveTrading = document.getElementById("ActiveTrading");
-  //     const Self = document.getElementById("Self");
-  //     if (k.checked) {
-  //       Two.add(k.value);
-  //     }
-  //     if (IRA.checked) {
-  //       Two.add(IRA.value);
-  //     }
-  //     if (HoldingCash.checked) {
-  //       Two.add(HoldingCash.value);
-  //     }
-  //     if (ActiveTrading.checked) {
-  //       Two.add(ActiveTrading.value);
-  //     }if (Self.checked) {
-  //         Two.add(Self.value);
-  //       }
-  //     if (!k.checked) {
-  //         Two.delete(k.value);
-  //       }
-  //       if (!IRA.checked) {
-  //         Two.delete(IRA.value);
-  //       }
-  //       if (!HoldingCash.checked) {
-  //         Two.delete(HoldingCash.value);
-  //       }
-  //       if (!ActiveTrading.checked) {
-  //         Two.delete(ActiveTrading.value);
-  //       }
-  //       if (!Self.checked) {
-  //         Two.delete(Self.value);
-  //       }
-  //     console.log(Array.from(Two).toString())
-  //     document.getElementById("LEADCF37").value = Array.from(Two).toString(" ")
-  //     if (Array.from(Two).length === 0 ){
-  //       document.getElementById("investmentWarning").style.display= 'block';
-  //       document.getElementById("investmentWarning").style.color= 'red';
-  //         return false
-  //     }
-  //     else{
-  //       document.getElementById("investmentWarning").style.display= 'none';
-  //     }
-  //   }
-
-
-  //   if(currentTab ===4){
-  //     var saving = document.querySelector('input[name="Saving"]:checked')?.value;
-  //     if (saving===undefined){
-  //       document.getElementById("savingWarning").style.display= 'block';
-  //       document.getElementById("savingWarning").style.color= 'red';
-  //         return false
-  //     }else{
-  //       document.getElementById("savingWarning").style.display= 'none';
-  //     }
-  //     document.getElementById('LEADCF35').value = saving
-  //   }
   if (currentTab === 1) {
     var age = document.getElementById('LEADCF16')?.value;
-    // const recaptchaResponse = grecaptcha.getResponse();
-    // if (!recaptchaResponse) {
-    //   document.getElementById("captchaWarning").style.display= 'block';
-    //   document.getElementById("captchaWarning").style.color= 'red';
-    //     return false; // Prevent form submission
-    // }
     if (age < 18 || age > 90) {
       document.getElementById("ageWarning").style.display = 'block';
       document.getElementById("ageWarning").style.color = 'red';
@@ -285,20 +189,6 @@ async function validateForm() {
       document.getElementById("startWarning").style.display = 'none';
     }
   }
-  //   if(currentTab ===3){
-  //     var Emp = document.querySelector('input[name="Emp"]:checked')?.value;
-  //     if (Emp===undefined){
-  //         document.getElementById("incomeWarning").style.display = "block"; 
-  //         document.getElementById("incomeWarning").style.color = "red"; 
-  //         return false
-  //     }
-  //     else{
-  //       document.getElementById("incomeWarning").style.display = "none"; 
-  //     }
-  //     document.getElementById('LEADCF34').value = Emp
-  //   }
-
-  // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     // document.getElementsByClassName("step")[currentTab].className += " finish";
   }
@@ -373,38 +263,5 @@ async function validatePhoneNo(phone) {
 
 
 
-
-
-// function getResponses(valis_auth_tokens, requests){
-//   for(let i in requests){
-//     var l = []
-//     var x =""
-//       const tokenMatch = i[1].match(/token=([^&]+)/);
-//       valis_auth_tokens.forEach((token) => {
-//           if(tokenMatch.localeCompare(token)==0){
-//             const matches = i[1].match(/[?&]([^&=]+)=([^&]+)/g);
-//             const queryParams = {};
-//             if (matches) {
-//               matches.forEach(match => {
-//                 const [key, value] = match.substring(1).split('=');
-//                 if(key=="token"){
-//                   x+=""
-//                 }
-//                 else{
-//                   x += key+","+value
-//                 }
-//               });
-//             }
-//             console.log("VALID,",x)
-//             l.push("VALID,",x)
-//           }
-//           else{
-//             l.push("INVALID")
-//           }
-//   })
-// }
-// return l
-
-// }
 
 
