@@ -1527,6 +1527,7 @@
     var zipCodeValue = zipCodeInput.value;
     
     var zipCodePattern = /^\d{5}(?:-\d{4})?$/; // ZIP code regular expression pattern
+    console.log(currentTab);
 if (currentTab === 0) {
   const selectedGoal = document.querySelector('input[name="radioname"]:checked')?.value;
   document.getElementById('LEADCF160').value = selectedGoal;
@@ -1564,16 +1565,8 @@ if (currentTab === 0) {
       document.getElementById("annualIncomeWarning").style.display = "none"; // Hide the age warning message
     }
     }
-    var emailInput = document.getElementById("Email"); // Email input
-    var emailValue = emailInput.value;
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var mobileInput = document.getElementById("Phone"); // Mobile number input
-    var mobileValue = mobileInput.value;
-    var mobilePattern = /^\d{10}$/; // Basic US mobile number pattern (10 digits)
-    
-    // validate Email
-    if  (currentTab==3){
-              grecaptcha.ready(function () {
+    if(currentTab === 2){
+      grecaptcha.ready(function () {
       grecaptcha.execute("6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W", { action: "submit" }).then(function (token) {
         fetch("https://recaptcha-verify-delta.vercel.app/api/verify-recaptcha", {
           method: "POST",
@@ -1593,6 +1586,17 @@ if (currentTab === 0) {
           });
       });
     });
+    }
+    var emailInput = document.getElementById("Email"); // Email input
+    var emailValue = emailInput.value;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var mobileInput = document.getElementById("Phone"); // Mobile number input
+    var mobileValue = mobileInput.value;
+    var mobilePattern = /^\d{10}$/; // Basic US mobile number pattern (10 digits)
+    
+    // validate Email
+    if  (currentTab==3){
+              
     
     if (!emailPattern.test(emailValue)) {
     emailInput.classList.add("invalid");
