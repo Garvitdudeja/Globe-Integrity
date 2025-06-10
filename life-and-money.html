@@ -1589,7 +1589,6 @@ if (currentTab === 0) {
     mobileInput.classList.remove("invalid");
     document.getElementById("mobileWarning").style.display = "none"; // Hide the mobile number warning message
     }
-     document.getElementById("LEADCF156").value =1
         grecaptcha.ready(function () {
       grecaptcha.execute("6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W", { action: "submit" }).then(function (token) {
         fetch("https://recaptcha-verify-delta.vercel.app/api/verify-recaptcha", {
@@ -1601,6 +1600,7 @@ if (currentTab === 0) {
           .then(data => {
             console.log("reCAPTCHA response:", data);
             if (data.success ) {
+              console.log("success")
               document.getElementById("LEADCF156").value = data.score;
               // e.target.submit(); // real form submission
             } else {
