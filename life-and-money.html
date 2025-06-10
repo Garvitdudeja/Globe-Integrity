@@ -233,6 +233,7 @@
     </style>
 
 
+     <script src="https://www.google.com/recaptcha/api.js?render=6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W"></script>
 
   </head>
 
@@ -759,6 +760,19 @@
     Invalid ZIP code. Please enter a valid US ZIP code.
   </div>
 </div>
+				<div class = 'zcwf_row d-none'>
+					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+						<label for = 'LEADCF156'>
+							Google Recaptcha
+						</label>
+					</div>
+					<div class = 'zcwf_col_fld'>
+						<textarea style = 'font-family: Arial, sans-serif;' aria-multiline = 'true' id = 'LEADCF156' aria-required = 'false' aria-label = 'LEADCF156' name = 'LEADCF156'>
+						</textarea>
+						<div class = 'zcwf_col_help'>
+						</div>
+					</div>
+				</div>
 
       </div>
       </div>
@@ -1520,7 +1534,8 @@ if (currentTab === 0) {
 }
 
     
-    if (currentTab === 1) {
+    if (currentTab === 1)
+     {
       var annualIncome = document.getElementById("LEADCF155");
       var annualIncomeValue = annualIncome.value;
     // Validate age in the first step
@@ -1574,6 +1589,25 @@ if (currentTab === 0) {
     mobileInput.classList.remove("invalid");
     document.getElementById("mobileWarning").style.display = "none"; // Hide the mobile number warning message
     }
+        grecaptcha.ready(function () {
+      grecaptcha.execute("6LcPf00rAAAAAHRRGkIiqqzj2QSdlUReEYz3EJ7W", { action: "submit" }).then(function (token) {
+        fetch("https://recaptcha-verify-delta.vercel.app/api/verify-recaptcha", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token })
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log("reCAPTCHA response:", data);
+            if (data.success ) {
+              document.getElementById("LEADCF156").value = data.score;
+              // e.target.submit(); // real form submission
+            } else {
+              alert("reCAPTCHA failed.");
+            }
+          });
+      });
+    });
     
     }
     
